@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+	<html class="sl-root base export loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Let&#39;s Build a Webserver!: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-josefine theme-color-cobalt-orange">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="2d94c0b8116bfab1298a796b5677b042">
+<div class="sl-block" data-block-type="text" data-block-id="6d0d88dff0d8e942748d985e896295eb" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 544px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="2e3d3dd8-df13-0b4b-5d74-9840f429c68e" data-gramm="true" data-gramm_editor="true">
+<p>Kirk Haines</p>
+
+<p>wyhaines@gmail.com</p>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 1785px; margin-top: -115px;" class="gr-textarea-btn " data-grammarly-reactid=".4"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".4.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="6afa3c725d543c2b5298898da1f00bf2" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1 style="color:rgb(255, 255, 255)">RailsConf 2016</h1>
+
+<h1 style="color:rgb(255, 255, 255)">Let's Build a Web Server!</h1>
+</div></div></section><section class="stack" data-id="d485efbc9e36788e6fe781745dc34672"><section data-id="d228c3094f3dabf379cdb78d8e75d101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="51acb3153bc7c67498b0f10bb926d790">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;" data-gramm_id="a502cda7-2898-8caf-df58-2949abcc1b2f" data-gramm="true" data-gramm_editor="true">
+<h1>What Is a Web Server?</h1>
+</div>
+<div><div style="z-index: 12; opacity: 1; margin-left: 2004px; margin-top: 216px;" class="gr-textarea-btn " data-grammarly-reactid=".o"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".o.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="e76ebbc1ff7c21efa6a0d04c4878fd2f" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 160px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible; color: rgb(255, 255, 255);">
+<blockquote>
+<p>A web server is an information technology that processes requests via HTTP, the basic network protocol used to distribute information on the World Wide Web.</p>
+</blockquote>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="26577bde14cc77ccf8975861107260a8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 160px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; overflow: visible;">
+<p>https://en.wikipedia.org/wiki/Web_server</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a5d3a766858806548610b1e13912d71f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 422px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>A web server is just a server that accepts HTTP requests, and returns HTTP responses.</p>
+</div></div></section><section data-id="c9f343d51d0aa3ab7224c9281f1a3c07"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="f92b28e3a81f2c9da4ada18a8b9f21d0">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="8917a054-3cd1-d9d7-53d0-bf6d342f84dc" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 10;">
+<h2>In The Beginning...</h2>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 3162px; margin-top: -566px;" class="gr-textarea-btn " data-grammarly-reactid=".g"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".g.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="e26564c33e21a06982fb3deb7a5881ab" style="height: auto; min-width: 30px; min-height: 30px; width: 799px; left: 79px; top: 280px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="86e3d32d-3fa6-a616-27f9-07d5c5fd4d95" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li style="text-align: left;">Tim Berners-Lee, of CERN</li>
+	<li style="text-align: left;">Information sharing between scientists</li>
+	<li style="text-align: left;">Original web browser and web server implementations</li>
+	<li style="text-align: left;">NeXT and Apple Macintosh - 50<span style="text-align:start">€ / server</span>
+</li>
+	<li style="text-align: left;"><span style="text-align:start">Source code - 50€ / site</span></li>
+	<li style="text-align: left;">Open sourced on April 30, 1993</li>
+</ul>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 1614px; margin-top: 79px;" class="gr-textarea-btn " data-grammarly-reactid=".i"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".i.0"> </div></div></div>
+</div></section><section data-id="fc292ef1688f61e63640579561e14633"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e54b97f25dad835b9df19cc1c9ce2cfe">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="7a1e4466-d21c-9084-3d7c-7bcdfe5a04c0" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 10;">
+<h2>What Does It Look Like?</h2>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 82px; margin-top: 952px;" class="gr-textarea-btn " data-grammarly-reactid=".k"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".k.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 700px; height: 403.902px; left: 129px; top: 180px;" data-block-id="6f948a6ca637881179b42df252872f3e"><div class="sl-block-content" style="border: 1px solid rgb(7, 55, 99); border-radius: 5px; z-index: 11;"><img style="" data-natural-width="2870" data-natural-height="1656" data-src="lets-build-a-webserver/2490791-basic_http_request.gif"></div></div></section></section><section class="stack" data-id="038c57b34fc59afb051a5eaa2bbb47be"><section data-id="ba1e5c000d409c4f9c49125c5eb7a996"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="61a732c35074d6629fa3f58250297ee7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 10;">
+<h1>HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="ce1e3d40d06f089b363399dfcd86dca4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="overflow: visible; z-index: 11;">
+<h2>HyperText Transfer Protocol</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="aba9e5a5aa56ec9948885366e3d5debe" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; overflow: visible; transition-delay: 1.3s; transition-duration: 0.9s;" data-animation-type="slide-up">
+<h2 style="text-align:left">Defines:</h2>
+
+<p style="text-align:left">    How to make a request to a HTTP server (a web server)</p>
+
+<p style="text-align:left">    How the server should respond to requests</p>
+</div></div></section><section data-id="82c9017df1c39b7767711fbdd70ac10b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="5862e1cf4bab2e507e142f9a5e9e7023">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="a542a4ff-68f8-1c00-7fce-7d22d8439fa1" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>Very Simple Beginnings</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 732px; margin-top: 1315px;" class="gr-textarea-btn " data-grammarly-reactid=".13"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".13.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="42616db5b782456b162476ad0995f3ba" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible; transition-delay: 0.6s; transition-duration: 0.9s;" data-gramm_id="cb8dd2c0-da53-c83b-e99a-8fc9eb65c66b" data-gramm="true" data-gramm_editor="true" data-animation-type="slide-right">
+<p style="text-align:left">Request a document</p>
+
+<p style="text-align:left">        GET document-path</p>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 631px; margin-top: 1210px;" class="gr-textarea-btn " data-grammarly-reactid=".15"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".15.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="e630c340276d737945bab3bddc8f6633" style="min-width: 30px; min-height: 30px; width: 360px; height: 207.721px; left: 300px; top: 422px;"><div class="sl-block-content" style="z-index: 13; transition-duration: 0.9s; transition-delay: 4s;" data-animation-type="slide-up"><img data-natural-width="2870" data-natural-height="1656" style="" data-src="lets-build-a-webserver/2490791-basic_http_request.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="11da867a0fb470b227a5644eb8bf18d4" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 80px; top: 331px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; overflow: visible; transition-duration: 0.9s; transition-delay: 2.5s;" data-gramm_id="45adea7a-2af4-4c8c-991a-fdf1242d37bd" data-gramm="true" data-gramm_editor="true" data-animation-type="slide-right">
+<p style="text-align:left"><span style="color:rgb(255, 255, 255); text-align:left">Valid response was simply to return the document.</span></p>
+</div>
+<div><div style="z-index: 15; opacity: 1; margin-left: 804px; margin-top: 828px;" class="gr-textarea-btn " data-grammarly-reactid=".17"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".17.0"> </div></div></div>
+</div></section><section data-id="3a76835570b66055c35f4ba0c858889c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="10ed0f547ba50024760fe4113027b20b">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="fdbee352-984f-499c-0330-dccfbc2668c9" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>"A Shell Server for HTTP"</h1>
+
+<p>(slightly modified from the original)</p>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 470px; margin-top: 889px;" class="gr-textarea-btn " data-grammarly-reactid=".19"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".19.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="1301f034f33030c1a2133ab561e1bf8c" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 591px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="1dd9d174-494a-dc34-a4d2-74297674ccee" data-gramm="true" data-gramm_editor="true">
+<p style="text-align: left;"><span style="font-size:0.9em">http://info.cern.ch/hypertext/WWW/Provider/ShellScript.html</span></p>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 254px; margin-top: 476px;" class="gr-textarea-btn " data-grammarly-reactid=".1b"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".1b.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="code" data-block-id="a3d65e1d77305ba220672cc5a2f54510" style="min-width: 30px; min-height: 30px; width: 800px; height: 167px; left: 80px; top: 280px;"><div class="sl-block-content" style="z-index: 13; border: 5px solid rgb(68, 68, 68); border-radius: 20px; font-size: 165%;" data-highlight-theme="ir-black"><pre class="hsp"><code>#! /bin/sh
+read get docid junk
+cat `echo "$docid" | \
+  ruby -p -e '$_.gsub!(/^\/ [\r\n]/,"").chomp'`</code></pre></div></div></section><section data-id="668828e5e43c675e4be73dec1036d902"><div class="sl-block" data-block-type="text" data-block-id="4fb7294df7ed0741871b4af99b726922" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 167px; top: 70px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="ecb1113b-cd39-9750-387d-8270caf08759" data-gramm="true" data-gramm_editor="true">
+<h1>Run the Server</h1>
+</div>
+<div><div style="z-index: 12; opacity: 1; margin-left: 681px; margin-top: 479px;" class="gr-textarea-btn " data-grammarly-reactid=".1f"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".1f.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="2bfbf8896d3d2df67de098729881ac65" style="min-width: 30px; min-height: 30px; width: 728px; height: 455px; left: 116px; top: 193px;"><div class="sl-block-content" style="z-index: 12; border: 5px solid rgb(68, 68, 68); border-radius: 13px;"><img style="" data-natural-width="2880" data-natural-height="1800" data-src="lets-build-a-webserver/2489521-netcat_demo.gif"></div></div></section><section data-id="b23659c99649c867b60e75e5e346d418"><div class="sl-block" data-block-type="text" data-block-id="ee9be7320e5f323f9a1b34425c06d01c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="a9b80f30-b54f-40aa-d931-22407e9027c0" data-gramm="true" data-gramm_editor="true">
+<h1>Access the Server</h1>
+</div>
+<div><div style="z-index: 12; opacity: 1; margin-left: 686px; margin-top: 479px;" class="gr-textarea-btn " data-grammarly-reactid=".1h"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".1h.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="f019d324fc12eb044495025bdac13546" style="min-width: 30px; min-height: 30px; width: 728px; height: 455px; left: 116px; top: 175px;"><div class="sl-block-content" style="z-index: 12; border: 5px solid rgb(68, 68, 68); border-radius: 13px;"><img data-natural-width="2880" data-natural-height="1800" style="" data-src="lets-build-a-webserver/2489523-super_simple.gif"></div></div></section><section data-id="bd09383eea30298ae7b2ff25a1888b7c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dd4a55b7a0bb1ac75e920e647036d1c1">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="6456e848-8597-df44-1d73-bbb42f78d8f5" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>That's Terrifying</h1>
+
+<p>i.e. Don't Actually Do This</p>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 768px; margin-top: 65px;" class="gr-textarea-btn gr-textarea-btn_checking" data-grammarly-reactid=".1j"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".1j.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="shape" data-block-id="598be179c0edef4547abcf40d3da5aed" style="min-width: 4px; min-height: 4px; width: 46px; height: 48px; left: 457px; top: 431px;"><div class="sl-block-content" data-shape-type="symbol-plus-circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(255, 255, 255)"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM24 18h-6v6h-4v-6h-6v-4h6v-6h4v6h6v4z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a5d974f621bcc62d5fef7a0cfb4cadb0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 217px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; overflow: visible;" data-gramm_id="0037d831-a949-cc82-014f-6fc27ad87187" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:0.7em">(super_simple.sh)</span></p>
+</div>
+<div><div style="z-index: 16; opacity: 1; margin-left: 568px; margin-top: 7px;" class="gr-textarea-btn " data-grammarly-reactid=".22"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".22.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="shape" data-block-id="f800d6a14c835034d2d1481ad26e5241" style="min-width: 4px; min-height: 4px; width: 127px; height: 21px; left: 417px; top: 560px;"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 127 21"><polygon points="63.5,21 127,10.5 88.89999999999999,10.5 88.89999999999999,0 38.1,0 38.1,10.5 0,10.5 63.5,21" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e40b8c7f4f878fae31e94fa40c093dd6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 611px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; overflow: visible;" data-gramm_id="2b987ac9-d7a4-80e6-1e92-ecd951ef7258" data-gramm="true" data-gramm_editor="true">
+<p>A (scary, limited) web server!</p>
+
+<p>This is easy!!!</p>
+</div>
+<div><div style="z-index: 18; opacity: 1; margin-left: 568px; margin-top: 54px;" class="gr-textarea-btn " data-grammarly-reactid=".24"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".24.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 153px; left: 80px; top: 267px;" data-block-id="efa5e93602dee3d6c545c971dc484196"><div class="sl-block-content" style="z-index: 16; border: 5px solid rgb(68, 68, 68); border-radius: 20px; font-size: 165%;" data-highlight-theme="ir-black"><pre class="hsp"><code>#! /bin/sh
+read get docid junk
+cat `echo "$docid" | \
+  ruby -p -e '$_.gsub!(/^\/ [\r\n]/,"").chomp'`</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="6b719d03d7617b2e44530da7d0663e7a" style="min-width: 30px; min-height: 30px; width: 800px; height: 48px; left: 80px; top: 490px;"><div class="sl-block-content" style="z-index: 17; font-size: 165%; border: 5px solid rgb(68, 68, 68); border-radius: 20px;" data-highlight-theme="ir-black"><pre class="bash"><code>netcat -l -p 5000 -e ./super_simple.sh</code></pre></div></div></section></section><section class="stack" data-id="a15ec01140b1c0121d2634140252e704"><section data-id="ef51504d2092b5afada26e64234178dc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="218444b577427632eb851322505eab7c">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="843d4097-9f1f-0b79-9a89-f1103a876ab6" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>That Original Server...</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 1173px; margin-top: 91px;" class="gr-textarea-btn " data-grammarly-reactid=".26"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".26.0"> </div></div></div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-block-id="029b2420efbef34da47335df7aada7a9" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="1afaabe9-d304-7b80-1ddb-283bafb77d35" data-gramm="true" data-gramm_editor="true"><p>Text</p></div>
+<div><div style="z-index: 14; opacity: 1; margin-left: 874px; margin-top: -31px;" class="gr-textarea-btn " data-grammarly-reactid=".2d"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".2d.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="code" data-block-id="87e42ba0c426fb95669156b948b555de" style="min-width: 30px; min-height: 30px; width: 800px; height: 430px; left: 80px; top: 161px;"><div class="sl-block-content" style="z-index: 13; font-size: 55%; border: 5px solid rgb(68, 68, 68); border-radius: 20px;" data-highlight-theme="ir-black"><pre><code>    for (;;) {
+        status = read(soc, command, COMMAND_SIZE);
+        if (status&lt;=0) {
+            if (TRACE) printf("read returned %i, errno=%i\n", status, errno);
+            return status;      /* Return and close file */
+        }
+        command[status]=0;      /* terminate the string */
+#ifdef VM
+        {
+            char * p;
+            for (p=command; *p; p++) {
+                *p = FROMASCII(*p);
+                if (*p == '\n') *p = ' ';
+            }
+        }
+#endif
+        if (TRACE) printf("read string is `%s'\n", command);
+
+        arg=index(command,' ');
+        if (arg) {
+            *arg++ = 0;                         /* Terminate command &amp; move on */
+            arg = strip(arg);                   /* Strip leading &amp; trailing space */
+            if (0==strcmp("GET", command)) {    /* Get a file                   */
+
+/*      Remove host and any punctuation. (Could use HTParse to remove access too @)
+*/
+                filename = arg;
+                if (arg[0]=='/') {
+                    if (arg[1]=='/') {
+                        filename = index(arg+2, '/');   /* Skip //host/ */
+                        if (!filename) filename=arg+strlen(arg);
+                    } else {
+                        filename = arg+1;               /* Assume root: skip slash */
+                    }
+                }
+
+                if (*filename) {                /* (else return test message)   */
+                    keywords=index(filename, '?');
+                    if (keywords) *keywords++=0;        /* Split into two */</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="233ee0de9ace59da568ec545d7223a28" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.5em"><span style="color:rgb(255, 255, 255)">https://github.com/NotTheRealTimBL/WWWDaemon/blob/master/old/V0.1/daemon.c#L214</span></span></p>
+</div></div></section><section data-id="2532230bc9de708ddb5676fd9edf99a3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="575972797b64037fea48b3f0ffc18a17"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Monolithic Early Versions</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="0bf70fe37e7630fd876d124808b916e8" style="min-width: 30px; min-height: 30px; width: 800px; height: 121px; left: 80px; top: 167px;"><div class="sl-block-content" style="z-index: 11; font-size: 95%;" data-highlight-theme="ir-black"><pre class="none"><code>/*              TCP/IP based server for HyperText                       TCPServer.c
+**              ---------------------------------
+**
+**  History:
+**      2 Oct 90        Written TBL. Include filenames for VM from RTB.
+*/</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a170afb94142de04442ee658637e2e52" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 320px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 87%;">
+<p>It's a file, daemon.c, that changed the direction of the internet forever.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 591px;" data-block-id="ccfdc03e3ca261a9f686c1c3681863ee"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.5em"><span style="color:rgb(255, 255, 255)">https://github.com/NotTheRealTimBL/WWWDaemon/blob/master/old/V0.1/daemon.c#L214</span></span></p>
+</div></div></section><section data-id="32ca0dbbf2ab83bdc763fb0c8e12cf9a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c095039250d5e0945c2d15b339b8d14d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>By Open Source Release, Better Organized</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="283470098952d647738ca3f2558358b4" style="min-width: 30px; min-height: 30px; width: 800px; height: 207px; left: 80px; top: 283px;"><div class="sl-block-content" style="z-index: 12; border-width: 5px; border-color: rgb(68, 68, 68); font-size: 92%;" data-highlight-theme="ir-black"><pre class="none"><code>Anchor.h		HTFTP.h			HTStyle.h		HyperAccess.h
+NewsAccess.m		TextToy.m               Anchor.m		HTFile.c
+HTStyle.m		HyperAccess.m		ParseHTML.h		WWW.h
+FileAccess.h		HTFile.h		HTTCP.c			HyperManager.h
+StyleToy.h		WWWPageLayout.h         FileAccess.m		HTParse.c
+HTTCP.h			HyperManager.m		StyleToy.m		WWWPageLayout.m
+HTAccess.c		HTParse.h		HTTP.c			HyperText.h
+TcpAccess.h		WorldWideWeb_main.m     HTAccess.h		HTString.c
+HTTP.h			HyperText.m		TcpAccess.m		tcp.h
+HTFTP.c			HTString.h		HTUtils.h		NewsAccess.h
+TextToy.h</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cf89842a2d2cfc6e84ebd69a912f2194" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>This code set the stage for the internet as we know it.</p>
+</div></div></section><section data-id="8633c0660227e6c967f03d8b01b7cb80"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="8c6bd3b32518149bc35dba034945b1b2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Just Because....</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="0da8b9dd5bc281733a74911391e63afd" style="min-width: 30px; min-height: 30px; width: 800px; height: 450px; left: 80px; top: 180px;"><div class="sl-block-content" style="z-index: 12;" data-highlight-theme="ir-black"><pre class="none"><code>/*              TCP/IP based server for HyperText               HTDaemon.c
+**              ---------------------------------
+**
+**
+** Compilation options:
+**      RULES           If defined, use rule file and translation table
+**      DIR_OPTIONS     If defined, -d options control directory access
+**
+**  Authors:
+**      TBL     Tim Berners-Lee, CERN
+**      JFG     Jean-Francois Groff, CERN
+**      JS      Jonathan Streets, FNAL
+**
+**  History:
+**         Sep 91  TBL  Made from earlier daemon files. (TBL)
+**      26 Feb 92  JFG  Bug fixes for Multinet.
+**       8 Jun 92  TBL  Bug fix: Perform multiple reads in case we don't get
+**                      the whole command first read.
+**      25 Jun 92  JFG  Added DECNET option through TCP socket emulation.
+**       6 Jan 93  TBL  Plusses turned to spaces between keywords
+**       7 Jan 93  JS   Bug fix: addrlen had not been set for accept() call
+*/
+/* (c) CERN WorldWideWeb project 1990-1992. See Copyright.html for details */</code></pre></div></div></section></section><section class="stack" data-id="c920a04c49b63825fc38a5c2f2e61367"><section data-id="99ebf804255b90076c906e5889467c9b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="4f6097ac8636ca8494675940268a5e70"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;">
+<h1>Things Evolved...</h1>
+
+<h2>HTTP 0.9 written as implemented</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d93302940aab11990defe70eaea85207" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.9em">Assume TCP; default to port 80</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Server accepts connection</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Client sends ASCII request: GET document-address\r\n</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">    or a search: GET document-address?search+term\r\n</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Server returns LF or CR/LF delimited HTML lines in response</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Plain text responses are preceded by a &lt;PLAINTEXT&gt; line</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Errors are human readable HTML and aren't differentiated from a non-error response</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">Server disconnects when the document is transmitted</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4da17c8b81f6a0c573cf94a597b1addf" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 261px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; overflow: visible;">
+<p>https://www.w3.org/Protocols/HTTP/AsImplemented.html</p>
+</div></div></section><section data-id="f67111212c011ff3a4551d40965295c4">
+<div class="sl-block" data-block-type="text" data-block-id="bb3c7877621225d899cf5eb1eedb5a9a" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(255, 255, 255); text-align:left">CERN provided:</p>
+
+<p style="color:rgb(255, 255, 255); text-align:left">        pseudocode of implementation architecture</p>
+
+<p style="color:rgb(255, 255, 255); text-align:left">        very basic examples, including shell script examples</p>
+
+<p style="color:rgb(255, 255, 255); text-align:left">        and some amazingly worded advice:</p>
+
+<p style="color:rgb(255, 255, 255); text-align:left"> </p>
+
+<blockquote style="color:rgb(255, 255, 255)">
+<h3 style="text-align:left"><span style="font-size:0.7em">If you know the perl language, then that is a powerful (if otherwise incomprehensible) language with which to hack together a server.</span></h3>
+</blockquote>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="47b2cac4b25f8e0a97e4a3564f2dd1ee" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1 style="color:rgb(255, 255, 255)">Easy to Implement</h1>
+</div></div></section></section><section class="stack" data-id="c8f1c36bf085449535c4e68fae240de2"><section data-id="af791b6a895e3bd5fb7fc6e4ea77981c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="6677a4bfb197dd0681fa69255fb69878"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;">
+<h1>HTTP 1.0</h1>
+
+<h2>Advent of Modern Servers</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="73e4e3e9f628e8cca34d56aed88c8f54" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;">
+<p style="text-align: left;">RFC 1945, from May 1996</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">20 years later, the capabilities and protocol structure described in HTTP 1.0 still form the core of communication content and structure between HTTP clients and servers</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="72827db42c913e86a8de84b47dccc7b6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.5em">http://www.isi.edu/in-notes/rfc1945.txt</span></p>
+</div></div></section><section data-id="2f3864a11dcfc05b0d499a80929ae23f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d11d86e15d1cc2347756676fbada72f8">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="ed60b614-8e09-ed27-9d5d-48e88e8da7d3" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<h2>More Diverse Request Methods</h2>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 665px; margin-top: 2384px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3g"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3g.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 225px; height: auto;" data-block-id="7c7c0804eada26267116a9762eb4f719">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="89fc6bd8-df99-cb64-f45c-6f5b2d7b38b5" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<ul>
+	<li>GET</li>
+	<li>POST</li>
+	<li>HEAD</li>
+	<li>PUT</li>
+	<li>DELETE</li>
+	<li>OPTIONS</li>
+	<li>CONNECT</li>
+	<li>other extensions allowed</li>
+</ul>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 412px; margin-top: 3187px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3i"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3i.0"> </div></div></div>
+</div></section><section data-id="92ed1d4be4efce026e8a557dab490426"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d07be6fe490c20548966cb5df151e61c">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="644690b9-2c21-f26a-589d-1eaad96e2f8f" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<h2>Additional Data Headers</h2>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: -1531px; margin-top: 3130px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3k"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3k.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 271px; height: auto;" data-block-id="325bab96e67ea8fc308f4f4235fc961c">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="a73772cd-ee5c-beb0-1e11-9c77244e9afc" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<p style="text-align: left;">Allowed the client to pass additional information to the server via "HTTP Headers". These are composed of lines, terminated with CR/LF, and formatted as:</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">key: value</p>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: -7719px; margin-top: 4110px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3m"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3m.0"> </div></div></div>
+</div></section><section data-id="b471ec2e0d05ed81f8ac22e8138e5588"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="69c9c5a32077ce06cc8a032a87b5d7c9">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="eb0f9458-18d9-247a-b43e-7965bff3a0e4" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<h2>Core HTTP 1.0 Request Headers</h2>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: -5775px; margin-top: 2542px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3o"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3o.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 188px; height: auto;" data-block-id="ae3fea9a2653d701c6b03998f7bf8443">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="d6509ca3-527a-66d5-7450-2790e42e35b4" data-gramm="true" data-gramm_editor="true" style="overflow: visible; line-height: 2.6;" data-has-line-height="">
+<ul>
+	<li><span style="font-size:1.2em">Authorization</span></li>
+	<li><span style="font-size:1.2em">From</span></li>
+	<li><span style="font-size:1.2em">If-Modified-Since</span></li>
+	<li><span style="font-size:1.2em">Referer</span></li>
+	<li><span style="font-size:1.2em">User-Agent</span></li>
+</ul>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 44961px; margin-top: 7036px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3q"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3q.0"> </div></div></div>
+</div></section><section data-id="45ef62fa1b2d00bfd802e70a2c962e6e"><div class="sl-block" data-block-type="text" style="width: 837px; left: 62px; top: 70px; height: auto;" data-block-id="da15d3b6e6e83140fc7a5a838de5f04f">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="5bec458e-b741-ab40-7383-9b679c41bd7b" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>Expanded Server Responses</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: -2168px; margin-top: 2602px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3s"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3s.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="54f2f30e9b3441581a6069cb6ac7dff1" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 173px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="e4fd7b13-1f35-e6fe-9fd2-03a314d68021" data-gramm="true" data-gramm_editor="true">
+<h2>Status Line</h2>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 339px; margin-top: 1679px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3u"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3u.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="e527f6f5c0703431fdf10b88d9fd6e82" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; overflow: visible;" data-gramm_id="ea2ebaf0-76d8-307d-acf0-da0d42244f9a" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left">All responses are initiated with a status line.</p>
+
+<p style="text-align:left">Indicates the HTTP protocol version in effect, a numeric code for the type of response, and a phrase providing a reason for the response. Lines are terminated with LF or CR/LF.</p>
+
+<p style="text-align:left">For example:</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP/1.0 500 Internal Service Error</p>
+</div>
+<div><div style="z-index: 14; opacity: 1; margin-left: -19967px; margin-top: 5148px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3w"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3w.0"> </div></div></div>
+</div></section><section data-id="cfd43341a55282dffdb394181e847cf6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e19a32de07973681b52795ce1eb269dc">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="3a3c72de-2de2-eb11-66ca-93f7e1b06428" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>Status Codes</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: -4808px; margin-top: 1013px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".40"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".40.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="79b3d76a14ebaa64cd74543aee00933e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 171px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="5c9d09ba-e08d-f0de-d34a-a1da50bf4103" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left">Let the client know what kind of response this is.</p>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: 741px; margin-top: 880px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".42"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".42.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="table" data-block-id="9e8a161f19e3105207fff9e6a03b6089" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 222px;"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-table-rows="6" data-table-cols="2" data-table-has-header="true"><table><tbody>
+<tr>
+<th style="width: 257px;">Code Range</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td style="width: 257px;">1xx: Informational</td>
+<td>Not used, but reserved for future use</td>
+</tr>
+<tr>
+<td style="width: 257px;">2xx: Success</td>
+<td>The action was successfully received, understood, and accepted.</td>
+</tr>
+<tr>
+<td style="width: 257px;">3xx: Redirection</td>
+<td>Further action must be taken in order to complete the request​</td>
+</tr>
+<tr>
+<td style="width: 257px;">4xx: Client Error</td>
+<td>The request contains bad syntax or cannot be fulfilled​</td>
+</tr>
+<tr>
+<td style="width: 257px;">5xx: Server Error</td>
+<td>The server failed to fulfill an apparently valid request</td>
+</tr>
+</tbody></table></div></div></section><section data-id="2b59ba387fff367d27a5e9a3f09c1791"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 22px; height: auto;" data-block-id="78099554b8e5cdbf9b22b300cbe96322">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="2442646c-f219-1666-a935-df639d93018d" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 10;">
+<h1>Specific Status Codes</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 398px; margin-top: 1142px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".5g"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".5g.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="table" data-block-id="3187579843d530f0b1ea57b09da8a325" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" style="z-index: 12;" data-table-rows="9" data-table-cols="4"><table><tbody>
+<tr>
+<th style="width: 83px;"><em>Code</em></th>
+<th style="width: 318px;"><em>Description</em></th>
+<th style="width: 83px;"><em>Code</em></th>
+<th><em>Description</em></th>
+</tr>
+<tr>
+<td style="width: 83px;">200</td>
+<td style="width: 318px;">OK</td>
+<td style="width: 83px;">400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td style="width: 83px;">201</td>
+<td style="width: 318px;">Created</td>
+<td style="width: 83px;">401</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td style="width: 83px;">202</td>
+<td style="width: 318px;">Accepted</td>
+<td style="width: 83px;">403</td>
+<td>Forbiden</td>
+</tr>
+<tr>
+<td style="width: 83px;">204</td>
+<td style="width: 318px;">No Content</td>
+<td style="width: 83px;">404</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td style="width: 83px;">301</td>
+<td style="width: 318px;">Moved Permanently</td>
+<td style="width: 83px;">500</td>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<td style="width: 83px;">302</td>
+<td style="width: 318px;">Moved Temporarily</td>
+<td style="width: 83px;">501</td>
+<td>Not Implemented</td>
+</tr>
+<tr>
+<td style="width: 83px;">304</td>
+<td style="width: 318px;">Not Modified</td>
+<td style="width: 83px;">502</td>
+<td>Bad Gateway</td>
+</tr>
+<tr>
+<td style="width: 83px;"></td>
+<td></td>
+<td>503</td>
+<td>Service Unavailable</td>
+</tr>
+</tbody></table></div></div></section><section data-id="e984c537d3bae5570742112c56f74ec7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="4177c6dbccfbe221534ba6634d532f82">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="db6ab4c8-f5a5-b211-9b49-980e5765f744" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 11;">
+<h1>Response/Entity Headers</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 499px; margin-top: 893px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3y"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3y.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="d55198f25a53c3407a0d9178979aeb10" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 167px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="babe391e-6792-0a97-7ce1-d75361b53b69" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left">Allow the server to provide additional information about the response itself, or the payload of the response, to the client. These are ASCII text terminated with a LF or CR/LF, in the same format as the request headers.</p>
+</div>
+<div><div style="z-index: 13; opacity: 1; margin-left: -920px; margin-top: 1510px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".63"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".63.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="table" data-block-id="e5e30a560d5ed9a999f1c4c6db85f70a" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 343px;"><div class="sl-block-content" style="z-index: 13;" data-table-rows="7" data-table-cols="2" data-table-has-header="true"><table><tbody>
+<tr>
+<th><em>Response Header</em></th>
+<th>
+<em>Entity Heade</em>r</th>
+</tr>
+<tr>
+<td>Location</td>
+<td>Allow</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>Content-Encoding</td>
+</tr>
+<tr>
+<td>WWW-Authenticate</td>
+<td>Content-Length</td>
+</tr>
+<tr>
+<td></td>
+<td>Content-Type</td>
+</tr>
+<tr>
+<td></td>
+<td>Expires</td>
+</tr>
+<tr>
+<td></td>
+<td>Last-Modified</td>
+</tr>
+</tbody></table></div></div></section><section data-id="7db83aa9008e2d24f0751f05cede30e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9073cc980bb2c8788831cfbafbf704aa">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="1d62f669-4664-acea-2cf9-0f470907ea24" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 10;">
+<h1>Use What Makes Sense</h1>
+</div>
+<div><div style="z-index: 2; opacity: 1; margin-left: 768px; margin-top: 65px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".75"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".75.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="3aadab3cef19bd923e552371fa8dfd5f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="e217f3a9-8972-3bce-95f1-8a032c884638" data-gramm="true" data-gramm_editor="true">
+<h3>Practical Minimum Header Sets</h3>
+</div>
+<div><div style="z-index: 14; opacity: 1; margin-left: 768px; margin-top: 18px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".77"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".77.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="7f84f7a607bc36029677dc29d470b57e" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 63px; top: 280px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible; font-size: 90%;" data-gramm_id="dd39f695-eaee-1de9-f858-e308f73fc246" data-gramm="true" data-gramm_editor="true">
+<p>200 OK - Barebones Response</p>
+</div>
+<div><div style="z-index: 15; opacity: 1; margin-left: 368px; margin-top: 3px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".79"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".79.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="21963594572a7df341e5ab6f97a6b637" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 63px; top: 315px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; border: 5px solid rgb(68, 68, 68); border-radius: 20px; overflow: visible; font-size: 60%; padding: 5px;" data-gramm_id="e74b3678-0aac-1bff-b2dc-d83e7377fccd" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:left"><span style="font-size:1.0em">Content-Length: 12345
+Content-Type: text/html</span></pre>
+</div>
+<div><div style="z-index: 16; opacity: 1; margin-left: 363px; margin-top: 35px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".7b"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".7b.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 512px; left: 63px; top: 495px;" data-block-id="755db98a2d09c6cc9e06ccd0deaac7cc">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; border: 5px solid rgb(68, 68, 68); border-radius: 20px; overflow: visible; font-size: 60%; padding: 5px;" data-gramm_id="e74b3678-0aac-1bff-b2dc-d83e7377fccd" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:left"><span style="font-size:1.0em">Server: </span>WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+<span style="font-size:1.0em">Content-Length: 12345
+Content-Type: text/html</span>
+<span style="font-size:1.0em">Expires: </span>Sun, 08 May 2016 16:07:32 GMT
+Last-Modified: Sun, 17 Apr 2016 16:06:50 GMT</pre>
+</div>
+<div><div style="z-index: 16; opacity: 1; margin-left: 363px; margin-top: 35px;" class="gr-textarea-btn " data-grammarly-reactid=".7b"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".7b.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 506px; top: 280px;" data-block-id="58464011d619c114976b237eac80f36f">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; overflow: visible; font-size: 90%;" data-gramm_id="dd39f695-eaee-1de9-f858-e308f73fc246" data-gramm="true" data-gramm_editor="true">
+<p>302 Moved Temporarily</p>
+</div>
+<div><div style="z-index: 15; opacity: 1; margin-left: 368px; margin-top: 3px;" class="gr-textarea-btn gr-textarea-btn_show " data-grammarly-reactid=".79"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".79.0"> </div></div></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 506px; top: 315px;" data-block-id="bca665f97ca9db84507b4e0a7f902857">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; border: 5px solid rgb(68, 68, 68); border-radius: 20px; overflow: visible; font-size: 60%; padding: 5px;" data-gramm_id="e74b3678-0aac-1bff-b2dc-d83e7377fccd" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:left"><span style="font-size:1.0em">Location: http://foo.com/blah.html
+</span></pre>
+</div>
+<div><div style="z-index: 16; opacity: 1; margin-left: 363px; margin-top: 35px;" class="gr-textarea-btn gr-textarea-btn_show " data-grammarly-reactid=".7b"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".7b.0"> </div></div></div>
+</div></section><section data-id="e61c2dffb267fe1733f5777fa9b4642b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="95e492fb9d0886717d22cc34346a7dde"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Entity Body</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c6c208674c71efabdbe768543828f040" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 245px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 129%;">
+<ul>
+	<li style="text-align:left">Preceded by a single CR/LF line</li>
+	<li style="text-align:left">Encoded as appropriate for the Content-Encoding and Content-Type</li>
+	<li style="text-align:left">If Content-Length is provided, client will wait for that many bytes of data, and may disregard any extra data. Otherwise client accepts data until server disconnects.</li>
+</ul>
+</div></div></section><section data-id="f6f04b9adbc6116d6f897815890d0d9e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="18c46fdce83aa3c02d083e0dec3f7772"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Putting It All Together</h2>
+
+<h3>HTTP/0.9</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 700px; height: 437.5px; left: 260px; top: 210px;" data-block-id="50f6f508ab09840414dea821755060a6"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2880" data-natural-height="1800" data-src="lets-build-a-webserver/2490853-together_0.9.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5d50dd338f7981e6ee3486005448701e" style="height: auto; min-width: 30px; min-height: 30px; width: 207px; left: 33px; top: 261px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 7s;" data-animation-type="slide-right">
+<p style="text-align: left;"><span style="font-size:0.7em">HTTP 0.9 Request</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1853ddde3f7040ccd6b30a0da8f6f2aa" style="height: auto; min-width: 30px; min-height: 30px; width: 207px; left: 33px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; transition-duration: 0.6s; transition-delay: 2s;" data-animation-type="slide-right">
+<p style="text-align: left;"><span style="font-size:0.7em">Connect to server</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 207px; left: 33px; top: 319px;" data-block-id="060e5c96a0aefe6b96a9aac915f82dd0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; transition-delay: 10s; transition-duration: 0.6s;" data-animation-type="fade-in">
+<p style="text-align:left"><span style="font-size:21px">Simple Response<br>
+No Status Line</span></p>
+
+<p style="text-align:left"><span style="font-size:21px">No Headers</span></p>
+</div></div></section><section data-id="3e24e28605cfe89a6c7cbcd7d4a58307"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="7f8b5edb8336ed4ec57e639a76929f27"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Putting It All Together</h2>
+
+<h3>HTTP/1.0</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 700px; height: 437.5px; left: 260px; top: 210px;" data-block-id="4185d77182703d5a13b49ba093d29c26"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2880" data-natural-height="1800" data-src="lets-build-a-webserver/2490875-together_1.0.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 207px; left: 33px; top: 261px;" data-block-id="dc10a04fa8e3d0956a99265c7f012ae4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 7s;" data-animation-type="slide-right">
+<p style="text-align:left"><span style="font-size:0.7em">HTTP 1.0 Request</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 207px; left: 33px; top: 210px;" data-block-id="bf966d2546655c11bed54f9e74931045"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; transition-duration: 0.6s; transition-delay: 2s;" data-animation-type="slide-right">
+<p style="text-align: left;"><span style="font-size:0.7em">Connect to server</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 207px; left: 33px; top: 319px;" data-block-id="2613c13fc4e4b8d39e5eb74238ae3a5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; transition-delay: 10s; transition-duration: 0.6s;" data-animation-type="fade-in">
+<p style="text-align:left"><span style="font-size:21px; line-height:27.3px">Status line</span></p>
+
+<p style="text-align:left"><span style="font-size:21px; line-height:27.3px">Headers</span></p>
+</div></div></section><section data-id="31c6666a4176f9b7215c7be284b2fc11"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="c0731991b2d82ff163da8defcf7ef663"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Putting It All Together</h2>
+
+<h3>HTTP/2.0</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 700px; height: 437.5px; left: 260px; top: 210px;" data-block-id="757339b621677a11fcd4df248e51c6f3"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2880" data-natural-height="1800" data-src="lets-build-a-webserver/2490879-together_2.0.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 207px; left: 33px; top: 261px;" data-block-id="c7da254e593a454d5705256745797811"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 7s;" data-animation-type="slide-right">
+<p style="text-align:left"><span style="font-size:0.7em">HTTP 1.0 Request</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 207px; left: 33px; top: 210px;" data-block-id="9190ad872182796e3fe998a35ebe0ca8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; transition-duration: 0.6s; transition-delay: 2s;" data-animation-type="slide-right">
+<p style="text-align: left;"><span style="font-size:0.7em">Connect to server</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 220px; left: 33px; top: 319px;" data-block-id="a6ea1d089e99941ef01642c4dd982ff2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; transition-delay: 10s; transition-duration: 0.6s;" data-animation-type="fade-in">
+<p style="text-align:left"><span style="font-size:21px">Status line</span></p>
+
+<p style="text-align:left"><span style="font-size:21px">Headers</span></p>
+
+<p style="text-align:left"><span style="font-size:21px">Doesn't immediately disconnect.....</span></p>
+
+<p style="text-align:left"><span style="font-size:21px">Connection: Keep-Alive</span></p>
+</div></div></section><section data-id="96d16ea55b0d620f2618dbc9364e150f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="09daa093fc7fe18e88e5f738c483e300"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Putting It All Together</h2>
+
+<h3>Did You Notice?</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="0fbf54b0944e5f7dcafe3337faa8f9fc" style="min-width: 30px; min-height: 30px; width: 560px; height: 371px; left: 320px; top: 210px;"><div class="sl-block-content" style="z-index: 11;" data-highlight-theme="ir-black"><pre class="http"><code>HTTP/1.1 200 OK
+Etag: 372b7ab-be-5713bcf2
+Content-Type: text/html
+Content-Length: 190
+Last-Modified: Sun, 17 Apr 2016 16:42:26 GMT
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Sun, 17 Apr 2016 17:15:54 GMT
+Connection: close
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example Doc for HTTP 1.0 Request&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;p&gt;Here lies content.&lt;/p&gt;
+        &lt;p&gt;It lived a simple life.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="40547dd4809832e290af68d147272c3d" style="height: auto; min-width: 30px; min-height: 30px; width: 82px; left: 40px; top: 201px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 1s;" data-animation-type="slide-right">
+<p style="text-align: left;"><span style="font-size:0.5em">HTTP/1.1 ?</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 140px; left: 40px; top: 280px;" data-block-id="1b59136f68470361a1c1a87cc25f4e6c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; transition-duration: 0.6s; font-size: 60%; transition-delay: 6s;" data-animation-type="slide-right">
+<p style="text-align:left"><span style="font-size:1.0em">What are these?</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:1.0em">Etag</span></p>
+
+<p style="text-align:left"><span style="font-size:1.0em">Date</span></p>
+
+<p style="text-align:left"><span style="font-size:1.0em">Connection</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-block-id="3e55e7d909e3ab5bed4bbb980b5bea10" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 92px; top: 251px;"><div class="sl-block-content" data-line-x1="-288" data-line-y1="96.5" data-line-x2="-77" data-line-y2="1" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="arrow" style="z-index: 14; transition-duration: 0.6s; transition-delay: 6.6s;" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="211" height="96" viewbox="-288 1 211 96"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-284" y1="95" x2="-81" y2="3"></line><line stroke="#ffffff" stroke-width="2" x1="-284" y1="95" x2="-81" y2="3"></line><polygon fill="#ffffff" transform="translate(-284,95) rotate(65.648)" points="0,4 4,-4 -4,-4"></polygon><polygon fill="#ffffff" transform="translate(-81,3) rotate(65.648)" points="0,-4 4,4 -4,4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 92px; top: 339px;" data-block-id="bf681ecbb67508589a84730fe4dd30c7"><div class="sl-block-content" data-line-x1="-303" data-line-y1="109.5" data-line-x2="-92" data-line-y2="74" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="arrow" style="z-index: 16; transition-duration: 0.6s; transition-delay: 7.6s;" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="211" height="36" viewbox="-303 74 211 36"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-299" y1="109" x2="-96" y2="75"></line><line stroke="#ffffff" stroke-width="2" x1="-299" y1="109" x2="-96" y2="75"></line><polygon fill="#ffffff" transform="translate(-299,109) rotate(80.45)" points="0,4 4,-4 -4,-4"></polygon><polygon fill="#ffffff" transform="translate(-96,75) rotate(80.45)" points="0,-4 4,4 -4,4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 145px; top: 357px;" data-block-id="8a5599941742b9eb51c50328157287ce"><div class="sl-block-content" data-line-x1="-265" data-line-y1="122.5" data-line-x2="-107" data-line-y2="76.75" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="arrow" style="z-index: 17; transition-duration: 0.6s; transition-delay: 8.6s;" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="158" height="46" viewbox="-265 77 158 46"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-261" y1="121" x2="-111" y2="78"></line><line stroke="#ffffff" stroke-width="2" x1="-261" y1="121" x2="-111" y2="78"></line><polygon fill="#ffffff" transform="translate(-261,121) rotate(73.851)" points="0,4 4,-4 -4,-4"></polygon><polygon fill="#ffffff" transform="translate(-111,78) rotate(73.851)" points="0,-4 4,4 -4,4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 129px; top: 227px;" data-block-id="243592efde05de59bbe73def6083953e"><div class="sl-block-content" data-line-x1="-266" data-line-y1="-38" data-line-x2="-92" data-line-y2="-38" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="arrow" style="z-index: 18; transition-duration: 0.6s; transition-delay: 1.2s;" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="174" height="1" viewbox="-266 -38 174 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-262" y1="-38" x2="-96" y2="-38"></line><line stroke="#ffffff" stroke-width="2" x1="-262" y1="-38" x2="-96" y2="-38"></line><polygon fill="#ffffff" transform="translate(-262,-38) rotate(90)" points="0,4 4,-4 -4,-4"></polygon><polygon fill="#ffffff" transform="translate(-96,-38) rotate(90)" points="0,-4 4,4 -4,4"></polygon></svg></div></div></section><section data-id="bd2fedb81b589c9dcc2546691aee363b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b3ae5d9dd80b2cd835390bb69dfcd549"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="font-size: 83%; z-index: 11;">
+<h1>A Server Isn't Strictly Constrained by Request Protocol</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fecb42f1d6d28b2541b6b95f0d22ac3a" style="height: auto; min-width: 30px; min-height: 30px; width: 882px; left: 39px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;">
+<ul>
+	<li style="text-align:left">Clients ignore what they don't understand.</li>
+	<li style="text-align:left">HTTP is generally backwards compatible.</li>
+	<li style="text-align:left">HTTP 1.0 amended to HTTP 1.1 after 3 years; this added a few more now-ubiquitous near-essential headers.</li>
+	<li style="text-align:left">        Date - The time from the server point of view</li>
+	<li style="text-align:left">        ETag - Hash value of the content; helps caches</li>
+	<li style="text-align:left">        Connection - What happens after the response is returned</li>
+	<li style="text-align:left">WEBrick returns HTTP 1.1 responses for any HTTP 1.x requests.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b628af183034375b8604a6bb73b53d3a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.5em">https://tools.ietf.org/html/rfc2616</span></p>
+</div></div></section><section data-id="5dea382e04f5dbee1e3b5e848e1c0e02"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="68f5008a70acb3d83ce27ebc09aee420"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Connection: Keep-Alive</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 154px; height: auto;" data-block-id="7b4bfc022e62c5f6f096729e399c5ec5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h3>"Come on baby, make it hurt so good..."</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="205edd20e73f04dc659d652d8ea656d5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>A single page may require many assets to assemble it.</li>
+	<li>Setup/teardown of many requests is expensive.</li>
+	<li>Expensive == slow</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ba42ab46fbec6f798e57a55c536ac669" style="height: auto; min-width: 30px; min-height: 30px; width: 827px; left: 67px; top: 451px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">"Connection: Keep-Alive" permits pipelining of requests through a single network connection between client and server.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d286dc51f4d2e225af91773500faf21e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 67px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">Not part of RFC 1945; effectively bolted onto HTTP 1.0</p>
+</div></div></section><section data-id="73419e8b93d12ccbd901565ea453caa3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="17cafb24cec60e51c9624713df37540a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Connection: Keep-Alive</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 154px; height: auto;" data-block-id="f97eb89510f7eb1dc5f356c53336855f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h3>"Come on baby, make it hurt so good..."</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="598e17c1489067dd8d1bd7c899f072cc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 236px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">HTTP 1.0 clients must send "Connection: Keep-Alive" if they</p>
+
+<p style="text-align: left;">support it. Otherwise, server will assume no support and send "Connection: close".</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4ef219f1bac5a183ae4bf6dc3b010bb0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 398px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Can be tricky to implement right; "Connection: close" is always safe. Thus, for example, Mongrel wasn't implemented with Keep-Alive support.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="85bf925732c10cfdf50233f22fa50859" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">HTTP 2.0 assumes Keep-Alive unless client tells it otherwise; HTTP 2.0 has much expanded Keep-Alive, supporting concurrent requests over a single connection.</p>
+</div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Web Server Architecture</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="98e96f173fa96e755e8deb11ea624d94" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 218px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">There is nothing special about web server architecture.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">It is just server architecture.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">A web server is nothing more than a server that receives HTTP requests and returns HTTP responses. </p>
+</div></div></section><section data-id="65e4f5db11e89186ced13b4452b35bc0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="ddcf49999e08869cd5aac258de72781d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>OK.... Server Architecture</h1>
+</div></div></section></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Ruby Web Servers</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;" data-block-id="52b1774e4cfac32b43fa070f8cdb0a45"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>A Quick Survey</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="855a8516514d43ad3a77f70376984523" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 280px; top: 247px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li style="text-align:left">WEBrick</li>
+	<li style="text-align:left">Mongrel</li>
+	<li style="text-align:left">Thin</li>
+	<li style="text-align:left">Puma</li>
+	<li style="text-align:left">Passenger</li>
+	<li style="text-align:left">Unicorn</li>
+	<li style="text-align:left">Rainbows!</li>
+	<li style="text-align:left">Yahns</li>
+	<li style="text-align:left">Goliath</li>
+	<li style="text-align:left">Swiftiply</li>
+</ul>
+</div></div></section><section data-id="3733e14e76cb53ca5a8b237788766423"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="993ef713db4fbb24cfe2ae87b283d528"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>WEBrick</h1>
+</div></div></section><section data-id="01f572ab25a4070d4827964b8955e240"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d655176248d702320bdae5e7602ed1d4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Mongrel</h1>
+</div></div></section><section data-id="5e3d49e7f2b7dfd473abacaa08ddb573"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="598bf8b4a360fc1ba756301b61bee7be"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Swiftiply</h1>
+</div></div></section><section data-id="1c89b006333f87c1e917aee64a9842a8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b26329350009e08e2436834b6717298a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Thin</h1>
+</div></div></section><section data-id="0401b8dfbf7ebc15d9aa850967e5997f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="f1bc34e67f8851a3e02bd8b2e0a916cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Goliath</h1>
+</div></div></section><section data-id="7f67091f2843d86578203b5981646b1a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="352af8bcf632facc6df72ba401e44a8b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Puma</h1>
+</div></div></section><section data-id="f17fbad0ef9fa0c947a08dc667e2aa02"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cfe1197428531978f975e180adc134c8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Passenger</h1>
+</div></div></section><section data-id="418cd47034d2860accb1053041b7ec1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e6490325d4028e36f30b578e3d48fa13"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Unicorn</h1>
+</div></div></section><section data-id="e730710b0a672bbaa0a535f24a819679"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c050006e874129c7ac9a1d47b83eb006"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Rainbows!</h1>
+</div></div></section><section data-id="88873dc7c0bbc5bbed6c0a7dc2914435"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c07c898a8d13363f59323d81da0b0618"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Yahns</h1>
+</div></div></section></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":668761,"slug":"lets-build-a-webserver","title":"Let's Build a Webserver!","description":"Railsconf 2016 Workshop -- Building web servers with Ruby","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/017e88fc2dddf87920bf47f7a77050eb/thumb.jpg","view_count":0,"user":{"id":489394,"username":"wyhaines","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/ca8efd0ba834b02b9b7dd34b5c6c2721?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","beta_collaboration":false,"pro":true,"enterprise":false,"enterprise_manager":false,"settings":{"id":331484,"present_controls":true,"present_upsizing":true,"present_notes":true},"registered":true},"background_transition":"fade","transition":"default","theme_id":null,"theme_font":"josefine","theme_color":"cobalt-orange","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"notes":{}}};
+			SLConfig.current_user = {
+				name: "",
+				username: "wyhaines",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			// Make Slides speaker notes available in the reveal.js speaker view
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: SLConfig.deck.share_notes,
+				slideNumber: SLConfig.deck.slide_number,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				maxScale: 2,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
