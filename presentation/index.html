@@ -746,8 +746,125 @@ Connection: close
 <p style="text-align: left;"> </p>
 
 <p style="text-align: left;">A web server is nothing more than a server that receives HTTP requests and returns HTTP responses. </p>
-</div></div></section><section data-id="65e4f5db11e89186ced13b4452b35bc0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="ddcf49999e08869cd5aac258de72781d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div></section><section data-id="65e4f5db11e89186ced13b4452b35bc0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="ddcf49999e08869cd5aac258de72781d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>OK.... Server Architecture</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8f23bdec817248ba26f4d8ec29d7a36b" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">• Setup</p>
+
+<p style="text-align: left;">      • Command line arguments</p>
+
+<p style="text-align: left;">      • Configuration</p>
+
+<p style="text-align: left;">• Listen on socket(s)</p>
+
+<p style="text-align: left;">• Enter main loop</p>
+
+<p style="text-align: left;">      • Accept socket connection</p>
+
+<p style="text-align: left;">      • Handle connection</p>
+
+<p style="text-align: left;">• Be prepared to handle signals for clean shutdown</p>
+</div></div></section><section data-id="0dbf5a3638359125dd57af612e202234"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b528aa23f0b3d87a4a8dd0d4f2eb0015"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Setup</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="917f5581c04f63f318f6ba5938663d52" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 160px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Command Line Arguments</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3ba8791ba9ad6e8d21c9f7805770bc37" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">Ruby has an absurd wealth of different libraries and frameworks for handing CLI option parsing and app creation.</p>
+</div></div>
+<div class="sl-block" data-block-type="table" data-block-id="07c36f1a1776cd6a6243d61511092c5d" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 341px;"><div class="sl-block-content" style="z-index: 14; font-size: 65%;" data-table-border-width="1px" data-table-rows="8" data-table-cols="2" data-table-has-header="false"><table><tbody>
+<tr>
+<td style="width: 158px;">OptionParser</td>
+<td>http://ruby-doc.org/stdlib-2.3.0/libdoc/optparse/rdoc/OptionParser.html</td>
+</tr>
+<tr>
+<td style="width: 158px;">Highline</td>
+<td>https://github.com/JEG2/highline</td>
+</tr>
+<tr>
+<td style="width: 158px;">Methadone</td>
+<td>https://github.com/davetron5000/methadone</td>
+</tr>
+<tr>
+<td style="width: 158px;">GetOpt</td>
+<td>https://github.com/djberg96/getopt</td>
+</tr>
+<tr>
+<td>Belafonte</td>
+<td>https://github.com/ess/belafonte</td>
+</tr>
+<tr>
+<td>Main</td>
+<td>https://github.com/ahoward/main</td>
+</tr>
+<tr>
+<td>GLI</td>
+<td>https://github.com/davetron5000/gli</td>
+</tr>
+<tr>
+<td>Thor</td>
+<td>https://github.com/erikhuda/thor</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6d42c757a084964bf4c8439c72fa09a5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 645px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">...and about 30 others. Use what you like. Ruby has options!</p>
+</div></div></section><section data-id="8aea5557ed4578a07f446cd1078eeb55"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b185b9adaef65b8a855b2958b8d3d12c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Setup</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 160px;" data-block-id="ef6e39918956f1f43c43f538dd7ed274"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Configuration</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c1fcc90089386c8cb870bba00b3fb50f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">As with command line options, Ruby offers a diverse set of simple tools for handling configuration files.</p>
+</div></div>
+<div class="sl-block" data-block-type="table" data-block-id="4bd361c6c0e2bebe269230da3e7624d5" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 342px;"><div class="sl-block-content" style="z-index: 14; font-size: 65%;" data-table-cols="2" data-table-has-header="false" data-table-rows="5"><table><tbody>
+<tr>
+<td style="width: 163px;">Ruby</td>
+<td>Class AppConfiguration<br>
+  LISTEN_ON = ['0.0.0.0:80','127.0.0.1:5000']<br>
+end<br>
+<br>
+require 'app_configuration.rb'</td>
+</tr>
+<tr>
+<td style="width: 163px;">JSON File</td>
+<td>require 'json'<br>
+AppConfiguration = JSON.parse( File.read( config_file_path ) )</td>
+</tr>
+<tr>
+<td style="width: 163px;">YAML File</td>
+<td>require 'yaml'<br>
+AppConfiguration = YAML.load( File.read( config_file_path ) )</td>
+</tr>
+<tr>
+<td style="width: 163px;">Configatron</td>
+<td>https://github.com/markbates/configatron</td>
+</tr>
+<tr>
+<td>Settingslogic</td>
+<td>https://github.com/settingslogic/settingslogic</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="f2c4b1537a0a43dba1099effbfd4a471" style="min-width: 4px; min-height: 4px; width: 390px; height: 17px; left: 250px; top: 434px;"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="2 4 28 24"><g class="shape-element" fill="rgb(255, 255, 255)"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d481ee16cea725a1f51cfda9b5a1e021" style="height: auto; min-width: 30px; min-height: 30px; width: 184px; left: 666px; top: 428px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 65%;">
+<p style="text-align: left;">app_configuration.rb</p>
+</div></div></section><section data-id="24c23fdbe29059368e080d2da621f702"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="44b4c2b50f984c36dfc3858e7ecad2c9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Listen on Sockets</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d3895727f5b697db44e07557d764dc28" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 157px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>AKA Network Communications</h2>
+</div></div></section><section data-id="98e9488f5ce9a280a3a7fa69e8069626"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="85ad51b088e100422f0cc4cbcdbaeea6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="21d96ac8d8f77aa5ccc84861b64c555c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 156px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>i.e. Concurrency Options</h2>
+</div></div></section><section data-id="457c802da2207963c3821eec3c41c894"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dd2299a2ecfe5cb8115592b6b59a6cbf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Signals and Miscellany</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c7a47793d4a7fa5d8e22ef3ea5a1cb4f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 163px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 0.975; font-size: 85%;" data-has-line-height="">
+<h2>The Other Details To Be a Well Behaved Daemon</h2>
 </div></div></section></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Ruby Web Servers</h1>
 </div></div>
