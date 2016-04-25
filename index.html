@@ -15,7 +15,7 @@
 	<body class="reveal-viewport theme-font-josefine theme-color-cobalt-orange">
 		<div class="reveal">
 			<div class="slides">
-				<section data-id="2d94c0b8116bfab1298a796b5677b042">
+				<section class="stack" data-id="c05f3119f741f62241bff94bc370527d"><section data-id="2d94c0b8116bfab1298a796b5677b042">
 <div class="sl-block" data-block-type="text" data-block-id="6d0d88dff0d8e942748d985e896295eb" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 544px;">
 <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="2e3d3dd8-df13-0b4b-5d74-9840f429c68e" data-gramm="true" data-gramm_editor="true">
 <p>Kirk Haines</p>
@@ -28,7 +28,27 @@
 <h1 style="color:rgb(255, 255, 255)">RailsConf 2016</h1>
 
 <h1 style="color:rgb(255, 255, 255)">Let's Build a Web Server!</h1>
-</div></div></section><section class="stack" data-id="d485efbc9e36788e6fe781745dc34672"><section data-id="d228c3094f3dabf379cdb78d8e75d101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="51acb3153bc7c67498b0f10bb926d790">
+</div></div></section><section data-id="d8e209128246a60cb056dec87d02df59"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="76afdf4271f90cb6cd0cc2248edf0f33"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Kirk Haines</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7e67d617171d6d52e4f0d62ac600866d" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">• Rubyist since 2001</p>
+
+<p style="text-align:left">• First professional Ruby web app in 2002</p>
+
+<p style="text-align:left">• Dozens of sites and apps, and several web servers since</p>
+
+<p style="text-align:left">• Engine Yard since 2008</p>
+
+<p style="text-align:left">• Former Ruby 1.8.6 maintainer</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">wyhaines@gmail.com</p>
+
+<p style="text-align:left">      @wyhaines</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="225af43009518c3c3891cc4d6626d074" style="min-width: 30px; min-height: 30px; width: 33px; height: 33px; left: 80px; top: 542px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="128" data-natural-height="128" data-src="lets-build-a-webserver/2504092-twitter-128.png"></div></div></section></section><section class="stack" data-id="d485efbc9e36788e6fe781745dc34672"><section data-id="d228c3094f3dabf379cdb78d8e75d101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="51acb3153bc7c67498b0f10bb926d790">
 <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;" data-gramm_id="a502cda7-2898-8caf-df58-2949abcc1b2f" data-gramm="true" data-gramm_editor="true">
 <h1>What Is a Web Server?</h1>
 </div>
@@ -169,7 +189,7 @@ cat `echo "$docid" | \
 <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;" data-gramm_id="1afaabe9-d304-7b80-1ddb-283bafb77d35" data-gramm="true" data-gramm_editor="true"><p>Text</p></div>
 <div><div style="z-index: 14; opacity: 1; margin-left: 874px; margin-top: -31px;" class="gr-textarea-btn " data-grammarly-reactid=".2d"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".2d.0"> </div></div></div>
 </div>
-<div class="sl-block" data-block-type="code" data-block-id="87e42ba0c426fb95669156b948b555de" style="min-width: 30px; min-height: 30px; width: 800px; height: 430px; left: 80px; top: 161px;"><div class="sl-block-content" style="z-index: 13; font-size: 55%; border: 5px solid rgb(68, 68, 68); border-radius: 20px;" data-highlight-theme="ir-black"><pre><code>    for (;;) {
+<div class="sl-block" data-block-type="code" data-block-id="87e42ba0c426fb95669156b948b555de" style="min-width: 30px; min-height: 30px; width: 800px; height: 430px; left: 80px; top: 177px;"><div class="sl-block-content" style="z-index: 13; font-size: 55%; border: 5px solid rgb(68, 68, 68); border-radius: 20px;" data-highlight-theme="ir-black"><pre><code>    for (;;) {
         status = read(soc, command, COMMAND_SIZE);
         if (status&lt;=0) {
             if (TRACE) printf("read returned %i, errno=%i\n", status, errno);
@@ -302,48 +322,47 @@ TextToy.h</code></pre></div></div>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="47b2cac4b25f8e0a97e4a3564f2dd1ee" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1 style="color:rgb(255, 255, 255)">Easy to Implement</h1>
-</div></div></section></section><section class="stack" data-id="c8f1c36bf085449535c4e68fae240de2"><section data-id="af791b6a895e3bd5fb7fc6e4ea77981c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="6677a4bfb197dd0681fa69255fb69878"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;">
+</div></div></section></section><section data-id="5ff756d57e94c091e7f06f07ea1bcc10"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 64px; height: auto;" data-block-id="01358d0af5cff6c69329b600bb30e3de"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>An Important Rule</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 280px; height: auto;" data-block-id="03f07253269491465299487f8c54daca"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle">
+<h2 style="text-align: left;">If an implementation receives a header that it does not understand, it must ignore the header.</h2>
+</div></div></section><section class="stack" data-id="c8f1c36bf085449535c4e68fae240de2"><section data-id="af791b6a895e3bd5fb7fc6e4ea77981c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 61px; height: auto;" data-block-id="6677a4bfb197dd0681fa69255fb69878"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;">
 <h1>HTTP 1.0</h1>
-
-<h2>Advent of Modern Servers</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="73e4e3e9f628e8cca34d56aed88c8f54" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;">
-<p style="text-align: left;">RFC 1945, from May 1996</p>
+<div class="sl-block" data-block-type="text" data-block-id="73e4e3e9f628e8cca34d56aed88c8f54" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;">
+<p style="text-align:left">Described in RFC 1945, from May 1996, HTTP 1.0 documented "common usage" instead of being a formal specification. That is, like HTTP 0.9, HTTP 1.0 described core features of extant usage of HTTP.</p>
 
-<p style="text-align: left;"> </p>
+<p style="text-align:left"> </p>
 
-<p style="text-align: left;">20 years later, the capabilities and protocol structure described in HTTP 1.0 still form the core of communication content and structure between HTTP clients and servers</p>
+<p style="text-align:left">20 years later, the capabilities and protocol structure described in HTTP 1.0 still form the core of communication content and structure between HTTP clients and servers</p>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="72827db42c913e86a8de84b47dccc7b6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<div class="sl-block" data-block-type="text" data-block-id="72827db42c913e86a8de84b47dccc7b6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 611px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p><span style="font-size:0.5em">http://www.isi.edu/in-notes/rfc1945.txt</span></p>
-</div></div></section><section data-id="2f3864a11dcfc05b0d499a80929ae23f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d11d86e15d1cc2347756676fbada72f8">
-<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="ed60b614-8e09-ed27-9d5d-48e88e8da7d3" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
-<h2>More Diverse Request Methods</h2>
-</div>
-<div><div style="z-index: 2; opacity: 1; margin-left: 665px; margin-top: 2384px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3g"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3g.0"> </div></div></div>
-</div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 225px; height: auto;" data-block-id="7c7c0804eada26267116a9762eb4f719">
-<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="89fc6bd8-df99-cb64-f45c-6f5b2d7b38b5" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="dde0c3d2b49e09e2b8ac57064776f0c9" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 158px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h2>Wildly Successful</h2>
+</div></div></section><section data-id="2f3864a11dcfc05b0d499a80929ae23f">
+<div class="sl-block" data-block-type="text" data-block-id="0521e49b5662fb2777130caed277f315" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <ul>
-	<li>GET</li>
-	<li>POST</li>
-	<li>HEAD</li>
-	<li>PUT</li>
-	<li>DELETE</li>
-	<li>OPTIONS</li>
-	<li>CONNECT</li>
-	<li>other extensions allowed</li>
+	<li style="color:rgb(255, 255, 255)">GET</li>
+	<li style="color:rgb(255, 255, 255)">POST</li>
+	<li style="color:rgb(255, 255, 255)">HEAD</li>
+	<li style="color:rgb(255, 255, 255)">PUT</li>
+	<li style="color:rgb(255, 255, 255)">DELETE</li>
+	<li style="color:rgb(255, 255, 255)">OPTIONS</li>
+	<li style="color:rgb(255, 255, 255)">CONNECT</li>
+	<li style="color:rgb(255, 255, 255)">other extensions allowed</li>
 </ul>
-</div>
-<div><div style="z-index: 2; opacity: 1; margin-left: 412px; margin-top: 3187px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3i"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3i.0"> </div></div></div>
-</div></section><section data-id="92ed1d4be4efce026e8a557dab490426"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d07be6fe490c20548966cb5df151e61c">
-<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="644690b9-2c21-f26a-589d-1eaad96e2f8f" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
-<h2>Additional Data Headers</h2>
-</div>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="99be10ae2ea98afc1f5c94e837418bec" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2 style="color:rgb(255, 255, 255)">More Diverse Request Methods</h2>
+</div></div></section><section data-id="92ed1d4be4efce026e8a557dab490426"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d07be6fe490c20548966cb5df151e61c">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" data-gramm_id="644690b9-2c21-f26a-589d-1eaad96e2f8f" data-gramm="true" data-gramm_editor="true" style="overflow: visible;" data-has-custom-html=""><h2>Additional Data Headers</h2></div>
 <div><div style="z-index: 2; opacity: 1; margin-left: -1531px; margin-top: 3130px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3k"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3k.0"> </div></div></div>
 </div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 271px; height: auto;" data-block-id="325bab96e67ea8fc308f4f4235fc961c">
-<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="a73772cd-ee5c-beb0-1e11-9c77244e9afc" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="a73772cd-ee5c-beb0-1e11-9c77244e9afc" data-gramm="true" data-gramm_editor="true" style="overflow: visible;" data-has-custom-html="">
 <p style="text-align: left;">Allowed the client to pass additional information to the server via "HTTP Headers". These are composed of lines, terminated with CR/LF, and formatted as:</p>
 
 <p style="text-align: left;"> </p>
@@ -358,13 +377,14 @@ TextToy.h</code></pre></div></div>
 <div><div style="z-index: 2; opacity: 1; margin-left: -5775px; margin-top: 2542px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3o"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3o.0"> </div></div></div>
 </div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 188px; height: auto;" data-block-id="ae3fea9a2653d701c6b03998f7bf8443">
-<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="d6509ca3-527a-66d5-7450-2790e42e35b4" data-gramm="true" data-gramm_editor="true" style="overflow: visible; line-height: 2.6;" data-has-line-height="">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-gramm_id="d6509ca3-527a-66d5-7450-2790e42e35b4" data-gramm="true" data-gramm_editor="true" style="overflow: visible;">
 <ul>
 	<li><span style="font-size:1.2em">Authorization</span></li>
 	<li><span style="font-size:1.2em">From</span></li>
 	<li><span style="font-size:1.2em">If-Modified-Since</span></li>
 	<li><span style="font-size:1.2em">Referer</span></li>
 	<li><span style="font-size:1.2em">User-Agent</span></li>
+	<li><span style="font-size:1.2em">Pragma: no-cache</span></li>
 </ul>
 </div>
 <div><div style="z-index: 2; opacity: 1; margin-left: 44961px; margin-top: 7036px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".3q"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".3q.0"> </div></div></div>
@@ -533,15 +553,15 @@ TextToy.h</code></pre></div></div>
 <td></td>
 <td>Last-Modified</td>
 </tr>
-</tbody></table></div></div></section><section data-id="7db83aa9008e2d24f0751f05cede30e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9073cc980bb2c8788831cfbafbf704aa">
+</tbody></table></div></div></section><section data-id="7db83aa9008e2d24f0751f05cede30e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="9073cc980bb2c8788831cfbafbf704aa">
 <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="1d62f669-4664-acea-2cf9-0f470907ea24" data-gramm="true" data-gramm_editor="true" style="overflow: visible; z-index: 10;">
 <h1>Use What Makes Sense</h1>
 </div>
 <div><div style="z-index: 2; opacity: 1; margin-left: 768px; margin-top: 65px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".75"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".75.0"> </div></div></div>
 </div>
-<div class="sl-block" data-block-type="text" data-block-id="3aadab3cef19bd923e552371fa8dfd5f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;">
+<div class="sl-block" data-block-type="text" data-block-id="3aadab3cef19bd923e552371fa8dfd5f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 149px;">
 <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="e217f3a9-8972-3bce-95f1-8a032c884638" data-gramm="true" data-gramm_editor="true">
-<h3>Practical Minimum Header Sets</h3>
+<h2>Practical Minimum Header Sets</h2>
 </div>
 <div><div style="z-index: 14; opacity: 1; margin-left: 768px; margin-top: 18px;" class="gr-textarea-btn gr-textarea-btn_offline" data-grammarly-reactid=".77"><div title="Protected by Grammarly" class="gr-textarea-btn_status" data-grammarly-reactid=".77.0"> </div></div></div>
 </div>
@@ -690,7 +710,7 @@ Connection: close
 <ul>
 	<li style="text-align:left">Clients ignore what they don't understand.</li>
 	<li style="text-align:left">HTTP is generally backwards compatible.</li>
-	<li style="text-align:left">HTTP 1.0 amended to HTTP 1.1 after 3 years; this added a few more now-ubiquitous near-essential headers.</li>
+	<li style="text-align:left">HTTP 1.0 amended to HTTP 1.1 after 3 years; this added more now-ubiquitous near-essential headers.</li>
 	<li style="text-align:left">        Date - The time from the server point of view</li>
 	<li style="text-align:left">        ETag - Hash value of the content; helps caches</li>
 	<li style="text-align:left">        Connection - What happens after the response is returned</li>
@@ -699,40 +719,420 @@ Connection: close
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="b628af183034375b8604a6bb73b53d3a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p><span style="font-size:0.5em">https://tools.ietf.org/html/rfc2616</span></p>
-</div></div></section><section data-id="5dea382e04f5dbee1e3b5e848e1c0e02"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="68f5008a70acb3d83ce27ebc09aee420"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<h1>Connection: Keep-Alive</h1>
+</div></div></section></section><section class="stack" data-id="04ed999611020d8a99259241c97c82e1"><section data-id="2d8af58b301a76565139d3ceeb7cd56c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e7002dc6c3b633360544afeaa0459e87"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;">
+<h1>HTTP 1.1</h1>
+
+<h2>The De Facto Modern Standard</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 154px; height: auto;" data-block-id="7b4bfc022e62c5f6f096729e399c5ec5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
-<h3>"Come on baby, make it hurt so good..."</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 331px;" data-block-id="5993aea0d56177586ee5cb15d05de8d1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; overflow: visible;">
+<p style="text-align:left">RFC 2616, from June 1999</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP 1.0 was still lacking in some features that turned out to be very useful. HTTP 1.1 filled those gaps, and 17 years later it's still the backbone of HTTP server capability.</p>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="205edd20e73f04dc659d652d8ea656d5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 591px;" data-block-id="e4b2596836729cd133f1a8b692632c39"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.5em">https://www.ietf.org/rfc/rfc2616.txt</span></p>
+</div></div></section><section data-id="17273e36027cc41692f9d38880857ef3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 64px; height: auto;" data-block-id="fdf28f72ee1fcbb75067965e73860bc7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Key Protocol Changes</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1974a05fa69ab18bbf763d6ece9cd629" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li style="text-align: left;">Connection Management</li>
+	<li style="text-align: left;">Host Identification</li>
+	<li style="text-align: left;">Message Transmission</li>
+	<li style="text-align: left;">Bandwidth Optimization</li>
+	<li style="text-align: left;">Caching</li>
+	<li style="text-align: left;">Security</li>
+	<li style="text-align: left;">Content Negotiation</li>
+	<li style="text-align: left;">Future Proofing</li>
+	<li style="text-align: left;">Errors</li>
+</ul>
+</div></div></section><section data-id="2990d14f497c55296d2acdd09543f74a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="bcc16f35d95dc6d520a300f1f7e233ad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><em>Connection: Keep-Alive</em></h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 210px;" data-block-id="8661e5686b6440b3c498d504b39a03cf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <ul>
 	<li>A single page may require many assets to assemble it.</li>
-	<li>Setup/teardown of many requests is expensive.</li>
+	<li>Setup/teardown of many TCP requests is expensive.</li>
 	<li>Expensive == slow</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="ba42ab46fbec6f798e57a55c536ac669" style="height: auto; min-width: 30px; min-height: 30px; width: 827px; left: 67px; top: 451px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
-<p style="text-align: left;">"Connection: Keep-Alive" permits pipelining of requests through a single network connection between client and server.</p>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 373px;" data-block-id="449aef4959f472a12e017a1875f04858"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">"<em>Connection: Keep-Alive</em>" permits pipelining of requests through a single network connection between client and server.</p>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="d286dc51f4d2e225af91773500faf21e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 67px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
-<p style="text-align: left;">Not part of RFC 1945; effectively bolted onto HTTP 1.0</p>
-</div></div></section><section data-id="73419e8b93d12ccbd901565ea453caa3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="17cafb24cec60e51c9624713df37540a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<h1>Connection: Keep-Alive</h1>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 552px;" data-block-id="a51af3d4ba6733841ce7b469f0b0252d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:left">Not part of RFC 1945; effectively bolted onto HTTP 1.0 because of it's utility, but actually part of HTTP 1.1.</p>
+</div></div></section><section data-id="73419e8b93d12ccbd901565ea453caa3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 61px; height: auto;" data-block-id="17cafb24cec60e51c9624713df37540a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><em>Connection: Keep-Alive</em></h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 154px; height: auto;" data-block-id="f97eb89510f7eb1dc5f356c53336855f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
-<h3>"Come on baby, make it hurt so good..."</h3>
-</div></div>
-<div class="sl-block" data-block-type="text" data-block-id="598e17c1489067dd8d1bd7c899f072cc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 236px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<p style="text-align: left;">HTTP 1.0 clients must send "Connection: Keep-Alive" if they</p>
 
-<p style="text-align: left;">support it. Otherwise, server will assume no support and send "Connection: close".</p>
+<div class="sl-block" data-block-type="text" data-block-id="598e17c1489067dd8d1bd7c899f072cc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">HTTP 1.0 clients must send "<em>Connection: Keep-Alive</em>" if they</p>
+
+<p style="text-align:left">support it. Otherwise, an HTTP 1.1+ server will assume no support and send:</p>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="4ef219f1bac5a183ae4bf6dc3b010bb0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 398px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
-<p style="text-align: left;">Can be tricky to implement right; "Connection: close" is always safe. Thus, for example, Mongrel wasn't implemented with Keep-Alive support.</p>
+
+<div class="sl-block" data-block-type="text" data-block-id="b2cca27793005170828e71a50245e330" style="height: auto; min-width: 30px; min-height: 30px; width: 403px; left: 270px; top: 383px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2><em><span style="color:rgb(255, 255, 255); text-align:left">Connection: close</span></em></h2>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="85bf925732c10cfdf50233f22fa50859" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
-<p style="text-align: left;">HTTP 2.0 assumes Keep-Alive unless client tells it otherwise; HTTP 2.0 has much expanded Keep-Alive, supporting concurrent requests over a single connection.</p>
+<div class="sl-block" data-block-type="text" data-block-id="cee2cb0efb539a74d885f6acc09a15c1" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 521px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">"<em>Close</em>" tells the client that the connection will be closed after the complete response has been sent.</p>
+</div></div></section><section data-id="739db9780d0100d8e5627009f41c348e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 62px; height: auto;" data-block-id="6b06c63b650dffb4cc04391022410c58"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><em>Connection: Keep-Alive</em></h1>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 79px; top: 362px;" data-block-id="32edadfba18b67360b8cd120137aa7ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">"<em>Connection: close</em>" is always safe. A client that has specified Keep-Alive will cope if the server doesn't honor it and returns "<em>Connection: close</em>"</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 79px; top: 552px;" data-block-id="a3b623251fb7679bc8ac026ff1ddfb73"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">HTTP 2.0 has much expanded <em>Keep-Alive</em>, supporting concurrent requests over a single connection.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 79px; top: 210px;" data-block-id="971d1dfc93553f9d2c884dd86781e9a0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="color:rgb(255, 255, 255); text-align:left">HTTP 1.1+ servers should assume <em>Keep-Alive</em> unless client tells it otherwise. However...</span></p>
+</div></div></section><section data-id="00402f5a5494d5a08312e6289150b805"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="bf688ba562d18c68b776ff8f37278e8c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>
+<em>Connection</em> and</h1>
+
+<h1>Single-Hop Headers</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="a4eb02a60e267a0f410d7bb6b53732f3" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 315px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left">HTTP 1.1 allows special handling for headers that apply for only a single hop in a message's path.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">For example, proxy servers that might add headers separate from what came from the originating client.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Any headers listed in the <em>Connection</em> header are removed by</p>
+
+<p style="text-align:left">the recipient before forwarding the message to the next hop.</p>
+</div></div></section><section data-id="11a4034dddbd2ccf1919f3794eb48946"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="3babe866be0482aaf00e3051aa303b88"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><em>Host</em></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 247px;" data-block-id="78355c0446470f5047c7172c06527402"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">Prior to HTTP 1.1, an HTTP server assumed that all request to it were for the same host/site.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">i.e. site.a.foo.com and site.b.foo.com both go to a server at 192.168.23.23, an HTTP 1.0 server treats them both the same.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">An HTTP 1.1+ server, though, can differentiate requests on 192.168.23.23 for site.a.foo.com and site.b.foo.com, and serve different responses for each.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c75a1dfa9b51d5fce03322714e695564" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 151px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Virtual Hosting</h2>
+</div></div></section><section data-id="1ea72699fdba0f889d381ee9390d20b3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="8354e5ad5f99654320350c8ef9b9d82a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Message Transmission</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b3528a66175b35b92857cd6a582ecf42" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">Imagine:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="73bd09f2188990d9f0c8a5450652e318" style="min-width: 30px; min-height: 30px; width: 339px; height: 30px; left: 82px; top: 280px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="http"><code>GET /media/giant_file.mpeg HTTP/1.0</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 250px; height: 85px; left: 80px; top: 384px;" data-block-id="ca255f6dd85ce201a23c6fe237b3cc63"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="http"><code>HTTP/1.0 200 OK
+Content-Type: video/mp4
+Content-Length: 540387995
+Connection: close</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="2ea1045f8e469f579bd939e6444f047b" style="min-width: 4px; min-height: 4px; width: 23px; height: 49px; left: 194px; top: 326px;"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 23 49"><polygon points="11.5,49 23,24.5 16.099999999999998,24.5 16.099999999999998,0 6.8999999999999995,0 6.8999999999999995,24.5 0,24.5 11.5,49" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="e8decd8294910272aca1f0ad5692d1b3" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 339px; top: 434px;"><div class="sl-block-content" data-line-x1="-41" data-line-y1="184" data-line-x2="100" data-line-y2="184" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="circle" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="141" height="1" viewbox="-41 184 141 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-37" y1="184" x2="97" y2="184"></line><line stroke="#ffffff" stroke-width="2" x1="-37" y1="184" x2="97" y2="184"></line><polygon fill="#ffffff" transform="translate(-37,184) rotate(90)" points="0,4 4,-4 -4,-4"></polygon><ellipse rx="3" ry="3" cx="97" cy="184" fill="#ffffff"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9c74115742db072f9140d14d40770791" style="height: auto; min-width: 30px; min-height: 30px; width: 392px; left: 488px; top: 362px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 75%;">
+<p style="text-align:left">That is a lot of data to send in one big chunk, or for the server to potentially process in one big chunk. A Ruby string containing more than 500 megabytes would use a lot of RAM, for example.</p>
+</div></div></section><section data-id="ccc22fa85ae4cba84e4c174c06c35d74"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="6077538e81fd85cdb6e497f0f5d897f9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Message Transmission</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="83597203f98812442f182a8df596f727" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">Wouldn't it be nice if a very large response, or one where the length isn't know when transmission starts, could be sent a little bit at a time?</p>
+</div></div></section><section data-id="5aee43e96778e001b79912ef8acb0442"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="8198b91af48e90256df0bac85e807534"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Message Transmission</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 80px; top: 320px;" data-block-id="c9a3cb6cb1296b402df5ed931d9f7e5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 94%;">
+<h3><span style="font-size:1.2em">Chunked encoding to the rescue.</span></h3>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Send content in smaller pieces, by prepending the length of each chunk, in hexadecimal, on on a line preceding the  chunk itself.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="88b3f1e398fafaef899bf039a64b90ed" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 160px; top: 171px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2><em>Transfer-Encoding: chunked</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="477a78376fa811b304b3f1a4d5fc534a" style="min-width: 30px; min-height: 30px; width: 346px; height: 300px; left: 534px; top: 330px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="http"><code>&lt;= Recv data, 105 bytes (0x69)
+0000: 10
+0004: I am some conten
+0016: 10
+001a: t that will be p
+002c: 10
+0030: arted out into a
+0042: 10
+0046:  bunch of small
+0058: 7
+005b: chunks.
+0064: 0
+0067:
+</code></pre></div></div></section><section data-id="10ea1283ee3f9a81e0a83c22991d6191"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="df49936f964abbcfd3587fae99dd8e47"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Message Transmission</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 80px; top: 320px;" data-block-id="e95dec45b59c8f1808e514abaf808cb9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 81%; line-height: 1.612;" data-has-line-height="">
+<ul>
+	<li style="text-align: left;">Lines terminated with CRLF</li>
+	<li style="text-align: left;">Chunk is a length line, expressed in hexadecimal, followed by a content line.</li>
+	<li style="text-align: left;">Chunks are terminated by an empty chunk with a length of zero.</li>
+	<li style="text-align: left;">
+<em>Content-Length</em> must not be sent when using chunked encoding.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 171px;" data-block-id="897a20131ab02d33c68c4a13cf964617"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2><em>Transfer-Encoding: chunked</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 346px; height: 300px; left: 534px; top: 330px;" data-block-id="a2b70649f5a64725fb22fa1b8eb06c16"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="http"><code>&lt;= Recv data, 105 bytes (0x69)
+0000: 10
+0004: I am some conten
+0016: 10
+001a: t that will be p
+002c: 10
+0030: arted out into a
+0042: 10
+0046:  bunch of small
+0058: 7
+005b: chunks.
+0064: 0
+0067:
+</code></pre></div></div></section><section data-id="1520f4210b6abb76269672fc2c832acb"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="06a6e8a99595b0292e4ddb8abb9f786f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Message Transmission</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 86px; top: 152px;" data-block-id="b2672ef7d6ef8a79b0a545ee0e2e7d4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 95%;">
+<h2>Beware <em>Content-Length</em> + <em>Transfer-Encoding: chunked</em>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cdefd9da82766cc0228659a2eb52e26f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 314px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 98%; line-height: 1.235;" dir="ui" data-has-line-height="">
+<p style="text-align:left">If you are writing a server, chunked encoding is very useful for large content. However, beware code that blindly computes and attaches a <em>Content-Length</em> to all HTTP responses.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">It "works", but it recently quit working in some cases - <strong>Windows 7 Chrome</strong> streaming to an external app like <strong>Adobe Reader</strong>, for example.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">It's invalid HTTP, and so what "works" now may not tomorrow.</p>
+</div></div></section><section data-id="64ff24d5ef1e8faa9997708f319cf2e3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="6087f0b6d08f4ba2eee36342d853c795"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e5542d28c4af8596904f901960e491c8" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">Bandwidth is a very limited resource.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">HTTP 1.0 had limited tools to allow clients and servers to make more efficient use of their bandwidth.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Compression was supported, but poorly.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Partial requests, or incremental requests, were not supported at all.</p>
+</div></div></section><section data-id="22986d99f401874aa72e779c249cab44"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="1218cc9fe790080ff127e9263edeb01c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="4fcb1d17b7436d2a3dc2dd17a7053f2e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">HTTP 1.0 didn't distinguish between content encodings, such as compression, that applied to a message end-to-end versus hop-to-hop.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP 1.0 had poor support for negotiating compression.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP 1.1 specifically and extensively defines the protocol for both negotiation, and disambiguation between encoding inherent in the format of the message (end-to-end encoding) and encoding applied only for a single hop.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b1c8c7a009aef6af38040eecc8ee2345" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 149px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div></section><section data-id="01eb6fd948054776427246c647b807df"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="97b180ae5ae3c6176c6b27f9cc93ffda"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="ef518f9de342da037824a9a06a85d80d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2 style="text-align:left"><em>Content-Encoding</em></h2>
+
+<p> </p>
+
+<p style="text-align:left">This describes an encoding which is an inherent quality of the resource. It can be used by a server when returning a message to a client.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="c22b376f1d1870e143c1f7a5af6a39fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div></section><section data-id="1d0fd7e2e126dd046cd0e1dba9a64608"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="1fd315ab799e9721095389cf10e92bf4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="845a9590984a914a7dde022940d335f9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2 style="text-align:left"><em>Accept-Encoding</em></h2>
+
+<p> </p>
+
+<p style="text-align:left">HTTP 1.1 carefully defines this header, which is used by a client to tell the server about encodings (such as gzip) that it</p>
+
+<p style="text-align:left">can support for <em>Content-Encoding</em>, and it's preferences.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="2fc5041ca06610e27b46c363e8948579"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="4b0e0a6f5c23e285f35a37525f6c4d7f" style="min-width: 30px; min-height: 30px; width: 500px; height: 54px; left: 230px; top: 550px;"><div class="sl-block-content" style="z-index: 14; font-size: 153%;" data-highlight-theme="ir-black"><pre class="http"><code>Accept-Encoding:gzip, deflate, sdch</code></pre></div></div></section><section data-id="2f5bfbf7853741bc7a0742c137d77657"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="d5f30ba05cbb90c8f1833e59238f39fe"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="ab00d58788e85f3b7e28f97199b5cb8d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<h2 style="text-align:left"><em>Transfer-Encoding</em></h2>
+
+<p> </p>
+
+<p style="text-align:left">This is intended to describe the hop-by-hop transport layer encoding of the resource. The intention of the HTTP protocol is that this header will be used when a server compresses content, such as a web page, on the fly, before transmission to a client in order to save bandwidth.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="aab8065f8815ece093240389e0cf4183"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div></section><section data-id="10171a810cf8853b495c7b0e16b50385"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="4bbdea3ac9bd4bf0b64402115ecb91f9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="da3e800f01a0a83cd3863bf8987af732"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2 style="text-align:left"><em>TE</em></h2>
+
+<p style="text-align:left">The <em>TE</em> header is akin to <em>Accept-Encoding</em>, but applies to the use of the <em>Transfer-Encoding</em> header. In addition to defining encodings, it can also be used to indicate whether the client is willing to accept trailer fields with chunked encoding. Read the RFC for more information about trailer fields.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="744e3f4dd7aa6d8addb31f759a63b8ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 570px; height: 54px; left: 195px; top: 560px;" data-block-id="ac7b548470c01c60f6a307faa9896c92"><div class="sl-block-content" style="z-index: 14; font-size: 153%;" data-highlight-theme="ir-black"><pre class="http"><code>TE:trailers, gzip; q=0.8, deflate; q=0.5</code></pre></div></div></section><section data-id="2252db9600b39da20b9799b48698bba1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="b8c153fc60df781f06f4c32dffd61d4a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 281.5px; left: 28px; top: 210px;" data-block-id="d32e334580f95a04f5888f66bda8675a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 69%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="22c4f128aa7eaee2a63b07d21a051315"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="20d1afaac4e9bd2ee90978133f4772dd" style="min-width: 30px; min-height: 30px; width: 360px; height: 360px; left: 300px; top: 270px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="640" data-natural-height="640" data-src="lets-build-a-webserver/2526411-71770fba1155ed2b24588faa3860c8e9.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 647px; top: 630px;" data-block-id="c56ac5a06cf919f7a4d9d2e0aeef511b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 69%;" dir="ui">
+<h2 style="text-align:left"><em>Transfer-Encoding</em></h2>
+</div></div></section><section data-id="15965ca4c397c8aeb819e873be36a3dc"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="ec00a6f33309d4ccf3e9e5c7c10a19cd"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="2add997bf3e593e9d71df03477879d45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="1c80052256bd55eeeaba2c2f443f6469"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3c124d29ed65beef626b6e9e6a7039e3" style="min-width: 30px; min-height: 30px; width: 668.444px; height: 376px; left: 145.778px; top: 324px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="800" data-natural-height="450" style="" data-src="lets-build-a-webserver/2526435-good-intentions.jpg"></div></div></section><section data-id="ff798b9759a0b8ef92427ddfc3d422fd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="949995d6f97057d50a652f406e9d7797"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="f816379fde9e87fd83f38861aff8bfad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="fe3b7bac077acbe6646db795d0153e78"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7de615dfb3c8e93cc090e46d1bc4264e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>Actual implementation in the real world of HTTP sometimes varies.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b0c347ef3a5188dc3fcb1b9f588bbe91" style="min-width: 30px; min-height: 30px; width: 360px; height: 223.801px; left: 80px; top: 414px;"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="563" data-natural-height="350" data-src="lets-build-a-webserver/2526565-LB1QKUNC5RXLTP6.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f06b34f2cc3858f669b28bcd00b0fe8d" style="height: auto; min-width: 30px; min-height: 30px; width: 111px; left: 95px; top: 428px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align: left;">Imagine</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="954f0f7076eb01d2bc30d8a83d92e60a" style="height: auto; min-width: 30px; min-height: 30px; width: 136px; left: 304px; top: 440px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p style="text-align:left">if you</p>
+
+<p style="text-align:left">          will...</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="250ebce38045c3e6c6314d8d6194b256" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 428px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; font-size: 91%;">
+<p style="text-align: left;">A client is willing to accept on-the-fly compression of web pages and other uncompressed assets.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">A server is willing to send them.</p>
+</div></div></section><section data-id="e45be57204f58d4cb7689ce8a70222da"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="66ae0e630ac38c6aa30b482f04fe48cb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="20d72792fa237949cd94b8a5c0b984a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="a8a70d1cb70a0a9a463286cca9dfec44"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 375px; height: 35px; left: 80px; top: 420px;" data-block-id="8269a74275a0cb215fde94927c2a4502"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="http"><code>TE:trailers, gzip; q=0.8, deflate; q=0.5</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="381b960d6ad262744931545723baaa85" style="height: auto; min-width: 30px; min-height: 30px; width: 375px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">By RFC, client can send:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f211eb12b086e8fc93c1e980e23f3aad" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 483px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align: left;">And server may respond:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 375px; height: 35px; left: 480px; top: 560px;" data-block-id="eb220a28d5d0bf68f0eb8f30cc686061"><div class="sl-block-content" style="z-index: 17;" data-highlight-theme="ir-black"><pre class="http"><code>Transfer-Encoding: gzip</code></pre></div></div></section><section data-id="6d047c1c3dda197d18104d6778f72382"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="eb0dd1a5014b8228fc1011f441b19f1a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="f71e450bb20677aa17c5b66ed661785d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="0d2ed5a0904febbab36f555fdca61ebd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ba6d899f84c33c2a1c684b0d85ff803a" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">In practice, your mileage may vary; most implementations use <em>Accept-Encoding</em> and <em>Content-Encoding</em> to negotiate and deliver on-the-fly compression of resources.</p>
+</div></div></section><section data-id="824e87f5cbef4bc390fdd7632ecda7c5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="5d5cf3ab0dc2c4e20e50646f331535c1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="53144412a180f59fdffcd4dd625fa3a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="23bb50ef5736c78e13fe6e26f8abca6e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 330px; height: 32px; left: 80px; top: 420px;" data-block-id="c10bbdda0e12cde449ff3259150d4d7d"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="http"><code>Accept-Encoding:gzip, deflate, sdch</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7742d61fea75ad4e515239ef2b4a9bfa" style="height: auto; min-width: 30px; min-height: 30px; width: 300px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">Client actually sends:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bd0e3dc74ebdfc5816bb760b3813d5cf" style="height: auto; min-width: 30px; min-height: 30px; width: 367px; left: 480px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align: left;">Server then responds with:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 330px; height: 32px; left: 480px; top: 560px;" data-block-id="da2eb031919be64466fe6d7f8ddf6a57"><div class="sl-block-content" style="z-index: 17;" data-highlight-theme="ir-black"><pre class="http"><code>Content-Encoding:gzip</code></pre></div></div></section><section data-id="dfe23def3f38c4ea7ab9600d93818560"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="d57d9bd3e71f50b8df9e47310a5eb639"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="2063e7aad267e71f276d61f17a467a82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 88%;" dir="ui">
+<h2 style="text-align:left"><em>Content-Encoding vs Transfer-Encoding</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="a526b57b02a45b9bc777746f67d45425"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6fc4e7b3e90f78105b2e076dc9eb1b0e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;">
+<p style="text-align: left;">HTTP gets complicated very quickly in the real world, so be careful with features you choose to support and implement.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Another example. The <em>deflate</em> encoding is defined by RFC to be data compressed with the deflate (RFC 1951) algorithm, formatted into a zlib (RFC 1950) stream. Microsoft clients and servers historically treated it as a raw deflate stream, however, which was incompatible with an RFC compliant implementation.</p>
+</div></div></section><section data-id="02cb340fb7b544573a5be19639f20383"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="57d888abf29a0017e290e58b42081c2f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Bandwidth Optimization</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 243px;" data-block-id="3504e4e22813413cca4852926e9ac0d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 88%;" dir="ui">
+<h2><em>TL;DR Summary</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 149px;" data-block-id="d20bbf9e25024cfaff5f135f05ca27f1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Compression</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b0ec040e9cc83ad1731c868403787021" style="min-width: 30px; min-height: 30px; width: 800px; height: 248px; left: 80px; top: 330px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="400" data-natural-height="124" style="" data-src="lets-build-a-webserver/2526714-104040.strip.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d54f7e26ba985875adeb1f4868a6f728" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 618px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Read the RFC, then check how it's actually implemented.</p>
+</div></div></section><section data-id="b41edfb98b3c718170e1955201c2e34c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="f04a43d10b6f7288139707234cf1d998"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>It's Complex...</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="590157345fa2281ec47a831423b53819" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 249px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">RCF 2616 is complex, and encapsulates the rich behaviors that enable most of the internet as we have come to know it.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">When in doubt, read it:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0c2aeefc9c4e998b29e7807f2400e312" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 451px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="color:rgb(255, 255, 255)">https://www.ietf.org/rfc/rfc2616.txt</span></p>
 </div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Web Server Architecture</h1>
 </div></div>
@@ -774,7 +1174,7 @@ Connection: close
 <div class="sl-block" data-block-type="text" data-block-id="3ba8791ba9ad6e8d21c9f7805770bc37" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p style="text-align:left">Ruby has an absurd wealth of different libraries and frameworks for handing CLI option parsing and app creation.</p>
 </div></div>
-<div class="sl-block" data-block-type="table" data-block-id="07c36f1a1776cd6a6243d61511092c5d" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 341px;"><div class="sl-block-content" style="z-index: 14; font-size: 65%;" data-table-border-width="1px" data-table-rows="8" data-table-cols="2" data-table-has-header="false"><table><tbody>
+<div class="sl-block" data-block-type="table" data-block-id="07c36f1a1776cd6a6243d61511092c5d" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 320px;"><div class="sl-block-content" style="z-index: 14; font-size: 65%;" data-table-border-width="1px" data-table-rows="9" data-table-cols="2" data-table-has-header="false"><table><tbody>
 <tr>
 <td style="width: 158px;">OptionParser</td>
 <td>http://ruby-doc.org/stdlib-2.3.0/libdoc/optparse/rdoc/OptionParser.html</td>
@@ -807,36 +1207,46 @@ Connection: close
 <td>Thor</td>
 <td>https://github.com/erikhuda/thor</td>
 </tr>
+<tr>
+<td>Samovar</td>
+<td>https://github.com/ioquatix/samovar</td>
+</tr>
 </tbody></table></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="6d42c757a084964bf4c8439c72fa09a5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 645px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
 <p style="text-align: left;">...and about 30 others. Use what you like. Ruby has options!</p>
-</div></div></section><section data-id="8aea5557ed4578a07f446cd1078eeb55"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b185b9adaef65b8a855b2958b8d3d12c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="8aea5557ed4578a07f446cd1078eeb55"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b185b9adaef65b8a855b2958b8d3d12c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
 <h1>Setup</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 160px;" data-block-id="ef6e39918956f1f43c43f538dd7ed274"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 160px;" data-block-id="ef6e39918956f1f43c43f538dd7ed274"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
 <h2>Configuration</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="c1fcc90089386c8cb870bba00b3fb50f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<div class="sl-block" data-block-type="text" data-block-id="c1fcc90089386c8cb870bba00b3fb50f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
 <p style="text-align: left;">As with command line options, Ruby offers a diverse set of simple tools for handling configuration files.</p>
 </div></div>
-<div class="sl-block" data-block-type="table" data-block-id="4bd361c6c0e2bebe269230da3e7624d5" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 342px;"><div class="sl-block-content" style="z-index: 14; font-size: 65%;" data-table-cols="2" data-table-has-header="false" data-table-rows="5"><table><tbody>
+<div class="sl-block" data-block-type="table" data-block-id="4bd361c6c0e2bebe269230da3e7624d5" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 342px;"><div class="sl-block-content" style="z-index: 10; font-size: 65%;" data-table-cols="2" data-table-has-header="false" data-table-rows="5"><table><tbody>
 <tr>
-<td style="width: 163px;">Ruby</td>
-<td>Class AppConfiguration<br>
-  LISTEN_ON = ['0.0.0.0:80','127.0.0.1:5000']<br>
-end<br>
+<td style="width: 163px;">Ruby<br>
 <br>
-require 'app_configuration.rb'</td>
+<br>
+<br>
+ </td>
+<td>
+<br>
+<br>
+<br>
+ </td>
 </tr>
 <tr>
 <td style="width: 163px;">JSON File</td>
-<td>require 'json'<br>
-AppConfiguration = JSON.parse( File.read( config_file_path ) )</td>
+<td>
+<br>
+ </td>
 </tr>
 <tr>
 <td style="width: 163px;">YAML File</td>
-<td>require 'yaml'<br>
-AppConfiguration = YAML.load( File.read( config_file_path ) )</td>
+<td>
+<br>
+ </td>
 </tr>
 <tr>
 <td style="width: 163px;">Configatron</td>
@@ -847,15 +1257,61 @@ AppConfiguration = YAML.load( File.read( config_file_path ) )</td>
 <td>https://github.com/settingslogic/settingslogic</td>
 </tr>
 </tbody></table></div></div>
-<div class="sl-block" data-block-type="shape" data-block-id="f2c4b1537a0a43dba1099effbfd4a471" style="min-width: 4px; min-height: 4px; width: 390px; height: 17px; left: 250px; top: 434px;"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="2 4 28 24"><g class="shape-element" fill="rgb(255, 255, 255)"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></g></svg></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="d481ee16cea725a1f51cfda9b5a1e021" style="height: auto; min-width: 30px; min-height: 30px; width: 184px; left: 666px; top: 428px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 65%;">
-<p style="text-align: left;">app_configuration.rb</p>
-</div></div></section><section data-id="24c23fdbe29059368e080d2da621f702"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="44b4c2b50f984c36dfc3858e7ecad2c9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="code" data-block-id="8cec0f10d0210852c5bed3aae7e00199" style="min-width: 30px; min-height: 30px; width: 623px; height: 65px; left: 250px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><pre class="ruby"><code>Class AppConfiguration
+  LISTEN_ON = ['0.0.0.0:80','127.0.0.1:5000']
+end
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="9a760487714316f71a673115284ec92e" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 482px;"><div class="sl-block-content" style="z-index: 11; font-size: 98%;"><pre class="ruby"><code>require 'json'
+AppConfiguration = JSON.parse( File.read( config_file_path ) )</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 544px;" data-block-id="65445c355db6260c1af0fb25f22a87af"><div class="sl-block-content" style="z-index: 17; font-size: 98%;"><pre class="ruby"><code>require 'yaml'
+AppConfiguration = YAML.load( File.read( config_file_path ) )</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 30px; left: 250px; top: 443px;" data-block-id="7af71a3066d3c303f6213f5b39e1b12b"><div class="sl-block-content" style="z-index: 18; font-size: 98%;"><pre class="ruby"><code>require 'app_configuration.rb'</code></pre></div></div></section><section data-id="24c23fdbe29059368e080d2da621f702"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="44b4c2b50f984c36dfc3858e7ecad2c9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Listen on Sockets</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="d3895727f5b697db44e07557d764dc28" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 157px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h2>AKA Network Communications</h2>
-</div></div></section><section data-id="98e9488f5ce9a280a3a7fa69e8069626"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="85ad51b088e100422f0cc4cbcdbaeea6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ceec8551e06aba3c8580b4c56b1d0fb1" style="height: auto; min-width: 30px; min-height: 30px; width: 809px; left: 80px; top: 244px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 94%;">
+<p style="text-align:left">A server needs a way to receive requests and to return responses.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">The two most common options:</p>
+
+<p style="text-align:left"> </p>
+
+<ul>
+	<li style="text-align: left;">Native Ruby Networking Support (TCPServer and friends)</li>
+	<li style="text-align: left;">EventMachine</li>
+</ul>
+</div></div></section><section data-id="25f8e63198331bd3010f94a5242a9a86"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cf9e5acbfbecdbf6dcb858701fef9406"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Listen on Sockets</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 157px;" data-block-id="0e168431429f09fd10b55e924370e282"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui"><h2>Native Ruby Networking Support</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 809px; left: 80px; top: 244px;" data-block-id="6660916382617a45088e4640c4c07db0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 94%;">
+<p style="text-align:left">Ruby has a rich set of networking libraries, making it easy to write TCP clients and servers.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="1a30aae1cbf915d88331fefbd8f8a6e7" style="min-width: 30px; min-height: 30px; width: 466px; height: 388px; left: 414px; top: 289px;"><div class="sl-block-content" style="z-index: 14;"><pre class="ruby"><code>require 'socket'
+
+class SimpleServer &lt; TCPServer
+
+  def initialize( address, port )
+    super( address, port )
+  end
+
+  def run( address = '127.0.0.1', port = 80 )
+    loop do
+      socket = server.accept
+      handle_request( socket.gets )
+    end
+  end
+
+  def handle_request( req )
+    # Do Stuff with req
+  end
+
+end
+</code></pre></div></div></section><section data-id="98e9488f5ce9a280a3a7fa69e8069626"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="85ad51b088e100422f0cc4cbcdbaeea6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Main Loop</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="21d96ac8d8f77aa5ccc84861b64c555c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 156px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
