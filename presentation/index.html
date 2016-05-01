@@ -839,7 +839,7 @@ Connection: close
 Content-Type: video/mp4
 Content-Length: 540387995
 Connection: close</code></pre></div></div>
-<div class="sl-block" data-block-type="shape" data-block-id="2ea1045f8e469f579bd939e6444f047b" style="min-width: 4px; min-height: 4px; width: 23px; height: 49px; left: 194px; top: 326px;"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 24 48"><polygon points="12,48 24,24 16.799999999999997,24 16.799999999999997,0 7.199999999999999,0 7.199999999999999,24 0,24 12,48" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="2ea1045f8e469f579bd939e6444f047b" style="min-width: 4px; min-height: 4px; width: 23px; height: 49px; left: 194px; top: 326px;"><div class="sl-block-content" data-shape-type="arrow-down" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 23 49"><polygon points="11.5,49 23,24.5 16.099999999999998,24.5 16.099999999999998,0 6.8999999999999995,0 6.8999999999999995,24.5 0,24.5 11.5,49" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
 <div class="sl-block" data-block-type="line" data-block-id="e8decd8294910272aca1f0ad5692d1b3" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 339px; top: 434px;"><div class="sl-block-content" data-line-x1="-41" data-line-y1="184" data-line-x2="100" data-line-y2="184" data-line-color="#ffffff" data-line-start-type="arrow" data-line-end-type="circle" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="141" height="1" viewbox="-41 184 141 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-37" y1="184" x2="97" y2="184"></line><line stroke="#ffffff" stroke-width="2" x1="-37" y1="184" x2="97" y2="184"></line><polygon fill="#ffffff" transform="translate(-37,184) rotate(90)" points="0,4 4,-4 -4,-4"></polygon><ellipse rx="3" ry="3" cx="97" cy="184" fill="#ffffff"></ellipse></svg></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="9c74115742db072f9140d14d40770791" style="height: auto; min-width: 30px; min-height: 30px; width: 392px; left: 488px; top: 362px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 75%;">
 <p style="text-align:left">That is a lot of data to send in one big chunk, or for the server to potentially process in one big chunk. A Ruby string containing more than 500 megabytes would use a lot of RAM, for example.</p>
@@ -1139,14 +1139,46 @@ Connection: close</code></pre></div></div>
 	<li style="text-align: left;">Retrieve document previews</li>
 	<li style="text-align: left;">Retrieve a very large file over an extended period of time via range requests for smaller, manageable chunks.</li>
 </ul>
+</div></div></section><section data-id="2c3ce6334eb599849f89b3062f95656f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="ac69f4add9a66891b2235acbcde0bf62"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Content-Negotiation</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="37f03a6bc5343cf7e23222e05a231b21" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 222px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 85%;">
+<p style="text-align:left">The world has many languages, character sets, encodings, and media types. HTTP 1.0 provided a mechanism for clients to express content preferences, but it was ambiguously specified.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP 1.1 is much more explicit and expansive. </p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="6b0da9cbf0d8c6ba65054f26e636b0ab" style="min-width: 30px; min-height: 30px; width: 353px; height: 30px; left: 80px; top: 420px;"><div class="sl-block-content" style="z-index: 12; font-size: 95%;" data-highlight-theme="ir-black"><pre class="http"><code>Accept-Language: en, es;q=0.5, nl;q=0.1</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4202ae8286bedb1b0ed39bc994cf751e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 159px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.9em">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="9760e84ee7668a7a536f31a892b5d9fe" style="min-width: 30px; min-height: 30px; width: 353px; height: 67px; left: 80px; top: 465px;"><div class="sl-block-content" style="z-index: 14; font-size: 95%;" data-highlight-theme="ir-black"><pre class="http"><code>Accept: text/html;q=1.0, text/*;q=0.8,
+        image/png;q=0.7, image/*;q=0.5,
+        */*;q=0.1</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e4b3c2ea4659efda77830463ef58845c" style="min-width: 30px; min-height: 30px; width: 353px; height: 37px; left: 80px; top: 545px;"><div class="sl-block-content" style="z-index: 15; font-size: 95%;" data-highlight-theme="ir-black"><pre class="http"><code>Accept-Charset: iso-8859-1, utf-8;q=0.9</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="3a4a9b61abdcc5cd8ce7308ea0bd4ea7" style="min-width: 30px; min-height: 30px; width: 463px; height: 33px; left: 80px; top: 594px;"><div class="sl-block-content" style="z-index: 16; font-size: 95%;" data-highlight-theme="ir-black"><pre class="http"><code>Accept-Encoding: gzip, compress;q=0.8, deflate;q=0.1</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fb543de9b2705d2a4a2a382681f6f9be" style="height: auto; min-width: 30px; min-height: 30px; width: 429px; left: 451px; top: 419px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 80%;">
+<p style="text-align: left;">English, Spanish, or Dutch as a last resort</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a184b92ed49a16f44739ddfd3bf1dc5a" style="height: auto; min-width: 30px; min-height: 30px; width: 429px; left: 451px; top: 470px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; font-size: 80%;">
+<p style="text-align:left">HTML, or other text formats, PNGs, other image formats, or anything else.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 429px; left: 451px; top: 548px;" data-block-id="2f0305b9bc83aa0b8a270cdae728f6d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; font-size: 80%;">
+<p style="text-align:left">ISO-8859-1 or UTF-8</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 560px; top: 595px;" data-block-id="2fcc7e07df90b3e7cf6a18fbe8972770"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; font-size: 80%;">
+<p style="text-align:left">GZip, compress, or deflate as a last resort.</p>
 </div></div></section><section data-id="acd53498aab947d381e6422e6cd30fa4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="65251725d83aad1926324d72bafca9cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Caching</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="40620234cc8d7a905d9a768c45adb095" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 149px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h2>Caching is love.</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="825f4d807b33c0521ef6d48e67ae5778" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<div class="sl-block" data-block-type="text" data-block-id="825f4d807b33c0521ef6d48e67ae5778" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 290px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
 <p style="text-align:left">HTTP 1.0 supported caching.</p>
+
+<p style="text-align:left"> </p>
 
 <p style="text-align:left">HTTP 1.1 improves it.</p>
 </div></div>
@@ -1157,7 +1189,23 @@ Connection: close</code></pre></div></div>
 	<li style="text-align: left;">Cache-Control</li>
 	<li style="text-align: left;">Vary</li>
 </ul>
-</div></div></section><section data-id="a25f3a6af4011a73fd05e62a87a9a799"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="645d5d17ff7d3770c034b228320aff29"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="72edf898bff654f0dd9ac2c897dac0ea"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="e69b446fc77c902275e44b7e770f6304"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Caching</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 149px;" data-block-id="a46e3b7d371db3ccd21f173a3cc62e64"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><em>Last-Modified</em></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 290px;" data-block-id="62db66e2f4f29d2e4c59261184f3dad2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p style="text-align:left">A server should send a <em>Last-Modified</em> header with a response, provided that there is a reasonable and consistent way to determine this.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="82a89bfa5ac58d98ec7cc2d03612da64" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 452px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Ruby makes it simple to generate a properly formatted date:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="86e5aae66ce0a5b3ab391fd9f8f38114" style="min-width: 30px; min-height: 30px; width: 371px; height: 91px; left: 80px; top: 504px;"><div class="sl-block-content" style="z-index: 15; font-size: 125%; transition-duration: 1.6s; transition-delay: 0.3s;" data-highlight-theme="ir-black" data-animation-type="slide-right"><pre class="hsp"><code>require 'time'
+
+File.mtime( resource ).httpdate</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="14e867d018111b94a6af1f3ba31626f0" style="min-width: 30px; min-height: 30px; width: 346px; height: 35px; left: 534px; top: 595px;"><div class="sl-block-content" style="z-index: 16; font-size: 125%; transition-duration: 2.6s; transition-delay: 0.9s;" data-highlight-theme="ir-black" data-animation-type="slide-left"><pre class="hsp"><code>Tue, 15 Sep 2015 13:21:54 GMT</code></pre></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="93c3f170264ff7fd20179870e6e2aad5" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 451px; top: 550px;"><div class="sl-block-content" data-line-x1="71" data-line-y1="299.5" data-line-x2="154" data-line-y2="345" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 17; transition-delay: 0.6s; transition-duration: 2.1s;" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="83" height="45" viewbox="71 300 83 45"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="71" y1="300" x2="152" y2="344"></line><line stroke="#ffffff" stroke-width="2" x1="71" y1="300" x2="152" y2="344"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(152,344) rotate(118.731)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="a25f3a6af4011a73fd05e62a87a9a799"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="645d5d17ff7d3770c034b228320aff29"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Caching</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 133px; left: 80px; top: 173px;" data-block-id="35faa064e170a4b1518b2ff6f0717ea4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -1188,7 +1236,18 @@ Date: Thu, 28 Apr 2016 12:25:35 GMT</code></pre></div></div>
 </div></div>
 
 
-</section><section data-id="d59a117d37da89e2af34f280582fe139"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="818262dd474c1a9cb911bc508aaf347a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="text" data-block-id="46dcce1a5e02a0e3d9d5d384786a80c0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">As with everything in HTTP, the full specification is pretty involved: <em>https://tools.ietf.org/html/rfc7232</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="11f44f66c4c574e7a1f29f55696359b0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li style="text-align: left;"><em>If-Match</em></li>
+	<li style="text-align: left;"><em>If-None-Match</em></li>
+	<li style="text-align: left;"><em>If-Modified-Since</em></li>
+	<li style="text-align: left;"><em>If-Unmodified-Since</em></li>
+	<li style="text-align: left;"><em>If-Range</em></li>
+</ul>
+</div></div></section><section data-id="d59a117d37da89e2af34f280582fe139"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="818262dd474c1a9cb911bc508aaf347a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Caching</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 528px; left: 216px; top: 152px;" data-block-id="aaa023ccd01d177ff6a3dc436c3ffcf8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -1196,7 +1255,17 @@ Date: Thu, 28 Apr 2016 12:25:35 GMT</code></pre></div></div>
 </div></div>
 
 
-</section><section data-id="b3d3658acc1ab4aa116fad65313ae65d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="3408c422f81a7a6b63895b9c1a065307"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="text" data-block-id="168394513bdfea5d7e98c5f609a56b0c" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 238px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">Also complex:</p>
+
+<p style="text-align: left;"><span style="font-size:0.9em"><em>https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="49007b5f38d076e33f9fabe8ba642bf2" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 344px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">May be used in both by both clients and servers, in both requests and responses, to modify caching behavior.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f44ce8fc149b71f1bf6fec9e764dbe51" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 452px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:left">Directives such as <em>max-age</em> can ensure relatively fresh responses, even in the face of clock skew, while the <em>private</em> and <em>no-store</em> directives help to hedge against caches keeping private data, or data that is fresh only for the immediate response. See the RFC for full details.</p>
+</div></div></section><section data-id="b3d3658acc1ab4aa116fad65313ae65d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="3408c422f81a7a6b63895b9c1a065307"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Caching</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 528px; left: 216px; top: 152px;" data-block-id="352606e0276bf8184d72a6fb8bea4cc5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -1204,27 +1273,155 @@ Date: Thu, 28 Apr 2016 12:25:35 GMT</code></pre></div></div>
 </div></div>
 
 
-</section><section data-id="400de6765b4fa089952188cb69122caa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="f0849c5f04fa3b6ca0ee2972d0716c57"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Security</h1>
-</div></div></section><section data-id="2c3ce6334eb599849f89b3062f95656f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="ac69f4add9a66891b2235acbcde0bf62"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Content-Negotiation</h1>
-</div></div></section><section data-id="243eadb23c6c280eb34117b9abe59cf0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="04e17ea878f6edd372da208b7f5488e9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Future Proofing</h1>
-</div></div></section><section data-id="f2f59197c18954bafbbe62f740c13c47"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="5fa1a94897decf9d3376e0458b674a61"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Errors</h1>
-</div></div></section><section data-id="b41edfb98b3c718170e1955201c2e34c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 63px; height: auto;" data-block-id="f04a43d10b6f7288139707234cf1d998"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<h1>It's Complex...</h1>
-</div></div>
-<div class="sl-block" data-block-type="text" data-block-id="590157345fa2281ec47a831423b53819" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 249px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<p style="text-align: left;">RCF 2616 is complex, and encapsulates the rich behaviors that enable most of the internet as we have come to know it.</p>
+<div class="sl-block" data-block-type="text" data-block-id="5700d3f375dd719625a155c65996ecef" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 253px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Content negotiation means that a single URL can potentially return multiple different resources.</p>
 
 <p style="text-align: left;"> </p>
 
-<p style="text-align: left;">When in doubt, read it:</p>
+<p style="text-align: left;"><em>Vary</em> tells a caching implementation to consider additional URLs when calculating an <em>ETag</em> to use in comparing content for cache validation purposes.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">For example:</p>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="0c2aeefc9c4e998b29e7807f2400e312" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 451px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
-<p><span style="color:rgb(255, 255, 255)">https://www.ietf.org/rfc/rfc2616.txt</span></p>
-</div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="code" data-block-id="7527935dc95014ae3c2226a5aa29c359" style="min-width: 30px; min-height: 30px; width: 256px; height: 36px; left: 305px; top: 552px;"><div class="sl-block-content" style="z-index: 14; font-size: 125%;" data-highlight-theme="ir-black"><pre class="hsp"><code>Vary: Accept-Language</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="12c87ecd84ae948bd53545c05a938c32" style="height: auto; min-width: 30px; min-height: 30px; width: 283px; left: 597px; top: 518px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;">
+<p style="text-align:left">Factor the contents of <em>Accept-Language</em> into the generated <em>ETag</em>.</p>
+</div></div></section><section data-id="400de6765b4fa089952188cb69122caa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="f0849c5f04fa3b6ca0ee2972d0716c57"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Security</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2acc3b0c4e9de890ef0e1aaabbd7d34a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 150px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Authentication</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b109a5ac50d35bc8292f9050e1ee005a" style="min-width: 30px; min-height: 30px; width: 424px; height: 150px; left: 509px; top: 340px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="http"><code>HTTP/1.1 401 Unauthorized
+Date: Sat, 30 Apr 2016 23:39:59 GMT
+WWW-Authenticate: Basic realm="sekrit_stuff"
+Expires: Sat, 30 Apr 2016 23:39:59 GMT
+Last-Modified: Thu, 28 Apr 2016 19:54:23 GMT
+Content-Length: 0
+Content-Type: text/html</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="105b9e3d5a5d9e9b9b62dbf746502296" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 495px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 80%;">
+<p style="text-align:left"><span style="font-size:0.9em">Client (typically) queries user for username/password, then reissues the request with an <em>Authentication</em> header containing those attributes. Client may cache and continue sending these attributes for any requests for the same realm.</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:0.9em">Weakness of this is that the username / password is transmitted in clear text.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="eb1016d9b407107cfae0239ef42d7873" style="height: auto; min-width: 30px; min-height: 30px; width: 417px; left: 80px; top: 276px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 80%;">
+<p style="text-align:left"><span style="font-size:1.0em">HTTP/1.0 defined <em>Basic authentication</em>, a challenge/response mechanism for authenticated access to a resource.</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:0.9em">Server responds to a request with a<em> WWW-Authenticate</em> header.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-block-id="92259214cf838fb0471ea7a8e434fcb7" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 363px; top: 393px;"><div class="sl-block-content" data-line-x1="-17" data-line-y1="143" data-line-x2="117" data-line-y2="143" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="134" height="1" viewbox="-17 143 134 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-17" y1="143" x2="115" y2="143"></line><line stroke="#ffffff" stroke-width="2" x1="-17" y1="143" x2="115" y2="143"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(115,143) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="6313ccff3c502a74a6536228f88d1243"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="02c0ee1e49218cd4b7f73f028f1a888d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Security</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 150px;" data-block-id="dab764609aefd4f93994221b990eaba4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Digest Authentication</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="38d18f0f2e8149f4440bf1bdd12db521" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Full details at: <em>https://tools.ietf.org/html/rfc2617</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9237f223c54022cd9510cd94a5c5bc52" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Same fundamental sequence as Basic Authentication, but it includes more information, and uses hashing algorithms:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e7bd9da7e9893913e6dd5f7cb4b941fb" style="min-width: 30px; min-height: 30px; width: 403px; height: 124px; left: 70px; top: 459px;"><div class="sl-block-content" style="z-index: 15; font-size: 72%;" data-highlight-theme="ir-black"><pre class="http"><code>HTTP/1.1 401 Unauthorized
+Date: Sat, 30 Apr 2016 23:39:59 GMT
+WWW-Authenticate: Digest realm="sekrit_stuff",
+                  qop=auth
+                  nonce="58647bd2acd7935c4b058702c363e872",
+                  opaque="05dd324d8d5129a65a4e0c8d34b9e1f3"
+Content-Type: text/html
+Content-Length: 0</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="773d328e969823748660709f83e2c9e7" style="min-width: 30px; min-height: 30px; width: 427px; height: 161px; left: 493px; top: 498px;"><div class="sl-block-content" style="z-index: 16; font-size: 72%;" data-highlight-theme="ir-black"><pre class="http"><code>GET /index.html HTTP/1.1
+Host: localhost
+Authorization: Digest username="Mufasa",
+               realm="testrealm@host.com",
+               nonce="f527aab47bb12114c31725da7df9fb7e",
+               uri="/index.html",
+               qop=auth,
+               nc=00000001,
+               cnonce="f1c4a297",
+               response="6629fae49393a05397450978507c4ef1",
+               opaque="05dd324d8d5129a65a4e0c8d34b9e1f3"</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="18552448ed35c21490d6ae6cdec8bd4b" style="height: auto; min-width: 30px; min-height: 30px; width: 221px; left: 161px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p><span style="font-size:27px; line-height:35.1px">Server Response</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="03717e48fb77dd18e7e5fa70fe6cdba0" style="height: auto; min-width: 30px; min-height: 30px; width: 375px; left: 533px; top: 459px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<p><span style="font-size:0.9em">Client Authenticated Request</span></p>
+</div></div></section><section data-id="ea5b8e931a27b08d3eb01c6db02e48cb"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="ab4787546347bca960e08c820a14ee6e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Security</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 150px;" data-block-id="908f24ed545784e97154b8e0701d58ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Proxy Authentication</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d4a9bb8e158d1a6b86ed9aa927498242" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 314px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 93%;">
+<p style="text-align:left">Hop-by-hop version of <em>WWW Authenticate</em> and <em>Authorization</em></p>
+
+<p style="text-align:left">headers, intended for proxy usage.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><em>Proxy-Authenticate</em></p>
+
+<p style="text-align:left"><em>Proxy-Authorization</em></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Use <em>407 Proxy Authentication Required</em> instead of a <em>401 </em> status line.</p>
+</div></div></section><section data-id="f2f59197c18954bafbbe62f740c13c47"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 60px; height: auto;" data-block-id="5fa1a94897decf9d3376e0458b674a61"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Errors</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="85d4a80770e20484b021eb7227a9fab6" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 95%;">
+<p style="text-align:left">HTTP/1.1 added 24 new status codes, plus a mechanism for returning warnings on an ostensibly successful response.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Notable new status codes:</p>
+
+<p style="text-align:left"> </p>
+
+<ul>
+	<li><span style="font-size:0.9em">409 (Conflict), returned when a request would conflict with the current state of the resource. For example, a PUT request might violate a versioning policy.</span></li>
+	<li><span style="font-size:0.9em">410 (Gone), used when a resource has been removed permanently from a server, and to aid in the deletion of any links to the resource.</span></li>
+</ul>
+</div></div></section><section data-id="33ca70491ca9dd13060f1565188fb572"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 60px; height: auto;" data-block-id="295ac1008dc53693ef12382856dfba89"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Errors</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 247px;" data-block-id="0eed71b22f5f94cd4e89aab558c8616e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;" dir="ui"><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.46</p></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e2c9c0699ce0fd83ba1396282c726968" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 151px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Warnings</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="46cb32e88e164e55bb1274b6a8cc5c16" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Warning headers provide caveats or additional information about an ostensibly successful response.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2b9d10e83992c0ba7c70834dc01ef814" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: left;">Can be used to provide additional information on caching operations or transformations. See the RFC if you are implementing complex cache/transformation behaviors.</p>
+</div></div></section><section data-id="243eadb23c6c280eb34117b9abe59cf0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="04e17ea878f6edd372da208b7f5488e9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>It's Complex</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b29605dc8ed5ccdc2a980575c7d4058e" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 171px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 95%; line-height: 1.235;" dir="ui" data-has-line-height="">
+<p style="text-align:left">HTTP is a mix of specification and description of common usage.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP/1.1          <em>​https://www.w3.org/Protocols/rfc2616/rfc2616.html</em></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">It has evolved substantially over time.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP/2.0           <em>ht</em><em>tps://tools.ietf.org/html/rfc7540</em></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP downgrades well when features that a client wants are missing, so for any server implementation, start simply, then layer HTTP features, referring to the RFCs frequently. When in doubt, research how other implementations do it.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="12a5ed3731cd9ca34f11edbe8c3453af" style="min-width: 4px; min-height: 4px; width: 43px; height: 21px; left: 209px; top: 430px;"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 43 21"><polygon points="0,6.3 21.5,6.3 21.5,0 43,10.5 21.5,21 21.5,14.7 0,14.7" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 43px; height: 21px; left: 209px; top: 264px;" data-block-id="5d91d6b2ebfe08f2b10359993e5fb665"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 43 21"><polygon points="0,6.3 21.5,6.3 21.5,0 43,10.5 21.5,21 21.5,14.7 0,14.7" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Web Server Architecture</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="98e96f173fa96e755e8deb11ea624d94" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 218px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
