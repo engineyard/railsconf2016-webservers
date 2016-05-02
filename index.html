@@ -1421,23 +1421,53 @@ Authorization: Digest username="Mufasa",
 <p style="text-align:left">HTTP downgrades well when features that a client wants are missing, so for any server implementation, start simply, then layer HTTP features, referring to the RFCs frequently. When in doubt, research how other implementations do it.</p>
 </div></div>
 <div class="sl-block" data-block-type="shape" data-block-id="12a5ed3731cd9ca34f11edbe8c3453af" style="min-width: 4px; min-height: 4px; width: 43px; height: 21px; left: 209px; top: 430px;"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 43 21"><polygon points="0,6.3 21.5,6.3 21.5,0 43,10.5 21.5,21 21.5,14.7 0,14.7" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div>
-<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 43px; height: 21px; left: 209px; top: 264px;" data-block-id="5d91d6b2ebfe08f2b10359993e5fb665"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 43 21"><polygon points="0,6.3 21.5,6.3 21.5,0 43,10.5 21.5,21 21.5,14.7 0,14.7" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 43px; height: 21px; left: 209px; top: 264px;" data-block-id="5d91d6b2ebfe08f2b10359993e5fb665"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 43 21"><polygon points="0,6.3 21.5,6.3 21.5,0 43,10.5 21.5,21 21.5,14.7 0,14.7" class="shape-element" fill="rgb(255, 255, 255)"></polygon></svg></div></div></section></section><section class="stack" data-id="ad116397b0ffcb0ba7d6d0a4684c2afd"><section data-id="4c1505572915b877050ea3faf6f6ed1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="319c0cb9cc70936e426411398c4432df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Web Server Architecture</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="98e96f173fa96e755e8deb11ea624d94" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 218px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<p style="text-align: left;">There is nothing special about web server architecture.</p>
+<div class="sl-block" data-block-type="text" data-block-id="98e96f173fa96e755e8deb11ea624d94" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 196px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.391;" data-has-line-height="">
+<p style="text-align:left">There is nothing special about web server architecture.</p>
 
-<p style="text-align: left;"> </p>
+<p style="text-align:left"> </p>
 
-<p style="text-align: left;">It is just server architecture.</p>
+<p style="text-align:left">It is just server architecture.</p>
 
-<p style="text-align: left;"> </p>
+<p style="text-align:left"> </p>
 
-<p style="text-align: left;">A web server is nothing more than a server that receives HTTP requests and returns HTTP responses. </p>
+<p style="text-align:left">A web server is nothing more than a server that receives HTTP requests and returns HTTP responses, typically through standard socket communications.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="7da1f2dadb0348c2d144e6d6a796b987" style="min-width: 30px; min-height: 30px; width: 411px; height: 481px; left: 521px; top: 196px;"><div class="sl-block-content" style="z-index: 13; font-size: 90%;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'socket'
+
+def run
+  simple_server = TCPServer.new("0.0.0.0", 8080)
+
+  loop do
+    connection = simple_server.accept
+    handle connection
+  end
+end
+
+def get_request connection
+  connection.gets
+end
+
+def process request
+  "OK"
+end
+
+def handle connection
+ request = get_request connection
+ response = process request
+ connection.puts response
+ connection.close
+end
+
+run</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1c3ddbc1021ffb9f0e577595789fcc34" style="height: auto; min-width: 30px; min-height: 30px; width: 173px; left: 634px; top: 157px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.7em">Basic TCP Server</span></p>
 </div></div></section><section data-id="65e4f5db11e89186ced13b4452b35bc0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="ddcf49999e08869cd5aac258de72781d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>OK.... Server Architecture</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="8f23bdec817248ba26f4d8ec29d7a36b" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="text" data-block-id="8f23bdec817248ba26f4d8ec29d7a36b" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 212px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <p style="text-align: left;">• Setup</p>
 
 <p style="text-align: left;">      • Command line arguments</p>
@@ -1579,7 +1609,7 @@ AppConfiguration = YAML.load( File.read( config_file_path ) )</code></pre></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 809px; left: 80px; top: 244px;" data-block-id="6660916382617a45088e4640c4c07db0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 94%;">
 <p style="text-align:left">Ruby has a rich set of networking libraries, making it easy to write TCP clients and servers.</p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="1a30aae1cbf915d88331fefbd8f8a6e7" style="min-width: 30px; min-height: 30px; width: 466px; height: 388px; left: 414px; top: 289px;"><div class="sl-block-content" style="z-index: 14;"><pre class="ruby"><code>require 'socket'
+<div class="sl-block" data-block-type="code" data-block-id="1a30aae1cbf915d88331fefbd8f8a6e7" style="min-width: 30px; min-height: 30px; width: 466px; height: 388px; left: 414px; top: 289px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'socket'
 
 class SimpleServer &lt; TCPServer
 
@@ -1599,11 +1629,536 @@ class SimpleServer &lt; TCPServer
   end
 
 end
-</code></pre></div></div></section><section data-id="98e9488f5ce9a280a3a7fa69e8069626"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="85ad51b088e100422f0cc4cbcdbaeea6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</code></pre></div></div></section><section data-id="98e9488f5ce9a280a3a7fa69e8069626"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="85ad51b088e100422f0cc4cbcdbaeea6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Main Loop</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="21d96ac8d8f77aa5ccc84861b64c555c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 156px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="text" data-block-id="21d96ac8d8f77aa5ccc84861b64c555c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 149px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h2>i.e. Concurrency Options</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2f7d620214c48f5c8fdea13d920fc2c1" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 251px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 95%;">
+<p style="text-align:left">How a server handles concurrency is fundamental to it's design.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">The prior basic server template was a blocking server.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Handles a single request at a time.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Long running requests cause the OS to queue waiting requests on the socket.</p>
+</div></div></section><section data-id="320aae4067ba2e62e2db428c3f2dd271"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="2eb8f91ba4eb01a209578b02a0fb35ad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 150px;" data-block-id="1d9f931d827b32daa8b8879cf6abf117"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Blocking Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="7bf82941f62e3161c82fa4809441e5f9" style="min-width: 30px; min-height: 30px; width: 803px; height: 447.517px; left: 79px; top: 237px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="698" data-natural-height="389" data-src="lets-build-a-webserver/2553434-longline.jpg"></div></div></section><section data-id="37360b3303c5ddcea5a463e359500196"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="0a4ec4576d45c213f3d76b040a348837"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Short Tangent</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 73px; top: 148px; height: auto;" data-block-id="46929f5c686f6747e0df3118d76eb8c8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h2>Simplest Ruby Web Server....</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="5a6815249dcfd08fbe5da6003e360da3" style="min-width: 30px; min-height: 30px; width: 480px; height: 34px; left: 240px; top: 230px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="hsp"><code>ruby -run -e httpd -- -p 8080 .</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d7f3249c2a79cb357dc8790da51bf733" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 289px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>OK....That's kind of cheating.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a38633de65d87767d361dcb744bdda2d" style="min-width: 30px; min-height: 30px; width: 440px; height: 331px; left: 440px; top: 350px;"><div class="sl-block-content" style="z-index: 15; font-size: 65%;" data-highlight-theme="ir-black"><pre class="ruby"><code># frozen_string_literal: false
+#
+# = un.rb
+#
+# Copyright (c) 2003 WATANABE Hirofumi &lt;eban@ruby-lang.org&gt;
+#
+# This program is free software.
+# You can distribute/modify this program under the same terms of Ruby.
+#
+# == Utilities to replace common UNIX commands in Makefiles etc
+#
+# == SYNOPSIS
+#
+#   ruby -run -e cp -- [OPTION] SOURCE DEST
+#   ruby -run -e ln -- [OPTION] TARGET LINK_NAME
+#   ruby -run -e mv -- [OPTION] SOURCE DEST
+#   ruby -run -e rm -- [OPTION] FILE
+#   ruby -run -e mkdir -- [OPTION] DIRS
+#   ruby -run -e rmdir -- [OPTION] DIRS
+#   ruby -run -e install -- [OPTION] SOURCE DEST
+#   ruby -run -e chmod -- [OPTION] OCTAL-MODE FILE
+#   ruby -run -e touch -- [OPTION] FILE
+#   ruby -run -e wait_writable -- [OPTION] FILE
+#   ruby -run -e mkmf -- [OPTION] EXTNAME [OPTION]
+#   ruby -run -e httpd -- [OPTION] DocumentRoot
+#   ruby -run -e help [COMMAND]
+</code></pre></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="161effd3643cec542cc56cffb4148e14" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 73px; top: 651px;"><div class="sl-block-content" data-line-x1="-33" data-line-y1="210" data-line-x2="319" data-line-y2="210" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="352" height="1" viewbox="-33 210 352 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-33" y1="210" x2="317" y2="210"></line><line stroke="#ffffff" stroke-width="2" x1="-33" y1="210" x2="317" y2="210"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(317,210) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="476b69c56759a24f20f68592af2bbae6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="8793783ac288bab7ad6d84f6ea485a74"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Short Tangent</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="cd1607485fa7cfe2fbca3a28d9c13a5c" style="min-width: 30px; min-height: 30px; width: 800px; height: 436px; left: 114px; top: 194px;"><div class="sl-block-content" style="z-index: 12;" data-highlight-theme="ir-black"><pre class="ruby"><code>def httpd
+  setup("", "BindAddress=ADDR", "Port=PORT", "MaxClients=NUM", "TempDir=DIR",
+        "DoNotReverseLookup", "RequestTimeout=SECOND", "HTTPVersion=VERSION") do
+    |argv, options|
+    require 'webrick'
+    opt = options[:RequestTimeout] and options[:RequestTimeout] = opt.to_i
+    [:Port, :MaxClients].each do |name|
+      opt = options[name] and (options[name] = Integer(opt)) rescue nil
+    end
+    options[:Port] ||= 8080     # HTTP Alternate
+    options[:DocumentRoot] = argv.shift || '.'
+    s = WEBrick::HTTPServer.new(options)
+    shut = proc {s.shutdown}
+    siglist = %w"TERM QUIT"
+    siglist.concat(%w"HUP INT") if STDIN.tty?
+    siglist &amp;= Signal.list.keys
+    siglist.each do |sig|
+      Signal.trap(sig, shut)
+    end
+    s.start
+  end
+end
+</code></pre></div></div>
+<div class="sl-block" data-block-type="line" data-block-id="24d35d99a109e69bf7674fd378730617" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 18px; top: 286px;"><div class="sl-block-content" data-line-x1="-362" data-line-y1="36" data-line-x2="-278" data-line-y2="36" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="84" height="1" viewbox="-362 36 84 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-362" y1="36" x2="-280" y2="36"></line><line stroke="#ffffff" stroke-width="2" x1="-362" y1="36" x2="-280" y2="36"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(-280,36) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="f6619846f8f32df182f676a01ce6964a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="a1890a7d93ad2ec20dfadca1244b0324"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>A Real (simple) Server</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="5a94aa49ce486dc05839c95735b40d5a" style="min-width: 30px; min-height: 30px; width: 800px; height: 480px; left: 80px; top: 212px;"><div class="sl-block-content" style="z-index: 12; font-size: 80%;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'socket'
+require 'mime-types'
+require 'time'
+trap 'INT' do; exit end # in a real server, you want more more cleanup than this
+
+DOCROOT = Dir.pwd
+CANNED_OK = "HTTP/1.0 200 OK\r\n"
+CANNED_NOT_FOUND = "HTTP/1.0 404 Not Found\r\n"
+CANNED_BAD_REQUEST = "HTTP/1.0 400 Bad Request\r\n"
+
+def run( host = '0.0.0.0', port = '8080' )
+  server = TCPServer.new( host, port )
+  while connection = server.accept
+    request = get_request connection
+    response = handle request
+    connection.write response
+    connection.close
+  end
+end
+
+def get_request connection
+  r = ''
+  while line = connection.gets
+    r &lt;&lt; line
+    break if r =~ /\r\n\r\n/m # Request headers terminate with \r\n\r\n
+  end
+
+  if r =~ /^(\w+) +(?:\w+:\/\/([^ \/]+))?(([^ \?\#]*)\S*) +HTTP\/(\d\.\d)/
+    request_method = $1
+    unparsed_uri = $3
+    uri = $4.empty? ? nil : $4
+    http_version = $5
+    name = $2 ? $2.intern : nil
+
+    uri = uri.tr( '+', ' ' ).
+        gsub( /((?:%[0-9a-fA-F]{2})+)/n ) { [$1.delete( '%' ) ].pack( 'H*' ) } if uri.include?('%')
+
+    [ request_method, http_version, name, unparsed_uri, uri ]
+  else
+    nil
+  end
+
+end
+
+def handle request
+  if request
+    process request
+  else
+    CANNED_BAD_REQUEST + final_headers
+  end
+end
+
+def process request
+  path = File.join( DOCROOT, request.last )
+  if FileTest.exist?( path ) and FileTest.file?( path ) and File.expand_path( path ).index( DOCROOT ) == 0
+    CANNED_OK +
+        "Content-Type: #{MIME::Types.type_for( path )}\r\n" +
+        "Content-Length: #{File.size( path )}\r\n" +
+        "Last-Modified: #{File.mtime( path )}\r\n" +
+        final_headers +
+        File.read( path )
+  else
+    CANNED_NOT_FOUND + final_headers
+  end
+end
+
+def final_headers
+  "Date: #{Time.now.httpdate}\r\nConnection: close\r\n\r\n"
+end
+
+run</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="88f04f59911d11f1bb38be9c9d182eca" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 161px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>A little over 70 lines, and it's enough to build on....</p>
+</div></div></section><section data-id="f3bf67dc7d35275d61c9a2014ca00ccd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="236a059f334544ae4372b2398c09bf1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>A Real (simple) Server</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c9a21b302697e631a0e6ebc01ede8805" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 7px; top: 159px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>HTTP 1.0 (barely)</li>
+	<li>Doesn't actually <strong>parse</strong> HTTP</li>
+	<li>Simple, and easily improved</li>
+	<li>Blocking server; no concurrency</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="15e8c6e1631667bf0a2dd218e8847f2b" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 354px;"><div class="sl-block-content" style="z-index: 13; font-size: 86%;" data-highlight-theme="ir-black"><pre class="none"><code>Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            8080
+
+Document Path:          /simple_blocking_server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      1
+Time taken for tests:   2.635 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      20340000 bytes
+HTML transferred:       18440000 bytes
+Requests per second:    3795.08 [#/sec] (mean)
+Time per request:       0.263 [ms] (mean)
+Time per request:       0.263 [ms] (mean, across all concurrent requests)
+Transfer rate:          7538.27 [Kbytes/sec] received</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f16e9b12e5e41555cc7fa37c82a53ec1" style="height: auto; min-width: 30px; min-height: 30px; width: 440px; left: 480px; top: 159px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li>Pretty fast? 3795/sec...</li>
+	<li>localhost</li>
+	<li>small static assets</li>
+	<li>easy to be fast when you don't do much...</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ba6e532fe71f25e5dd50619e10ff4431" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 669px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 80%;">
+<p>All examples ran with Ruby 2.3.1</p>
+</div></div></section><section data-id="c3b513b60d32c674cd0ba45df9c5fa85"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 60px; height: auto;" data-block-id="86f131d7a0fd4e1e9a64b6974c8e6f2f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>A Real (simple) Server</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e9845ba0bad2ecd1fc1156498f8026f7" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 171px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Slow Responses....</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2df2941d068524999a85af7642133f87" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Imagine that it takes some work to generate those responses.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Make each one take at least one second....</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a5119d0d9de3228e01f2f10bc5f81761" style="min-width: 30px; min-height: 30px; width: 850px; height: 175px; left: 55px; top: 455px;"><div class="sl-block-content" style="z-index: 14; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- simple_blocking_server.rb     2016-05-01 11:16:13.750705766 -0400
++++ simple_blocking_server_slow.rb        2016-05-01 16:08:31.422044736 -0400
+@@ -56,6 +56,7 @@
+   # This server is stupid. For any request method, and http version, it just tries to serve a static file.
+   path = File.join( DOCROOT, request.last )
+   if FileTest.exist?( path ) and FileTest.file?( path ) and File.expand_path( path ).index( DOCROOT ) == 0
++    sleep 1
+     CANNED_OK +
+         "Content-Type: #{MIME::Types.type_for( path )}\r\n" +
+         "Content-Length: #{File.size( path )}\r\n" +</code></pre></div></div></section><section data-id="5c7f291452bb5b542eabac584f5f3f8f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 60px; height: auto;" data-block-id="a4d065fcbc4bf7b2c79656c450bc485b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>A Real (simple) Server</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="84a6c9ff265fab05269b6da671be811e" style="min-width: 30px; min-height: 30px; width: 880px; height: 350px; left: 40px; top: 197px;"><div class="sl-block-content" style="z-index: 12;" data-highlight-theme="ir-black"><pre class="none"><code>Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            8080
+
+Document Path:          /simple_blocking_server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      1
+Time taken for tests:   20.022 seconds
+Complete requests:      20
+Failed requests:        0
+Total transferred:      40680 bytes
+HTML transferred:       36880 bytes
+Requests per second:    1.00 [#/sec] (mean)
+Time per request:       1001.093 [ms] (mean)
+Time per request:       1001.093 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.98 [Kbytes/sec] received
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d8342019fa311b71256a7c02b2e442c6" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Almost 8000 requests/second down to 1 request/second. Ouch.</p>
+</div></div></section><section data-id="125c5cf40c6a6e615877493d0c8d8c7b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="c1ed872aacba222a989a6a2ab67ac9c3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>How To Address This?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="3e62d192e235449631e03bcf014bb4b9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h2>Concurrency!</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2b373ab35df70951aa26ae43e8ab0079" style="height: auto; min-width: 30px; min-height: 30px; width: 259px; left: 61px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; transition-duration: 1.6s; transition-delay: 0.9s;" data-animation-type="slide-right">
+<p>Multiprocessing</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5c0885957037389e602ece1b9be024e3" style="height: auto; min-width: 30px; min-height: 30px; width: 220px; left: 370px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; transition-delay: 1.2s; transition-duration: 2.1s;" data-animation-type="slide-up">
+<p>Multithreading</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c958812b3c69a736c720cddd52cae00f" style="height: auto; min-width: 30px; min-height: 30px; width: 178px; left: 702px; top: 528px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; transition-duration: 2.6s; transition-delay: 1.2s;" data-animation-type="slide-left">
+<p>Event Based</p>
+</div></div></section><section data-id="f22ba216590b147ac9fd4019bc4994b1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="9ad60bd11c545bbd6338bb90a783c852"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 150px;" data-block-id="ebcf3f841eda8ca9e324bc14907b7bfc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Multiprocessing</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b8dc669c3a03202168674043dcc16b97" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Just run a bunch of blocking servers, and have something else distribute and balance the load to them.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4928b4a36ac63735276c1741301ecafc" style="height: auto; min-width: 30px; min-height: 30px; width: 211px; left: 375px; top: 370px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; border: 7px solid rgb(153, 0, 255); border-radius: 20px; padding: 3px; transition-duration: 1.6s; transition-delay: 0.6s; background-color: rgb(103, 78, 167);" data-animation-type="slide-down">
+<p>Load Balancer</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="dc7ca3bc67cdaeb6c3fb91ad63e9acae" style="height: auto; min-width: 30px; min-height: 30px; width: 226px; left: 80px; top: 509px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; border: 6px solid rgb(0, 255, 0); border-radius: 35px; padding: 3px; transition-duration: 2.2s; transition-delay: 1.2s; background-color: rgb(39, 78, 19);" data-animation-type="slide-right">
+<p>Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 226px; left: 367px; top: 509px;" data-block-id="f9c2ff4693a838b4d1d3f5fbadf30a27"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; border: 6px solid rgb(0, 255, 0); border-radius: 35px; padding: 3px; transition-delay: 1.2s; transition-duration: 2.2s; background-color: rgb(39, 78, 19);" data-animation-type="scale-up">
+<p>Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 226px; left: 654px; top: 509px;" data-block-id="00391699c63b0e1137ca044f938c1590"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; border: 6px solid rgb(0, 255, 0); border-radius: 35px; padding: 3px; transition-duration: 2.2s; transition-delay: 1.2s; background-color: rgb(39, 78, 19);" data-animation-type="slide-left">
+<p>Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-block-id="b3d4765f5053c319c27917ecf8433c3f" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 193px; top: 429px;"><div class="sl-block-content" data-line-x1="-187" data-line-y1="240" data-line-x2="-13" data-line-y2="179" data-line-color="#ffffff" data-line-start-type="line-arrow" data-line-end-type="line-arrow" style="z-index: 18; transition-delay: 0.9s; transition-duration: 1.9s;" data-animation-type="slide-down"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="174" height="61" viewbox="-187 179 174 61"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-185" y1="239" x2="-15" y2="180"></line><line stroke="#ffffff" stroke-width="2" x1="-185" y1="239" x2="-15" y2="180"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(-185,239) rotate(70.681)" d="M -6 -6 L 0 0 L 6 -6"></path><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(-15,180) rotate(70.681)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 480px; top: 443px;" data-block-id="7935a44c678e2598651578d518373972"><div class="sl-block-content" data-line-x1="85.5" data-line-y1="231" data-line-x2="85" data-line-y2="178" data-line-color="#ffffff" data-line-start-type="line-arrow" data-line-end-type="line-arrow" style="z-index: 19; transition-duration: 1.9s; transition-delay: 0.9s;" data-animation-type="slide-down"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="53" viewbox="85 178 1 53"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="85" y1="229" x2="85" y2="180"></line><line stroke="#ffffff" stroke-width="2" x1="85" y1="229" x2="85" y2="180"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(85,229) rotate(-0.541)" d="M -6 -6 L 0 0 L 6 -6"></path><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(85,180) rotate(-0.541)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 586px; top: 429px;" data-block-id="b8fa3d64820a04a37fab1ad9fb9c39f4"><div class="sl-block-content" data-line-x1="153" data-line-y1="246" data-line-x2="-28" data-line-y2="179" data-line-color="#ffffff" data-line-start-type="line-arrow" data-line-end-type="line-arrow" style="z-index: 20; transition-duration: 1.9s; transition-delay: 0.9s;" data-animation-type="slide-down"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="181" height="67" viewbox="-28 179 181 67"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="151" y1="245" x2="-26" y2="180"></line><line stroke="#ffffff" stroke-width="2" x1="151" y1="245" x2="-26" y2="180"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(151,245) rotate(-69.687)" d="M -6 -6 L 0 0 L 6 -6"></path><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(-26,180) rotate(-69.687)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b04ac7da869c8d526c7604bfaab1ad5f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 593px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; transition-delay: 0.6s; transition-duration: 4s;" data-animation-type="slide-up">
+<h2>CONCURRENCY! WINNING!</h2>
+</div></div></section><section data-id="fc26eb823fd45d488658e8af18e1d376"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="f471809f3c5095c286c41b247b09c548"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 150px;" data-block-id="587de64edbc54bd9a971bd6c3d14e61c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Multiprocessing</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;" data-block-id="1401f30da02394892ce42e7f6d2a6aa0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">Just run a bunch of blocking servers, and have something else distribute and balance the load to them.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 80px; top: 381px;" data-block-id="ba8943ba4caa35c2d54f6bcb9920561f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Pros</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 800px; top: 381px;" data-block-id="2ddd2a09e74099247ce3b640be395c30"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: right;">Cons</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 320px; left: 160px; top: 420px;" data-block-id="bc0222b1d476651604270615c9a6b014"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;">
+<ul>
+	<li style="text-align:left">Simple to implement.</li>
+	<li style="text-align:left">Performance can still be quite good.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 320px; left: 480px; top: 420px;" data-block-id="83e87ad55c86f9a07cdddfb085d48642"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 90%;">
+<ul>
+	<li>Managing processes can be complex.</li>
+	<li>Limited sharing of resources can be expensive.</li>
+</ul>
+</div></div></section><section data-id="3452bc4c927cceba1b20b93ddb584fd0"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 51px; height: auto;" data-block-id="f6bf4364ab98548c113fa692158291eb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="5c5b833fbd37f2db721833ccdfac62c4" style="height: auto; min-width: 30px; min-height: 30px; width: 332px; left: 532px; top: 148px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<p>Multiprocessing Simple Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="09a5eddde84c4ef1e3df0a4f4fbd4b47" style="min-width: 30px; min-height: 30px; width: 500px; height: 468px; left: 448px; top: 214px;"><div class="sl-block-content" style="z-index: 13; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- kiss_slow.rb        2016-05-01 16:08:31.422044736 -0400
++++ kiss_multiprocessing.rb     2016-05-01 16:45:13.238012734 -0400
+@@ -11,6 +11,8 @@
+ def run( host = '0.0.0.0', port = '8080' )
+   server = TCPServer.new( host, port )
+
++  fork_it
++
+   while connection = server.accept
+     request = get_request connection
+     response = handle request
+@@ -20,6 +22,18 @@
+   end
+ end
+
++def fork_it( process_count = 9 )
++  pid = nil
++  process_count.times do
++    if pid = fork
++      Process.detach( pid )
++    else
++      break
++    end
++  end
++
++end
++
+ def get_request connection
+   r = ''
+   while line = connection.gets</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="54befd30f285ac29cb3d58b703834b67" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;"><span style="font-size:0.9em">Listen on a port, then fork.</span></p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;"><span style="font-size:0.9em">A child processes share opened ports. OS load balances.</span></p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;"><span style="font-size:0.9em">YMMV depending on OS.</span></p>
+</div></div></section><section data-id="cbdf10a1782ee204721c9234c743b8e6"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="b19a8e25cdbc541635243bc22ea664f6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 332px; left: 314px; top: 144px;" data-block-id="1f12d7baa54ba1f062300021dacd2603"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<p>Multiprocessing Simple Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="c637b01f993d212ffa7f88f6d1b10233" style="min-width: 30px; min-height: 30px; width: 703px; height: 360px; left: 129px; top: 240px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="diff"><code>Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            8080
+
+Document Path:          /simple_blocking_server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      10
+Time taken for tests:   20.113 seconds
+Complete requests:      200
+Failed requests:        0
+Total transferred:      406800 bytes
+HTML transferred:       368800 bytes
+Requests per second:    9.94 [#/sec] (mean)
+Time per request:       1005.662 [ms] (mean)
+Time per request:       100.566 [ms] (mean, across all concurrent requests)
+Transfer rate:          19.75 [Kbytes/sec] received
+</code></pre></div></div></section><section data-id="2ea34537bb22983ca9da2807221db7b3"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="a182c6fc674ae79ead1b222ae783ddb3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 332px; left: 314px; top: 144px;" data-block-id="2eb0bcf91cbe5782c1630fa92d630617"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<p>Multiprocessing Simple Blocking Server</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3ed28d6906df785d249307003026a33e" style="height: auto; min-width: 30px; min-height: 30px; width: 624px; left: 80px; top: 299px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 84%;">
+<p style="text-align: left;">Ruby pre 2.0 was very copy-on-write unfriendly.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Multiprocessing consumed large amounts of RAM.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Modern Rubies are more resource friendly when forking.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="18a154fef664922a3f594c2c0797420b" style="min-width: 30px; min-height: 30px; width: 138px; height: 300px; left: 742px; top: 241px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="diff"><code>  VSZ   RSS
+------ -----
+596208 14888
+ 53256 12892
+120984 12956
+188568 12988
+256180 12992
+323788 13000
+391368 13040
+458952 13044
+526544 13056
+594152 13092
+       -----
+       131948K</code></pre></div></div></section><section data-id="ff4e78a9ebe260f2708072aebe3b3a3d"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="107c7a4bbf76ad697b146a18539548d1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 332px; left: 314px; top: 144px;" data-block-id="e8e892562e1ecf556425c404b3fc530f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Multithreading</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="63c3ea36deb10b0bd2c50322cf9e9641" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">A thread is the smallest sequence of instructions that can be managed independently by the scheduler. Multiple threads will share one process's memory.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 80px; top: 381px;" data-block-id="b975acb3b0ed97cedd2589dc39c5fc3a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Pros</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 800px; top: 381px;" data-block-id="4241b3b0c23c027e93d13760f188da9a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align: right;">Cons</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a0ea733b4c99f8c775e86a9a67d7770e" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 439px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 88%;">
+<ul>
+	<li style="text-align:left">Threading implementations vary a lot across Ruby implementations.</li>
+	<li style="text-align:left">Locking issues on shared resources can be complicated.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6ddc33c8932bef0006baf96148182413" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 439px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 88%;">
+<ul>
+	<li style="text-align:left">Easier to manage/load-balance in a single piece of software.</li>
+	<li style="text-align:left">Threads are lightweight, so resource usage is generally better.</li>
+	<li style="text-align:left">Can be very performant.</li>
+</ul>
+</div></div></section><section data-id="a4d2c012b6570dcc797164bbaff79784"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="96442ab1998700b30abe80672c1c2ceb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="e643ee2447f733c476937ffefc01b98d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Multithreaded Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="6370805c582b4cb5e8857e7850e859bb" style="min-width: 30px; min-height: 30px; width: 526px; height: 336px; left: 217px; top: 314px;"><div class="sl-block-content" style="z-index: 13; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- server_slow.rb      2016-05-01 16:08:31.422044736 -0400
++++ server_multithreaded.rb     2016-05-01 21:56:47.997815573 -0400
+@@ -11,12 +11,14 @@
+ def run( host = '0.0.0.0', port = '8080' )
+   server = TCPServer.new( host, port )
+
+-  while connection = server.accept
+-    request = get_request connection
+-    response = handle request
++  while con = server.accept
++    Thread.new( con ) do |connection|
++      request = get_request connection
++      response = handle request
+
+-    connection.write response
+-    connection.close
++      connection.write response
++      connection.close
++    end
+   end
+ end
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8fb3642ae6bf60137ae82cebf83e7964" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;">
+<p>Simple, naive implementation - a new thread for every request.</p>
+</div></div></section><section data-id="2412bf7d60e4eff3736879c4d397151f"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="dba167e2cef91df7e20b1225a327e5d2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="30203a6ae0a9d294bae5702667b28a89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Multithreaded Server</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="table" data-block-id="9f5a1b5be6938ca43d5338f2b589e6aa" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 237px;"><div class="sl-block-content" style="z-index: 13; font-size: 90%; text-align: left; background-color: rgb(0, 0, 0);" data-table-rows="7" data-table-cols="3"><table><tbody>
+<tr>
+<th style="width: 255px;">Total Requests</th>
+<th>Concurrent Requests</th>
+<th>Requests per Second</th>
+</tr>
+<tr>
+<td style="width: 255px;">200</td>
+<td>10</td>
+<td>9.95</td>
+</tr>
+<tr>
+<td style="width: 255px;">200</td>
+<td>20</td>
+<td>19.80</td>
+</tr>
+<tr>
+<td>500</td>
+<td>50</td>
+<td>48.98</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>100</td>
+<td>96.26</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>200</td>
+<td>184.45</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>1000</td>
+<td>628.33</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="30f4cec8196711b787f05662bafa648d" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 85%;">
+<p style="text-align:left">Slow requests scale pretty well with threads. Diminishing returns when thread count gets high, but not bad for such a trivial implementation.</p>
 </div></div></section><section data-id="ea5516ec94b6d02275ec1aed077e89ee"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9605b70b02a4452c7e4e3935246f43c3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Parsing HTTP</h1>
 </div></div></section><section data-id="457c802da2207963c3821eec3c41c894"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dd2299a2ecfe5cb8115592b6b59a6cbf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
@@ -1611,7 +2166,24 @@ end
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="c7a47793d4a7fa5d8e22ef3ea5a1cb4f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 163px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 0.975; font-size: 85%;" data-has-line-height="">
 <h2>The Other Details To Be a Well Behaved Daemon</h2>
-</div></div></section></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section></section><section data-id="8b96b1b85cb17597dfa8b45047dc0c20"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="744fd6cde1bb11722d93d5f57158eaa8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Web Server</h1>
+
+<h2>vs</h2>
+
+<h1>Application Server</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="675624d76550bd523097a51e3dafddb6" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 80%;" data-has-custom-html="">
+<p style="text-align:left">• A web server speaks HTTP with clients, answering requests for resources.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">• An applications server contains an application, and answers requests for application resources.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">• Generally, application servers are a specific type of web server.</p>
+</div></div></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Ruby Web Servers</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;" data-block-id="52b1774e4cfac32b43fa070f8cdb0a45"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
@@ -1630,8 +2202,23 @@ end
 	<li style="text-align:left">Goliath</li>
 	<li style="text-align:left">Swiftiply</li>
 </ul>
-</div></div></section><section data-id="3733e14e76cb53ca5a8b237788766423"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="993ef713db4fbb24cfe2ae87b283d528"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div></section><section data-id="3733e14e76cb53ca5a8b237788766423"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 60px; height: auto;" data-block-id="993ef713db4fbb24cfe2ae87b283d528"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>WEBrick</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="26a06526d0a66ebf6611061917091357" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Pure Ruby</p>
+
+<p style="text-align:left">• Thread based design</p>
+
+<p style="text-align:left">• Written in 2000 by <span style="color:#FFFFFF">Masayoshi Takahashi and</span> Yuuzou Gotou.</p>
+
+<p style="text-align:left">• Ubiquitous, as it is bundled with Ruby itself.</p>
+
+<p style="text-align:left">• Flexible, fairly featureful, and easy to use.</p>
+
+<p style="text-align:left">• Fairly well documented.</p>
+
+<p style="text-align:left">• Fairly slow.</p>
 </div></div></section><section data-id="01f572ab25a4070d4827964b8955e240"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d655176248d702320bdae5e7602ed1d4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Mongrel</h1>
 </div></div></section><section data-id="5e3d49e7f2b7dfd473abacaa08ddb573"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="598bf8b4a360fc1ba756301b61bee7be"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
