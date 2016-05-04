@@ -31,7 +31,7 @@
 </div></div></section><section data-id="d8e209128246a60cb056dec87d02df59"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="76afdf4271f90cb6cd0cc2248edf0f33"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Kirk Haines</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="7e67d617171d6d52e4f0d62ac600866d" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="text" data-block-id="7e67d617171d6d52e4f0d62ac600866d" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 166px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <p style="text-align:left">• Rubyist since 2001</p>
 
 <p style="text-align:left">• First professional Ruby web app in 2002</p>
@@ -48,7 +48,8 @@
 
 <p style="text-align:left">      @wyhaines</p>
 </div></div>
-<div class="sl-block" data-block-type="image" data-block-id="225af43009518c3c3891cc4d6626d074" style="min-width: 30px; min-height: 30px; width: 33px; height: 33px; left: 80px; top: 542px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="128" data-natural-height="128" data-src="lets-build-a-webserver/2504092-twitter-128.png"></div></div></section></section><section class="stack" data-id="d485efbc9e36788e6fe781745dc34672"><section data-id="d228c3094f3dabf379cdb78d8e75d101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="51acb3153bc7c67498b0f10bb926d790">
+<div class="sl-block" data-block-type="image" data-block-id="225af43009518c3c3891cc4d6626d074" style="min-width: 30px; min-height: 30px; width: 33px; height: 33px; left: 80px; top: 542px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="128" data-natural-height="128" data-src="lets-build-a-webserver/2504092-twitter-128.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="0ffc87c9e9f1474baf2c821c0206b710" style="min-width: 30px; min-height: 30px; width: 924.135px; height: 685px; left: 17.9323px; top: 6px;"><div class="sl-block-content" style="z-index: 0; opacity: 0.3;"><img data-natural-width="827" data-natural-height="613" style="" data-src="lets-build-a-webserver/2563583-ey-train-on-transparent-bg.png"></div></div></section></section><section class="stack" data-id="d485efbc9e36788e6fe781745dc34672"><section data-id="d228c3094f3dabf379cdb78d8e75d101"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="51acb3153bc7c67498b0f10bb926d790">
 <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="overflow: visible; z-index: 11;" data-gramm_id="a502cda7-2898-8caf-df58-2949abcc1b2f" data-gramm="true" data-gramm_editor="true">
 <h1>What Is a Web Server?</h1>
 </div>
@@ -137,8 +138,8 @@
 </div>
 <div class="sl-block" data-block-type="code" data-block-id="a3d65e1d77305ba220672cc5a2f54510" style="min-width: 30px; min-height: 30px; width: 800px; height: 167px; left: 80px; top: 280px;"><div class="sl-block-content" style="z-index: 13; border: 5px solid rgb(68, 68, 68); border-radius: 20px; font-size: 165%;" data-highlight-theme="ir-black"><pre class="hsp"><code>#! /bin/sh
 read get docid junk
-cat `echo "$docid" | \
-  ruby -p -e '$_.gsub!(/^\/ [\r\n]/,"").chomp'`</code></pre></div></div></section><section data-id="668828e5e43c675e4be73dec1036d902"><div class="sl-block" data-block-type="text" data-block-id="4fb7294df7ed0741871b4af99b726922" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 167px; top: 70px;">
+cat `echo "$docid"` | \
+  ruby -p -e '$_.gsub(/^\/ [\r\n]/,"").chomp'</code></pre></div></div></section><section data-id="668828e5e43c675e4be73dec1036d902"><div class="sl-block" data-block-type="text" data-block-id="4fb7294df7ed0741871b4af99b726922" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 167px; top: 70px;">
 <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; overflow: visible;" data-gramm_id="ecb1113b-cd39-9750-387d-8270caf08759" data-gramm="true" data-gramm_editor="true">
 <h1>Run the Server</h1>
 </div>
@@ -1575,15 +1576,15 @@ run</code></pre></div></div>
 <td>https://github.com/settingslogic/settingslogic</td>
 </tr>
 </tbody></table></div></div>
-<div class="sl-block" data-block-type="code" data-block-id="8cec0f10d0210852c5bed3aae7e00199" style="min-width: 30px; min-height: 30px; width: 623px; height: 65px; left: 250px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><pre class="ruby"><code>Class AppConfiguration
+<div class="sl-block" data-block-type="code" data-block-id="8cec0f10d0210852c5bed3aae7e00199" style="min-width: 30px; min-height: 30px; width: 623px; height: 65px; left: 250px; top: 350px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="ruby"><code>Class AppConfiguration
   LISTEN_ON = ['0.0.0.0:80','127.0.0.1:5000']
 end
 </code></pre></div></div>
-<div class="sl-block" data-block-type="code" data-block-id="9a760487714316f71a673115284ec92e" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 482px;"><div class="sl-block-content" style="z-index: 11; font-size: 98%;"><pre class="ruby"><code>require 'json'
+<div class="sl-block" data-block-type="code" data-block-id="9a760487714316f71a673115284ec92e" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 482px;"><div class="sl-block-content" style="z-index: 11; font-size: 98%;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'json'
 AppConfiguration = JSON.parse( File.read( config_file_path ) )</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 544px;" data-block-id="65445c355db6260c1af0fb25f22a87af"><div class="sl-block-content" style="z-index: 17; font-size: 98%;"><pre class="ruby"><code>require 'yaml'
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 52px; left: 250px; top: 544px;" data-block-id="65445c355db6260c1af0fb25f22a87af"><div class="sl-block-content" style="z-index: 17; font-size: 98%;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'yaml'
 AppConfiguration = YAML.load( File.read( config_file_path ) )</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 30px; left: 250px; top: 443px;" data-block-id="7af71a3066d3c303f6213f5b39e1b12b"><div class="sl-block-content" style="z-index: 18; font-size: 98%;"><pre class="ruby"><code>require 'app_configuration.rb'</code></pre></div></div></section><section data-id="24c23fdbe29059368e080d2da621f702"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="44b4c2b50f984c36dfc3858e7ecad2c9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 623px; height: 30px; left: 250px; top: 443px;" data-block-id="7af71a3066d3c303f6213f5b39e1b12b"><div class="sl-block-content" style="z-index: 18; font-size: 98%;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'app_configuration.rb'</code></pre></div></div></section><section data-id="24c23fdbe29059368e080d2da621f702"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="44b4c2b50f984c36dfc3858e7ecad2c9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Listen on Sockets</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="d3895727f5b697db44e07557d764dc28" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 157px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -1661,11 +1662,20 @@ end
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 73px; top: 148px; height: auto;" data-block-id="46929f5c686f6747e0df3118d76eb8c8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
 <h2>Simplest Ruby Web Server....</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="5a6815249dcfd08fbe5da6003e360da3" style="min-width: 30px; min-height: 30px; width: 480px; height: 34px; left: 240px; top: 230px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="hsp"><code>ruby -run -e httpd -- -p 8080 .</code></pre></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="d7f3249c2a79cb357dc8790da51bf733" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 289px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<div class="sl-block" data-block-type="code" data-block-id="5a6815249dcfd08fbe5da6003e360da3" style="min-width: 30px; min-height: 30px; width: 800px; height: 87px; left: 80px; top: 403px;"><div class="sl-block-content" style="z-index: 13; font-size: 285%;" data-highlight-theme="ir-black"><pre class="hsp"><code>ruby -run -e httpd -- -p 8080 .</code></pre></div></div>
+
+
+</section><section data-id="ad229fdfc678527e2a4f0a0a3f4abb08"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="a2a6e9d9bbd2422880dcc4c6b6faeebf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Short Tangent</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 73px; top: 148px; height: auto;" data-block-id="186b3d354e62a4a51620d71bcd6fa93e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h2>Simplest Ruby Web Server....</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 480px; height: 34px; left: 240px; top: 230px;" data-block-id="b16810ceb3d2091d9362a8617130e5b6"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="hsp"><code>ruby -run -e httpd -- -p 8080 .</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 289px;" data-block-id="7daa8163e132ffdac59fc3b3b74ce835"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
 <p>OK....That's kind of cheating.</p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="a38633de65d87767d361dcb744bdda2d" style="min-width: 30px; min-height: 30px; width: 440px; height: 331px; left: 440px; top: 350px;"><div class="sl-block-content" style="z-index: 15; font-size: 65%;" data-highlight-theme="ir-black"><pre class="ruby"><code># frozen_string_literal: false
+<div class="sl-block" data-block-type="code" style="width: 440px; height: 331px; left: 440px; top: 350px;" data-block-id="81203e2c790de8b92c93ea466b07ade5"><div class="sl-block-content" style="z-index: 15; font-size: 65%;" data-highlight-theme="ir-black"><pre class="ruby"><code># frozen_string_literal: false
 #
 # = un.rb
 #
@@ -1692,7 +1702,7 @@ end
 #   ruby -run -e httpd -- [OPTION] DocumentRoot
 #   ruby -run -e help [COMMAND]
 </code></pre></div></div>
-<div class="sl-block" data-block-type="line" data-block-id="161effd3643cec542cc56cffb4148e14" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 73px; top: 651px;"><div class="sl-block-content" data-line-x1="-33" data-line-y1="210" data-line-x2="319" data-line-y2="210" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="352" height="1" viewbox="-33 210 352 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-33" y1="210" x2="317" y2="210"></line><line stroke="#ffffff" stroke-width="2" x1="-33" y1="210" x2="317" y2="210"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(317,210) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="476b69c56759a24f20f68592af2bbae6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="8793783ac288bab7ad6d84f6ea485a74"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 73px; top: 651px;" data-block-id="51e6ab2b5bf7a56cf7ceb4a449ce1584"><div class="sl-block-content" data-line-x1="-33" data-line-y1="210" data-line-x2="319" data-line-y2="210" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="352" height="1" viewbox="-33 210 352 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-33" y1="210" x2="317" y2="210"></line><line stroke="#ffffff" stroke-width="2" x1="-33" y1="210" x2="317" y2="210"></line><path style="fill: rgba(0,0,0,0);" stroke="#ffffff" stroke-width="2" transform="translate(317,210) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div></section><section data-id="476b69c56759a24f20f68592af2bbae6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="8793783ac288bab7ad6d84f6ea485a74"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Short Tangent</h1>
 </div></div>
 <div class="sl-block" data-block-type="code" data-block-id="cd1607485fa7cfe2fbca3a28d9c13a5c" style="min-width: 30px; min-height: 30px; width: 800px; height: 436px; left: 114px; top: 194px;"><div class="sl-block-content" style="z-index: 12;" data-highlight-theme="ir-black"><pre class="ruby"><code>def httpd
@@ -1838,12 +1848,10 @@ Transfer rate:          7538.27 [Kbytes/sec] received</code></pre></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="e9845ba0bad2ecd1fc1156498f8026f7" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 171px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h2>Slow Responses....</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" data-block-id="2df2941d068524999a85af7642133f87" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<p style="text-align: left;">Imagine that it takes some work to generate those responses.</p>
+<div class="sl-block" data-block-type="text" data-block-id="2df2941d068524999a85af7642133f87" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p style="text-align:left">Imagine that it takes some time to generate those responses <span style="text-decoration: underline">and return them across the internet to the client</span>.</p>
 
-<p style="text-align: left;"> </p>
-
-<p style="text-align: left;">Make each one take at least one second....</p>
+<p style="text-align:left">Make each one take at least one second....</p>
 </div></div>
 <div class="sl-block" data-block-type="code" data-block-id="a5119d0d9de3228e01f2f10bc5f81761" style="min-width: 30px; min-height: 30px; width: 850px; height: 175px; left: 55px; top: 455px;"><div class="sl-block-content" style="z-index: 14; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- simple_blocking_server.rb     2016-05-01 11:16:13.750705766 -0400
 +++ simple_blocking_server_slow.rb        2016-05-01 16:08:31.422044736 -0400
@@ -1943,14 +1951,12 @@ Transfer rate:          1.98 [Kbytes/sec] received
 	<li>Managing processes can be complex.</li>
 	<li>Limited sharing of resources can be expensive.</li>
 </ul>
-</div></div></section><section data-id="3452bc4c927cceba1b20b93ddb584fd0"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 51px; height: auto;" data-block-id="f6bf4364ab98548c113fa692158291eb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="3452bc4c927cceba1b20b93ddb584fd0"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 51px; height: auto;" data-block-id="f6bf4364ab98548c113fa692158291eb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Main Loop</h1>
 </div></div>
 
-<div class="sl-block" data-block-type="text" data-block-id="5c5b833fbd37f2db721833ccdfac62c4" style="height: auto; min-width: 30px; min-height: 30px; width: 332px; left: 532px; top: 148px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
-<p>Multiprocessing Simple Blocking Server</p>
-</div></div>
-<div class="sl-block" data-block-type="code" data-block-id="09a5eddde84c4ef1e3df0a4f4fbd4b47" style="min-width: 30px; min-height: 30px; width: 500px; height: 468px; left: 448px; top: 214px;"><div class="sl-block-content" style="z-index: 13; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- kiss_slow.rb        2016-05-01 16:08:31.422044736 -0400
+
+<div class="sl-block" data-block-type="code" data-block-id="09a5eddde84c4ef1e3df0a4f4fbd4b47" style="min-width: 30px; min-height: 30px; width: 500px; height: 468px; left: 448px; top: 214px;"><div class="sl-block-content" style="z-index: 12; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- kiss_slow.rb        2016-05-01 16:08:31.422044736 -0400
 +++ kiss_multiprocessing.rb     2016-05-01 16:45:13.238012734 -0400
 @@ -11,6 +11,8 @@
  def run( host = '0.0.0.0', port = '8080' )
@@ -1980,7 +1986,7 @@ Transfer rate:          1.98 [Kbytes/sec] received
  def get_request connection
    r = ''
    while line = connection.gets</code></pre></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="54befd30f285ac29cb3d58b703834b67" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<div class="sl-block" data-block-type="text" data-block-id="54befd30f285ac29cb3d58b703834b67" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p style="text-align: left;"><span style="font-size:0.9em">Listen on a port, then fork.</span></p>
 
 <p style="text-align: left;"> </p>
@@ -1990,18 +1996,15 @@ Transfer rate:          1.98 [Kbytes/sec] received
 <p style="text-align: left;"> </p>
 
 <p style="text-align: left;"><span style="font-size:0.9em">YMMV depending on OS.</span></p>
-</div></div></section><section data-id="cbdf10a1782ee204721c9234c743b8e6"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="b19a8e25cdbc541635243bc22ea664f6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="734dcb6855a81729c97c74e750416c7b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 85%;">
+<h2>Multiprocessing Simple Blocking Server</h2>
+</div></div></section><section data-id="cbdf10a1782ee204721c9234c743b8e6"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="b19a8e25cdbc541635243bc22ea664f6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Main Loop</h1>
 </div></div>
 
-<div class="sl-block" data-block-type="text" style="height: auto; width: 332px; left: 314px; top: 144px;" data-block-id="1f12d7baa54ba1f062300021dacd2603"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
-<p>Multiprocessing Simple Blocking Server</p>
-</div></div>
-<div class="sl-block" data-block-type="code" data-block-id="c637b01f993d212ffa7f88f6d1b10233" style="min-width: 30px; min-height: 30px; width: 703px; height: 360px; left: 129px; top: 240px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="diff"><code>Server Software:
-Server Hostname:        127.0.0.1
-Server Port:            8080
 
-Document Path:          /simple_blocking_server.rb
+<div class="sl-block" data-block-type="code" data-block-id="c637b01f993d212ffa7f88f6d1b10233" style="min-width: 30px; min-height: 30px; width: 703px; height: 270px; left: 129px; top: 310px;"><div class="sl-block-content" style="z-index: 12;" data-highlight-theme="ir-black"><pre class="diff"><code>Document Path:          /simple_blocking_server.rb
 Document Length:        1844 bytes
 
 Concurrency Level:      10
@@ -2014,14 +2017,15 @@ Requests per second:    9.94 [#/sec] (mean)
 Time per request:       1005.662 [ms] (mean)
 Time per request:       100.566 [ms] (mean, across all concurrent requests)
 Transfer rate:          19.75 [Kbytes/sec] received
-</code></pre></div></div></section><section data-id="2ea34537bb22983ca9da2807221db7b3"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="a182c6fc674ae79ead1b222ae783ddb3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="bf40cabd91046b0e177b3f4307b54f52"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 85%;">
+<h2>Multiprocessing Simple Blocking Server</h2>
+</div></div></section><section data-id="2ea34537bb22983ca9da2807221db7b3"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="a182c6fc674ae79ead1b222ae783ddb3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Main Loop</h1>
 </div></div>
 
-<div class="sl-block" data-block-type="text" style="height: auto; width: 332px; left: 314px; top: 144px;" data-block-id="2eb0bcf91cbe5782c1630fa92d630617"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
-<p>Multiprocessing Simple Blocking Server</p>
-</div></div>
-<div class="sl-block" data-block-type="text" data-block-id="3ed28d6906df785d249307003026a33e" style="height: auto; min-width: 30px; min-height: 30px; width: 624px; left: 80px; top: 299px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 84%;">
+
+<div class="sl-block" data-block-type="text" data-block-id="3ed28d6906df785d249307003026a33e" style="height: auto; min-width: 30px; min-height: 30px; width: 624px; left: 80px; top: 299px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 84%;">
 <p style="text-align: left;">Ruby pre 2.0 was very copy-on-write unfriendly.</p>
 
 <p style="text-align: left;"> </p>
@@ -2032,7 +2036,7 @@ Transfer rate:          19.75 [Kbytes/sec] received
 
 <p style="text-align: left;">Modern Rubies are more resource friendly when forking.</p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="18a154fef664922a3f594c2c0797420b" style="min-width: 30px; min-height: 30px; width: 138px; height: 300px; left: 742px; top: 241px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="diff"><code>  VSZ   RSS
+<div class="sl-block" data-block-type="code" data-block-id="18a154fef664922a3f594c2c0797420b" style="min-width: 30px; min-height: 30px; width: 138px; height: 300px; left: 742px; top: 241px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="diff"><code>  VSZ   RSS
 ------ -----
 596208 14888
  53256 12892
@@ -2045,7 +2049,21 @@ Transfer rate:          19.75 [Kbytes/sec] received
 526544 13056
 594152 13092
        -----
-       131948K</code></pre></div></div></section><section data-id="ff4e78a9ebe260f2708072aebe3b3a3d"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="107c7a4bbf76ad697b146a18539548d1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+       131948K</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="e9e57ab552524cbc564cf78c3628a09c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 85%;">
+<h2>Multiprocessing Simple Blocking Server</h2>
+</div></div></section><section data-id="1c1c715652331c033e4c785df5fdc69b"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="c79f444a620df699c563668f7f36b3fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="5508fa320d9227f1c4252d2819596e3f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Multiprocessing Simple Blocking Server</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="85d85831cac9599a31ab8110e8c5bb1f" style="min-width: 30px; min-height: 30px; width: 600px; height: 420px; left: 329px; top: 243px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="460" data-natural-height="322" style="" data-src="lets-build-a-webserver/2556386-Funny-Walmart-Meme.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="46d6443c0dcc3dff44bbf32d1f85039b" style="height: auto; min-width: 30px; min-height: 30px; width: 291px; left: 15px; top: 342px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">With slow requests, multiprocessing with blocking servers still often feels like this.</p>
+</div></div></section><section data-id="ff4e78a9ebe260f2708072aebe3b3a3d"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="107c7a4bbf76ad697b146a18539548d1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Main Loop</h1>
 </div></div>
 
@@ -2064,7 +2082,7 @@ Transfer rate:          19.75 [Kbytes/sec] received
 <div class="sl-block" data-block-type="text" data-block-id="a0ea733b4c99f8c775e86a9a67d7770e" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 439px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 88%;">
 <ul>
 	<li style="text-align:left">Threading implementations vary a lot across Ruby implementations.</li>
-	<li style="text-align:left">Locking issues on shared resources can be complicated.</li>
+	<li style="text-align:left">Locking issues on shared resources can be complicated. i.e. Threads are hard and it's easy to screw it up.</li>
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="6ddc33c8932bef0006baf96148182413" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 439px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 88%;">
@@ -2085,7 +2103,31 @@ Transfer rate:          19.75 [Kbytes/sec] received
 <div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="e643ee2447f733c476937ffefc01b98d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
 <h2>Multithreaded Server</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="6370805c582b4cb5e8857e7850e859bb" style="min-width: 30px; min-height: 30px; width: 526px; height: 336px; left: 217px; top: 314px;"><div class="sl-block-content" style="z-index: 13; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- server_slow.rb      2016-05-01 16:08:31.422044736 -0400
+
+<div class="sl-block" data-block-type="text" data-block-id="8fb3642ae6bf60137ae82cebf83e7964" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;">
+<p style="text-align:left">Programming with threads can easily be a talk all by itself.  A few quick guides and tutorials:</p>
+
+<p style="text-align:left"> </p>
+
+<ul>
+	<li style="text-align:left"><a href="https://blog.engineyard.com/2013/ruby-concurrency" target="_blank">https://blog.engineyard.com/2013/ruby-concurrency</a></li>
+	<li style="text-align:left"><a href="http://www.csinaction.com/2014/10/10/multithreading-in-the-mri-ruby-interpreter/" target="_blank">http://www.csinaction.com/2014/10/10/multithreading-in-the-mri-ruby-interpreter/</a></li>
+	<li style="text-align:left"><a href="https://www.toptal.com/ruby/ruby-concurrency-and-parallelism-a-practical-primer" target="_blank">https://www.toptal.com/ruby/ruby-concurrency-and-parallelism-a-practical-primer</a></li>
+	<li style="text-align:left"><a href="http://www.tutorialspoint.com/ruby/ruby_multithreading.htm" target="_blank">http://www.tutorialspoint.com/ruby/ruby_multithreading.htm</a></li>
+</ul>
+</div></div></section><section data-id="08d4590289c2cfc2092be55371aebcae"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="d79cb300da766aef431a69dab1eda418"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="4c433654b6d79aaa50c0303a48654a44"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Multithreaded Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 526px; height: 336px; left: 217px; top: 322px;" data-block-id="00988e5009ef0f3e6664de716d8db8f0"><div class="sl-block-content" style="z-index: 13; font-size: 80%;" data-highlight-theme="ir-black"><pre class="diff"><code>--- server_slow.rb      2016-05-01 16:08:31.422044736 -0400
 +++ server_multithreaded.rb     2016-05-01 21:56:47.997815573 -0400
 @@ -11,12 +11,14 @@
  def run( host = '0.0.0.0', port = '8080' )
@@ -2107,8 +2149,8 @@ Transfer rate:          19.75 [Kbytes/sec] received
    end
  end
 </code></pre></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="8fb3642ae6bf60137ae82cebf83e7964" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;">
-<p>Simple, naive implementation - a new thread for every request.</p>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 228px;" data-block-id="fcd64e9cfbe02200d9d4b613caa993f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;">
+<p>Simple, naive implementation - a new thread for every request, and assume everything else just works with this.</p>
 </div></div></section><section data-id="2412bf7d60e4eff3736879c4d397151f"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="dba167e2cef91df7e20b1225a327e5d2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Main Loop</h1>
 </div></div>
@@ -2120,52 +2162,964 @@ Transfer rate:          19.75 [Kbytes/sec] received
 
 
 
-<div class="sl-block" data-block-type="table" data-block-id="9f5a1b5be6938ca43d5338f2b589e6aa" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 237px;"><div class="sl-block-content" style="z-index: 13; font-size: 90%; text-align: left; background-color: rgb(0, 0, 0);" data-table-rows="7" data-table-cols="3"><table><tbody>
+<div class="sl-block" data-block-type="table" data-block-id="9f5a1b5be6938ca43d5338f2b589e6aa" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 237px;"><div class="sl-block-content" style="z-index: 13; font-size: 90%; text-align: left; background-color: rgb(0, 0, 0);" data-table-rows="7" data-table-cols="2"><table><tbody>
 <tr>
-<th style="width: 255px;">Total Requests</th>
+
 <th>Concurrent Requests</th>
 <th>Requests per Second</th>
 </tr>
 <tr>
-<td style="width: 255px;">200</td>
+
 <td>10</td>
 <td>9.95</td>
 </tr>
 <tr>
-<td style="width: 255px;">200</td>
+
 <td>20</td>
 <td>19.80</td>
 </tr>
 <tr>
-<td>500</td>
+
 <td>50</td>
 <td>48.98</td>
 </tr>
 <tr>
-<td>1000</td>
+
 <td>100</td>
 <td>96.26</td>
 </tr>
 <tr>
-<td>2000</td>
+
 <td>200</td>
 <td>184.45</td>
 </tr>
 <tr>
-<td>10000</td>
+
 <td>1000</td>
 <td>628.33</td>
 </tr>
 </tbody></table></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="30f4cec8196711b787f05662bafa648d" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 85%;">
 <p style="text-align:left">Slow requests scale pretty well with threads. Diminishing returns when thread count gets high, but not bad for such a trivial implementation.</p>
-</div></div></section><section data-id="ea5516ec94b6d02275ec1aed077e89ee"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="9605b70b02a4452c7e4e3935246f43c3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div></section><section data-id="f948a5c406959a73739c6f21c853388d"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="a58bd935110dd859470a6dc8e222694c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="a192f662ec052ec20cba3e46096e8b86"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="d8e42dff002015d72926ad6d809237bc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;"> "Event Driven" is a vague label, encompassing numerous patterns and feature sets. One of the most common of these patterns is the Reactor pattern.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">The Reactor pattern describes a system that handles asynchronous events, but that does so with synchronous event callbacks.</p>
+</div></div></section><section data-id="4e91deaf5c938e496b84e6adb8a12442"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="b0f1a5e2119e43e679822187602f2124"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="3086a0c3fdd446bda174481496497344"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="3ded040e82e137599b50b7cfd65feebf" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 303px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Client/Server interactions are often slow, but most of that time is spent waiting on latencies. CPUs are fast. The rest of the world is pretty slow.</p>
+</div></div></section><section data-id="d79ac1c54e6d833bd20dd44f80717a49"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="48c317aeb562feb364c1def72b3d9bda"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="db9749ce182be9c39964a4464e0b0669"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 303px;" data-block-id="68032cd95cebe67e2424b8df6489d957"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 96%;">
+<p style="text-align:left">An event reactor just spins in a loop, waiting for something to happen - such as a network connection, or data to read or two write.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">When it does, an event -- a callback -- is triggered to deal with it.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Callbacks block the reactor.</p>
+</div></div></section><section data-id="5d9e8c3fcbc3ff3e1c4b9a93e5219ed3"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="812ec52be313607d8c4a30ea1dd78560"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="108f4ff6ac872cb2d75a62858c979262"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 80px; top: 241px;" data-block-id="6b885251c309b3b8f0b94473918ac82d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">Pros</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 80px; left: 800px; top: 241px;" data-block-id="a5e04a7a7622d9963b24ca6954b8ec59"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: right;">Cons</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="dfa99fc22dde76d88706385667730465" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 85%;">
+<ul>
+	<li style="text-align:left">Slow callbacks block the reactor.</li>
+	<li style="text-align:left">Callback structured programming can be confusing.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 331px;" data-block-id="1b06703e283689ca4c7580130050e9c3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 85%;">
+<ul>
+	<li style="text-align:left">Can be very fast and resource friendly.</li>
+	<li style="text-align:left">With an appropriate underlying event notification facility, can scale to thousands of simultaneous connections.</li>
+</ul>
+</div></div></section><section data-id="4bbcc551653bfd1a999afae7ecb666a3"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="3d9362eb35f68af674147fed7753400f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="67f236df1d6ceb1e4672afea5a892d78"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="62c364e4a76c1f9ad9ef5ae4bf65c5d5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">Like Threading, this could easily be a talk all by itself. A few resources for further reading:</p>
+
+<p style="text-align:left"> </p>
+
+<ul>
+	<li style="text-align:left"><a href="https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help" target="_blank">https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help</a></li>
+	<li style="text-align:left"><a href="https://github.com/eventmachine/eventmachine" target="_blank">https://github.com/eventmachine/eventmachine</a></li>
+	<li style="text-align:left"><a href="http://www.bigfastblog.com/rubys-eventmachine-part-1-event-based-programming" target="_blank">http://www.bigfastblog.com/rubys-eventmachine-part-1-event-based-programming</a></li>
+	<li style="text-align:left"><a href="https://github.com/celluloid/celluloid-io/" target="_blank">https://github.com/celluloid/celluloid-io/</a></li>
+</ul>
+</div></div></section><section data-id="7f6573dc6cae28486b745612199fe210"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="e6bf51867688d5a3d713b8240a793224"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="47501fccda0d5cc5c433b463728975f6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="a3aa5e8317525826e301ca11286c96f6" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Many ways to do it, including EventMachine, Celluloid.io, or even a simple pure ruby event framework (SimpleReactor).</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="93d04529ddcfaea08506730dd5309db6" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">Events/reactor stuff gets complicated, so see the examples for code for a couple simple variants. I didn't do a simple diff version of the slow server.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">However...</p>
+</div></div></section><section data-id="20ed9d1112b34d87861c14e1f8c35019"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="cd553304cd5ad6668c6301c67bed9bf6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="1310779a7ad6f5a92e1eb26ee76bf558"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="1bdb40443919c18733cdbef2eacd00dd" style="min-width: 30px; min-height: 30px; width: 807px; height: 392px; left: 80px; top: 238px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="hsp"><code>require 'simplereactor'
+require 'tinytypes'
+require 'getoptlong'
+require 'socket'
+require 'time'
+
+class SimpleWebServer
+
+  attr_reader :threaded
+
+  EXE = File.basename __FILE__
+  VERSION = "1.0"
+
+  def self.parse_cmdline
+    initialize_defaults
+
+    opts = GetoptLong.new(
+      [ '--help',      '-h', GetoptLong::NO_ARGUMENT],
+      [ '--threaded',  '-t', GetoptLong::NO_ARGUMENT],
+      [ '--processes', '-n', GetoptLong::REQUIRED_ARGUMENT],
+      [ '--engine',    '-e', GetoptLong::REQUIRED_ARGUMENT],
+      [ '--port',      '-p', GetoptLong::REQUIRED_ARGUMENT],
+      [ '--docroot',   '-d', GetoptLong::REQUIRED_ARGUMENT]
+    )
+
+    opts.each do |opt, arg|
+      case opt
+      when '--help'
+        puts &lt;&lt;-EHELP
+#{EXE} [OPTIONS]
+
+#{EXE} is a very simple web server. It only serves static files. It does very
+little parsing of the HTTP request, only fetching the small amount of
+information necessary to determine what resource is being requested. The server
+defaults to serving files from the current director when it was invoked.
+
+-h, --help:
+  Show this help.
+
+-d DIR, --docroot DIR:
+  Provide a specific directory for the docroot for this server.
+
+-e ENGINE, --engine ENGINE:
+  Tell the webserver which IO engine to use. This is passed to SimpleReactor,
+  and will be one of 'select' or 'nio'. If not specified, it will attempt to
+  use nio, and fall back on select.
+
+-p PORT, --port PORT:
+  The port for the web server to listen on. If this flag is not used, the web
+  server defaults to port 80.
+
+-b HOSTNAME, --bind HOSTNAME:
+  The hostname/IP to bind to. This defaults to 127.0.0.1 if it is not provided.
+
+-n COUNT, --processes COUNT:
+  The number of processess to create of this web server. This defaults to a single process.
+
+-t, --threaded:
+  Wrap content deliver in a thread to hedge against slow content delivery.
+EHELP
+        exit
+      when '--docroot'
+        @docroot = arg
+      when '--engine'
+        @engine = arg
+      when '--port'
+        @port = arg.to_i != 0 ? arg.to_i : @port
+      when '--bind'
+        @host = arg
+      when '--processes'
+        @processes = arg.to_i != 0 ? arg.to_i : @port
+      when '--threaded'
+        @threaded = true
+      end
+    end
+  end
+
+  def self.initialize_defaults
+    @docroot = '.'
+    @engine = 'nio'
+    @port = 80
+    @host = '127.0.0.1'
+    @processes = 1
+    @threaded = false
+  end
+
+  def self.docroot
+    @docroot
+  end
+
+  def self.engine
+    @engine
+  end
+
+  def self.port
+    @port
+  end
+
+  def self.host
+    @host
+  end
+
+  def self.processes
+    @processes
+  end
+
+  def self.threaded
+    @threaded
+  end
+
+  def self.run
+    parse_cmdline
+
+    SimpleReactor.use_engine @engine.to_sym
+
+    webserver = SimpleWebServer.new
+
+    webserver.run
+  end
+
+  def initialize
+    @children = nil
+    @docroot = self.class.docroot
+    @threaded = self.class.threaded
+  end
+
+  def run
+    @server = TCPServer.new self.class.host, self.class.port
+
+    handle_processes
+
+    SimpleReactor.Reactor.run do |reactor|
+      @reactor = reactor
+      @reactor.attach @server, :read do |monitor|
+        connection = monitor.io.accept
+        handle_request '',connection, monitor
+      end
+    end
+  end
+
+  def handle_request buffer, connection, monitor = nil
+    eof = false
+    buffer &lt;&lt; connection.read_nonblock(16384)
+  rescue EOFError
+    eof = true
+  rescue IO::WaitReadable
+    # This is actually handled in the logic below. We just need to survive it.
+  ensure
+    request = parse_request buffer, connection
+    if !request &amp;&amp; monitor
+      @reactor.next_tick do
+        @reactor.attach connection, :read do |mon|
+          handle_request buffer, connection
+        end
+      end
+    elsif eof &amp;&amp; !request
+      deliver_400 connection
+    elsif request
+      handle_response_for request, connection
+    end
+
+    if eof
+      queue_detach connection
+    end
+  end
+
+  def queue_detach connection
+      @reactor.next_tick do
+        @reactor.detach(connection)
+        connection.close
+      end
+  end
+
+  def handle_response_for request, connection
+    path = File.join( @docroot, request[:uri] )
+    if FileTest.exist?( path ) and FileTest.file?( path ) and File.expand_path( path ).index( @docroot ) == 0
+
+      deliver path, connection
+    else
+      deliver_404 path, connection
+    end
+  end
+
+  def parse_request buffer, connection
+    if buffer =~ /^(\w+) +(?:\w+:\/\/([^ \/]+))?([^ \?\#]*)\S* +HTTP\/(\d\.\d)/
+      request_method = $1
+      uri = $3
+      http_version = $4
+      if $2
+        name = $2.intern
+        uri = C_slash if @uri.empty?
+        # Rewrite the request to get rid of the http://foo portion.
+        buffer.sub!(/^\w+ +\w+:\/\/[^ \/]+([^ \?]*)/,"#{@request_method} #{@uri}")
+        buffer =~ /^(\w+) +(?:\w+:\/\/([^ \/]+))?([^ \?\#]*)\S* +HTTP\/(\d\.\d)/
+        request_method = $1
+        uri = $3
+        http_version = $4
+      end
+      uri = uri.tr('+', ' ').gsub(/((?:%[0-9a-fA-F]{2})+)/n) {[$1.delete('%')].pack('H*')} if uri.include?('%')
+      unless name
+        if buffer =~ /^Host: *([^\r\0:]+)/
+          name = $1.intern
+        end
+      end
+
+      { :uri =&gt; uri, :request_method =&gt; request_method, :http_version =&gt; http_version, :name =&gt; name }
+    end
+  end
+
+  def deliver uri, connection
+    if FileTest.directory? uri
+      deliver_directory connection
+    else
+      if threaded
+        Thread.new { _deliver uri, connection }
+      else
+        _deliver uri, connection
+      end
+    end
+  rescue Errno::EPIPE
+  rescue Exception =&gt; e
+    deliver_500 connection, e
+  end
+
+  def _deliver uri, connection
+    data = File.read(uri)
+    last_modified = File.mtime(uri).httpdate
+    sleep 1
+    connection.write "HTTP/1.1 200 OK\r\nContent-Length:#{data.length}\r\nContent-Type: #{content_type_for uri}\r\nLast-Modified: #{last_modified}\r\nConnection:close\r\n\r\n#{data}"
+    queue_detach connection
+  end
+
+  def deliver_directory
+    deliver_403 connection
+  end
+
+  def deliver_404 uri, connection
+    buffer = "The requested resource (#{uri}) could not be found."
+    connection.write "HTTP/1.1 404 Not Found\r\nContent-Length:#{buffer.length}\r\nContent-Type:text/plain\r\nConnection:close\r\n\r\n#{buffer}"
+  rescue Errno::EPIPE
+  ensure
+    queue_detach connection
+  end
+
+  def deliver_400 connection
+    buffer = "The request was malformed and could not be completed."
+    connection.write "HTTP/1.1 400 Bad Request\r\nContent-Length:#{buffer.length}\r\nContent-Type:text/plain\r\nConnection:close\r\n\r\n#{buffer}"
+  rescue Errno::EPIPE
+  ensure
+    queue_detach connection
+  end
+
+  def deliver_403 connection
+    buffer = "Forbidden. The requested resource can not be accessed."
+    connection.write "HTTP/1.1 403 Bad Request\r\nContent-Length:#{buffer.length}\r\nContent-Type:text/plain\r\nConnection:close\r\n\r\n#{buffer}"
+  rescue Errno::EPIPE
+  ensure
+    queue_detach connection
+  end
+
+  def deliver_500 connection, error
+    buffer = "There was an internal server error -- #{error}"
+puts buffer
+    connection.write "HTTP/1.1 500 Bad Request\r\nContent-Length:#{buffer.length}\r\nContent-Type:text/plain\r\nConnection:close\r\n\r\n#{buffer}"
+  rescue Errno::EPIPE
+  ensure
+    queue_detach connection
+  end
+
+  def content_type_for path
+    MIME::TinyTypes.types.simple_type_for( path ) || 'application/octet-stream'
+  end
+
+  def data_for path_info
+    path = File.join(@docroot,path_info)
+    path if FileTest.exist?(path) and FileTest.file?(path) and File.expand_path(path).index(docroot) == 0
+  end
+
+  def handle_processes
+    if self.class.processes &gt; 1
+      @children = []
+      (self.class.processes - 1).times do |thread_count|
+        pid = fork()
+        if pid
+          @children &lt;&lt; pid
+        else
+          break
+        end
+      end
+
+      Thread.new { Process.waitall } if @children
+    end
+  end
+
+end
+
+SimpleWebServer.run</code></pre></div></div></section><section data-id="cfec4049f8bc172881fc4d56c7f53007"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="6bf554db49ebc84de576cd60c273ac1a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="5f265c9b6fd61a5c0e8887f73a958cd0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2bb4e37b88ac21797808df7cafc1e0fc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 245px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p style="text-align: left;">With slow requests, this is no better than the simple blocking server.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="d742a19c2deae933164c3a7d4063bfa2" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 330px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="hsp"><code>Document Path:          /server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      1
+Time taken for tests:   10.014 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      19880 bytes
+HTML transferred:       18440 bytes
+Requests per second:    1.00 [#/sec] (mean)
+Time per request:       1001.423 [ms] (mean)
+Time per request:       1001.423 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.94 [Kbytes/sec] received
+</code></pre></div></div></section><section data-id="b523753d2abd9946ae63076c316b4a8f"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="376afdc1a45b0a3ae24d28b2ff5d890f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="449901775533170bb91ab43b2be010f5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 312px;" data-block-id="74930f9615d75a81c01ce665e62c75ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;">
+<p style="text-align:left">However, where events shine is in dealing with high communications latencies.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">They don't block on IO, so an efficient reactor can service large numbers of high latency connections efficiently.</p>
+</div></div></section><section data-id="5debf649260eaa25b4b5199cb481d0ed"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="7229ab665dd97b9a7339e6f950f21440"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="bbe4ffbccf3047a6fff83255912d21f8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;" data-block-id="b5275adc1adc4d88b683a36337e8dd4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 89%;">
+<p style="text-align:left">So, while performance is obviously good when testing from localhost:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="f34fb6189a7c70b6b8552e7d0bcee309" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 350px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="hsp"><code>Document Path:          /server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      50
+Time taken for tests:   5.866 seconds
+Complete requests:      20000
+Failed requests:        0
+Total transferred:      39760000 bytes
+HTML transferred:       36880000 bytes
+Requests per second:    3409.40 [#/sec] (mean)
+Time per request:       14.665 [ms] (mean)
+Time per request:       0.293 [ms] (mean, across all concurrent requests)
+Transfer rate:          6619.03 [Kbytes/sec] received
+</code></pre></div></div></section><section data-id="4abf94ff4713b95dce8687f7e2186394"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="f20d8f70d27eb32cb15c784e85e5fbb3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="53b115241e2b911c2d78fbbac13e217d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 229px;" data-block-id="7ec3021b78c3c63c99d8a74a50aa7dbf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 89%;">
+<p style="text-align:left">Evented IO handling keeps things happy at high concurrencies, even across the country. For example, this is from anEngine Yard AWS Oregon instance talking to a non-AWS VM on the east coast.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 300px; left: 80px; top: 370px;" data-block-id="06e660e2cf32cf2ee2cf165126976060"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="hsp"><code>Document Path:          /server.rb
+Document Length:        1844 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   3.394 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Total transferred:      19907832 bytes
+HTML transferred:       18465816 bytes
+Requests per second:    2946.48 [#/sec] (mean)
+Time per request:       339.387 [ms] (mean)
+Time per request:       0.339 [ms] (mean, across all concurrent requests)
+Transfer rate:          5728.33 [Kbytes/sec] received
+</code></pre></div></div></section><section data-id="5a69c472e8c5f0c8e22ab7d1f9521fe9"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="6dd087a645712cc9546eec8dc3744276"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="0eaf757785a958506fb4f0dd2a495b54"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="table" style="height: auto; width: 800px; left: 80px; top: 350px;" data-block-id="ed8b06451f5bdb4b34be930245e5c6c6"><div class="sl-block-content" style="z-index: 13; font-size: 90%; text-align: left; background-color: rgb(0, 0, 0);" data-table-rows="7" data-table-cols="2"><table><tbody>
+<tr>
+
+<th>Concurrent Requests</th>
+<th>Requests per Second</th>
+</tr>
+<tr>
+
+<td>10</td>
+<td>3888</td>
+</tr>
+<tr>
+
+<td>50</td>
+<td>3814</td>
+</tr>
+<tr>
+
+<td>250</td>
+<td>3651</td>
+</tr>
+<tr>
+
+<td>1000</td>
+<td>3609</td>
+</tr>
+<tr>
+
+<td>2000</td>
+<td>3261</td>
+</tr>
+<tr>
+
+<td>10000</td>
+<td>2740</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 816px; left: 64px; top: 210px;" data-block-id="fa10b42b7126ea7b50926fd2935020f1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>And if your event notification framework is up to it, concurrencies can scale nicely.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="be2d7b2caf49a51d14040862c377158c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 311px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Fast Responses</p>
+</div></div></section><section data-id="605e0d4a883f81073f461d322b2bd2e0"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="4f2e9d9414e47f2123dbba1f55b5f14a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 148px;" data-block-id="1bd270746c8ba4e78d5554bb72ff6921"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server - Hybridization!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="93545b06eec2fc44eacc15543e103448" style="min-width: 30px; min-height: 30px; width: 433px; height: 447.931px; left: 264px; top: 219px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="870" data-natural-height="900" data-src="lets-build-a-webserver/2565898-20160504_065741.jpg"></div></div></section><section data-id="ab8d77d5cb44bc7424a70c7c9fa720f9"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="d52733fa07038aaa3dff2b5d4fe7f099"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 148px;" data-block-id="fbb3013d90537428f277a1f465162295"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server - Hybridization!</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 326.733px; height: 338px; left: 587.267px; top: 322px;" data-block-id="553b69c2e1eb1507ad1f5c119f921f81"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="870" data-natural-height="900" data-src="lets-build-a-webserver/2565898-20160504_065741.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="749053691d17f8b2af1c3ee62a234e56" style="height: auto; min-width: 30px; min-height: 30px; width: 467px; left: 80px; top: 322px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;"><span style="color:rgb(255, 255, 255); text-align:left">Evented IO can also mix well with threading, letting the slow stuff be slow, while not blocking the reactor from spinning and servicing things that are ready to be serviced.</span></p>
+</div></div></section><section data-id="5332cf376948427c18b65696614342d1"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="f2410ceafe4cb9ac81cfa44b7211d696"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="8cd5e6fc5f72d41fa70a033194f19179"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="table" style="height: auto; width: 800px; left: 80px; top: 297px;" data-block-id="76b45251a51729fd5b494aff8075ae8b"><div class="sl-block-content" style="z-index: 13; font-size: 90%; text-align: left; background-color: rgb(0, 0, 0);" data-table-rows="8" data-table-cols="2"><table><tbody>
+<tr>
+
+<th style="width: 396px;">Concurrent Requests</th>
+<th>Requests per Second</th>
+</tr>
+<tr>
+
+<td style="width: 396px;">10</td>
+<td>8</td>
+</tr>
+<tr>
+
+<td style="width: 396px;">50</td>
+<td>30</td>
+</tr>
+<tr>
+
+<td style="width: 396px;">250</td>
+<td>181</td>
+</tr>
+<tr>
+
+<td style="width: 396px;">500</td>
+<td>340</td>
+</tr>
+<tr>
+
+<td style="width: 396px;">1000</td>
+<td>511</td>
+</tr>
+<tr>
+
+<td style="width: 396px;">2000</td>
+<td>854</td>
+</tr>
+<tr>
+<td style="width: 396px;">10000</td>
+<td>713</td>
+</tr>
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 241px;" data-block-id="d6d8bb494db6a42685fea1a9081a8738"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Slow (1 second delayed) Responses</p>
+</div></div></section><section data-id="430eb5d884eddce804c615a68aeb4c72"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="5f3533991632fe87767bbf35741fc893"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 240px; top: 144px;" data-block-id="36958630e242866a66513a3f461e7895"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>Event Driven Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 816px; left: 80px; top: 280px;" data-block-id="a7bff56ec6f51b05fa0f4ae18a7783a1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">Reactor/Event IO combined with threading is a great combination, if you are willing to deal with the complexity of implementation.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Even pure Ruby + Ruby 2.3 is pretty fast</p>
+</div></div></section><section data-id="2d9f1b8f9bfdfdf876a6b85c1c03af76"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="cd09505711acabb503965d0cad73b9df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="bc391c0fff3d1c4caf903e34fdd16a94"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>EventMachine</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4e72952907939f4ec32293900d3df0f3" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 253px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>10 years of Ruby history</li>
+	<li>C++ core</li>
+	<li>Quite fast</li>
+	<li>Code can get complicated and confusing because of the callback based structure.</li>
+</ul>
+</div></div></section><section data-id="fb4b8c32bb6dc3b750a4c1b70416b722"><div class="sl-block" data-block-type="text" style="width: 350px; left: 305px; top: 58px; height: auto;" data-block-id="82251b5b01e26cc97e083e159d183a94"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Main Loop</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 144px;" data-block-id="beb351ffa4a4a65e8fbe8ddc2ca9a566"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<h2>EventMachine - How Fast?</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="55f19c44a83d4fd2b531a84b547006a8" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 260px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="hsp"><code>Document Path:          /smallfile1462361058
+Document Length:        1021 bytes
+
+Concurrency Level:      25
+Time taken for tests:   6.474 seconds
+Complete requests:      100000
+Failed requests:        0
+Keep-Alive requests:    100000
+Total transferred:      120300000 bytes
+HTML transferred:       102100000 bytes
+Requests per second:    15447.11 [#/sec] (mean)
+Time per request:       1.618 [ms] (mean)
+Time per request:       0.065 [ms] (mean, across all concurrent requests)
+Transfer rate:          18147.34 [Kbytes/sec] received
+</code></pre></div></div></section><section data-id="ea5516ec94b6d02275ec1aed077e89ee"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="9605b70b02a4452c7e4e3935246f43c3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Parsing HTTP</h1>
-</div></div></section><section data-id="457c802da2207963c3821eec3c41c894"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dd2299a2ecfe5cb8115592b6b59a6cbf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="db2d60ca49ab07c084f1c28b1dc8ddcb" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">It all comes back to the HTTP.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">HTTP is a text grammar. To know what a client wants, the server has to be able to make sense of this grammar.</p>
+</div></div></section><section data-id="ed58c6e4c9f4503cbda832a877f94220"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 62px; height: auto;" data-block-id="11246c7ba2b4574b8e40ec83dc3d73ac"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5fbf2477e9f31e5193180ade35696ead" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui"><p style="text-align: left;">Most of the very simple examples so far have cheated with this.  </p></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="867f11853b1da9a21a43224d9b5d6be4" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 371px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">They use regular expressions. Going too far down that path will drive you to madness and sorrow.</p>
+</div></div></section><section data-id="fe5930623b517e47f39acea174762cce"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="70c5b5471592d22da4ba122091292d9a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 94px; top: 218px;" data-block-id="1bb3e33017dd226e19d14d2e448c2118"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 47%;" data-has-custom-html="">
+<p style="text-align: left;">You can't parse [X]HTML with regex. Because HTML can't be parsed by regex. Regex is not a tool that can be used to correctly parse HTML. As I have answered in HTML-and-regex questions here so many times before, the use of regex will not allow you to consume HTML. Regular expressions are a tool that is insufficiently sophisticated to understand the constructs employed by HTML. HTML is not a regular language and hence cannot be parsed by regular expressions. Regex queries are not equipped to break down HTML into its meaningful parts. so many times but it is not getting to me. Even enhanced irregular regular expressions as used by Perl are not up to the task of parsing HTML. You will never make me crack. HTML is a language of sufficient complexity that it cannot be parsed by regular expressions. Even Jon Skeet cannot parse HTML using regular expressions. Every time you attempt to parse HTML with regular expressions, the unholy child weeps the blood of virgins, and Russian hackers pwn your webapp. Parsing HTML with regex summons tainted souls into the realm of the living. HTML and regex go together like love, marriage, and ritual infanticide. The &lt;center&gt; cannot hold it is too late. The force of regex and HTML together in the same conceptual space will destroy your mind like so much watery putty. If you parse HTML with regex you are giving in to Them and their blasphemous ways which doom us all to inhuman toil for the One whose Name cannot be expressed in the Basic Multilingual Plane, he comes. HTML-plus-regexp will liquify the n​erves of the sentient whilst you observe, your psyche withering in the onslaught of horror. Rege̿̔̉x-based HTML parsers are the cancer that is killing StackOverflow <i>it is too late it is too late we cannot be saved</i> the trangession of a chi͡ld ensures regex will consume all living tissue (except for HTML which it cannot, as previously prophesied) <i>dear lord help us how can anyone survive this scourge</i> using regex to parse HTML has doomed humanity to an eternity of dread torture and security holes <i>using rege</i>x as a tool to process HTML establishes a brea<i>ch between this world</i> and the dread realm of c͒ͪo͛ͫrrupt entities (like SGML entities, but <i>more corrupt) a mere glimp</i>se of the world of reg​<b>ex parsers for HTML will ins</b>​tantly transport a p<i>rogrammer's consciousness i</i>nto a w<i>orl</i>d of ceaseless screaming, he comes<strike>, the pestilent sl</strike>ithy regex-infection wil​<b>l devour your HT</b>​ML parser, application and existence for all time like Visual Basic only worse <i>he comes he com</i>es <i>do not fi</i>​ght h<b>e com̡e̶s, ̕h̵i</b>​s un̨ho͞ly radiańcé de<i>stro҉ying all enli̍̈́̂̈́ghtenment, HTML tags <b>lea͠ki̧n͘g fr̶ǫm ̡yo​͟ur eye͢s̸ ̛l̕ik͏e liq</b>​uid p</i>ain, the song of re̸gular exp​re<strike>ssion parsing </strike>will exti<i>​nguish the voices of mor​<b>tal man from the sp</b>​here I can see it can you see ̲͚̖͔̙î̩́t̲͎̩̱͔́̋̀ it is beautiful t​</i>he f<code>inal snuf</code>fing o<i>f the lie​<b>s of Man ALL IS LOŚ͖̩͇̗̪̏̈́T A</b></i><b>LL I​S L</b>OST th<i>e pon̷y he come</i>s he c̶̮om<strike>es he co</strike><b><strike>me</strike>s t<i>he</i> ich​</b>or permeat<i>es al</i>l MY FAC<i>E MY FACE ᵒh god n<b>o NO NOO̼</b></i><b>O​O N</b>Θ stop t<i>he an​*̶͑̾̾​̅ͫ͏̙̤g͇̫͛͆̾ͫ̑͆l͖͉̗̩̳̟̍ͫͥͨ</i>e̠̅s<code> ͎a̧͈͖r̽̾̈́͒͑e</code> n<b>​ot rè̑ͧ̌aͨl̘̝̙̃ͤ͂̾̆ ZA̡͊͠͝LGΌ ISͮ̂҉̯͈͕̹̘̱ T</b>O͇̹̺ͅƝ̴ȳ̳ TH̘<b>Ë͖́̉ ͠P̯͍̭O̚​N̐Y̡ H̸̡̪̯ͨ͊̽̅̾̎Ȩ̬̩̾͛ͪ̈́̀́͘ ̶̧̨̱̹̭̯ͧ̾ͬC̷̙̲̝͖ͭ̏ͥͮ͟Oͮ͏̮̪̝͍M̲̖͊̒ͪͩͬ̚̚͜Ȇ̴̟̟͙̞ͩ͌͝</b>S̨̥̫͎̭ͯ̿̔̀ͅ</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="bd154481e3c360953ed3f8cf0f2802cc" style="min-width: 30px; min-height: 30px; width: 933.333px; height: 700px; left: 27px; top: 0px;"><div class="sl-block-content" style="z-index: 11; opacity: 0.4; transition-duration: 10s; transition-delay: 3s;" data-animation-type="scale-up"><img style="" data-natural-width="1200" data-natural-height="900" data-src="lets-build-a-webserver/2566025-Cthulhu.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="07d3ab9d7eb806c83dd20ac1726113a1" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 136px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h2>With Regular Expressions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="babf9b9939debdfeb7166e57747090ec" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 661px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 83%;">
+<p><a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454" target="_blank"><span style="font-size:0.5em">http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454</span></a></p>
+</div></div></section><section data-id="71da27ada5259817eadd00ad052919b6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="5f3f094971cc61d08a78269e8df485d0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 933.333px; height: 700px; left: 27px; top: 0px;" data-block-id="7329f74f7a21c65260fc2a117022726a"><div class="sl-block-content" style="z-index: 11; opacity: 0.4; transition-duration: 10s; transition-delay: 3s;" data-animation-type="scale-up"><img style="" data-natural-width="1200" data-natural-height="900" data-src="lets-build-a-webserver/2566025-Cthulhu.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 136px;" data-block-id="5768659800ee7ec6f20f54d5bcee7fd4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>With Regular Expressions</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="86a918d27fb4755abc37162d2ef07343" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 391px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">For limited, specific pieces of information, you can get away with it. People may hate you, but you can do it. Future sanity is not guaranteed, however.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">HTTP is so complicated that this approach is madness for most purposes. Use a real parser.</p>
+</div></div></section><section data-id="54480940eafe4e962804eaba5ee97d58"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="3c2fd06a6b492ff4b681bd06ac49095e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3b6dd3dac9c1db58c06bbf8dfa8fd3eb" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 157px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 89%;">
+<h2>Most People Don't Like Writing Parsers</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f9e0464372e68fbcc5eb3229d06d7837" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 362px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Fortunately (unless that is the sort of thing that floats your boat) you don't have to. There are several viable options readily available.</p>
+</div></div></section><section data-id="4a6c03ec599cd6ee9c411225576de416"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="b159558603f7bb0aaf1fdd6ad0f2c426"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 157px;" data-block-id="e80f0c1dc973b532be24174d829ff08c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 89%;">
+<h2>Mongrel's Parser</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;" data-block-id="6f8f25381ee83b0ab854380f8d595210"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Zed Shaw wrote Mongrel, a Ruby web and application server, about 10 years ago.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">The HTTP parser that it used was built using the Ragel state machine compiler.  It is a robust and pretty fast. In some version or other, it is used in many Ruby web server implementations.</p>
+</div></div></section><section data-id="98b5c89c671b94725a7c30a74a335efe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="9642562bfa68b3b5b35514b744f54094"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 173px;" data-block-id="c2f69e6c3e6a3bacacf662c4a5635886"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 51%;">
+<h2><a href="https://github.com/mongrel/mongrel/blob/master/lib/mongrel.rb#L113" target="_blank">https://github.com/mongrel/mongrel/blob/master/lib/mongrel.rb#L113</a></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="440180cb0577baebae12285c42d80bd3" style="min-width: 30px; min-height: 30px; width: 800px; height: 405px; left: 80px; top: 245px;"><div class="sl-block-content" style="z-index: 13;" data-highlight-theme="ir-black"><pre class="ruby"><code>    def process_client(client)
+      begin
+        parser = HttpParser.new
+        params = HttpParams.new
+        request = nil
+        data = client.readpartial(Const::CHUNK_SIZE)
+        nparsed = 0
+
+        # Assumption: nparsed will always be less since data will get filled with more
+        # after each parsing.  If it doesn't get more then there was a problem
+        # with the read operation on the client socket.  Effect is to stop processing when the
+        # socket can't fill the buffer for further parsing.
+        while nparsed &lt; data.length
+          nparsed = parser.execute(params, data, nparsed)
+
+          if parser.finished?
+            if not params[Const::REQUEST_PATH]
+              # it might be a dumbass full host request header
+              uri = URI.parse(params[Const::REQUEST_URI])
+              params[Const::REQUEST_PATH] = uri.path
+            end
+
+            raise "No REQUEST PATH" if not params[Const::REQUEST_PATH]
+
+            script_name, path_info, handlers = @classifier.resolve(params[Const::REQUEST_PATH])
+
+            if handlers
+              params[Const::PATH_INFO] = path_info
+              params[Const::SCRIPT_NAME] = script_name
+
+              # From http://www.ietf.org/rfc/rfc3875 :
+              # "Script authors should be aware that the REMOTE_ADDR and REMOTE_HOST
+              #  meta-variables (see sections 4.1.8 and 4.1.9) may not identify the
+              #  ultimate source of the request.  They identify the client for the
+              #  immediate request to the server; that client may be a proxy, gateway,
+              #  or other intermediary acting on behalf of the actual source client."
+              params[Const::REMOTE_ADDR] = client.peeraddr.last
+
+              # select handlers that want more detailed request notification
+              notifiers = handlers.select { |h| h.request_notify }
+              request = HttpRequest.new(params, client, notifiers)
+
+              # in the case of large file uploads the user could close the socket, so skip those requests
+              break if request.body == nil  # nil signals from HttpRequest::initialize that the request was aborted
+
+              # request is good so far, continue processing the response
+              response = HttpResponse.new(client)
+
+              # Process each handler in registered order until we run out or one finalizes the response.
+              handlers.each do |handler|
+                handler.process(request, response)
+                break if response.done or client.closed?
+              end
+
+              # And finally, if nobody closed the response off, we finalize it.
+              unless response.done or client.closed? 
+                response.finished
+              end
+            else
+              # Didn't find it, return a stock 404 response.
+              client.write(Const::ERROR_404_RESPONSE)
+            end
+
+            break #done
+          else
+            # Parser is not done, queue up more data to read and continue parsing
+            chunk = client.readpartial(Const::CHUNK_SIZE)
+            break if !chunk or chunk.length == 0  # read failed, stop processing
+
+            data &lt;&lt; chunk
+            if data.length &gt;= Const::MAX_HEADER
+              raise HttpParserError.new("HEADER is longer than allowed, aborting client early.")
+            end
+          end
+        end
+      rescue EOFError,Errno::ECONNRESET,Errno::EPIPE,Errno::EINVAL,Errno::EBADF
+        client.close rescue nil
+      rescue HttpParserError =&gt; e
+        Mongrel.log(:error, "#{Time.now.httpdate}: HTTP parse error, malformed request (#{params[Const::HTTP_X_FORWARDED_FOR] || client.peeraddr.last}): #{e.inspect}")
+        Mongrel.log(:error, "#{Time.now.httpdate}: REQUEST DATA: #{data.inspect}\n---\nPARAMS: #{params.inspect}\n---\n")
+        # http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4
+        client.write(Const::ERROR_400_RESPONSE)
+      rescue Errno::EMFILE
+        reap_dead_workers('too many files')
+      rescue Object =&gt; e
+        Mongrel.log(:error, "#{Time.now.httpdate}: Read error: #{e.inspect}")
+        Mongrel.log(:error, e.backtrace.join("\n"))
+      ensure
+        begin
+          client.close
+        rescue IOError
+          # Already closed
+        rescue Object =&gt; e
+          Mongrel.log(:error, "#{Time.now.httpdate}: Client error: #{e.inspect}")
+          Mongrel.log(:error, e.backtrace.join("\n"))
+        end
+        request.body.delete if request and request.body.class == Tempfile
+      end
+    end</code></pre></div></div></section><section data-id="ada3dcfc34e156841b9d66f72c46b514"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="7203050e4a47697b13dff3e0642c7de5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3378851fe5808ef0e36b2ca3cbba51b8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 149px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><a href="http://www.ruby-doc.org/stdlib-2.3.1/libdoc/webrick/rdoc/WEBrick/HTTPRequest.html" target="_blank">WEBrick::HTTPRequest</a></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3c683d074a5c15a8443fd7db0bdc6da3" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">WEBrick has a serviceable, if not gloriously fast, parser.</p>
+
+<p style="text-align: left;"> </p>
+
+<p style="text-align: left;">Just pass it an IO object, and it'll returned a structure built from the parsed HTTP.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a3373aa28f6c59bdbd2ecc5000702c5a" style="min-width: 30px; min-height: 30px; width: 800px; height: 70px; left: 80px; top: 490px;"><div class="sl-block-content" style="z-index: 14; font-size: 146%;" data-highlight-theme="ir-black"><pre class="ruby"><code>request = WEBrick::HTTPRequest.new( WEBrick::Config::HTTP )
+request.parse( request_io )
+</code></pre></div></div></section><section data-id="b0294c965c72286e3217fb55da18fbbe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="bf6da9b32a21a743b38d40297da0bfef"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 149px;" data-block-id="8ed295f5eabae113f9d08ddc4eece8ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><a href="https://github.com/eventmachine/evma_httpserver/tree/master/ext" target="_blank">EVMA_HTTPServer's Parser</a></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="138fe7bfb5c3754db5583944487c17a6" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">The HTTP parser that is part of the EVMA_HTTPServer web server implementation that is in the EventMachine project. It could use some love, but it works.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="16b6f7319fff9abc3d5c8ea3c82ad266" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 400px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="ruby"><code>require 'mime-types'
+require 'eventmachine'
+require 'evma_httpserver'
+
+trap 'INT' do; exit end # in a real server, you want more more cleanup than this
+
+class MyHttpServer &lt; EM::Connection
+  include EM::HttpServer
+
+  DOCROOT = Dir.pwd
+
+  def post_init
+    super
+    no_environment_strings
+  end
+
+  def process_http_request
+    response = EM::DelegatedHttpResponse.new(self)
+    path = File.join( DOCROOT, @http_request_uri )
+    if FileTest.exist?( path ) and FileTest.file?( path ) and File.expand_path( path ).index( DOCROOT ) == 0
+      response.status = 200
+      response.content_type MIME::Types.type_for( path ).last.to_s
+      response.content = File.read( path )
+      response.send_response
+    else
+      response.status = 200
+      response.content = "The resource #{path} could not be found."
+      response.send_response
+    end
+  end
+
+  def final_headers
+    "Date: #{Time.now.httpdate}\r\nConnection: close\r\n\r\n"
+  end
+
+end
+
+EM.run {
+  EM.start_server '0.0.0.0', 80, MyHttpServer
+}
+</code></pre></div></div></section><section data-id="0e2666da33a51984986773ba0b55d0d6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="cf7cd4684700f08d6b3247c764c4c2d2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Parsing HTTP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 149px;" data-block-id="d8b5a13549718f81708437559e74ecae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><a href="https://github.com/nodejs/http-parser" target="_blank">Joyent's HTTP Parser</a></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="8975f5e49c03e6720f4be5d6cce99797" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">There is a Ruby library, <em><a href="https://github.com/tmm1/http_parser.rb" target="_blank">http_parser.rb</a></em>, that is built on top of the Joyent (NodeJS) parser. This is also a fast, battle proven parser like the Mongrel parser, and is widely used.</p>
+</div></div></section><section data-id="457c802da2207963c3821eec3c41c894"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dd2299a2ecfe5cb8115592b6b59a6cbf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Signals and Miscellany</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="c7a47793d4a7fa5d8e22ef3ea5a1cb4f" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 163px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 0.975; font-size: 85%;" data-has-line-height="">
 <h2>The Other Details To Be a Well Behaved Daemon</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0ae87748398d6b65118f4d6f3f37f2e4" style="height: auto; min-width: 30px; min-height: 30px; width: 578px; left: 80px; top: 339px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 3.9;" data-has-line-height="">
+<ul>
+	<li>Handle signals so that you die gracefully</li>
+	<li>Cleanup after yourself</li>
+</ul>
 </div></div></section></section><section data-id="8b96b1b85cb17597dfa8b45047dc0c20"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 59px; height: auto;" data-block-id="744fd6cde1bb11722d93d5f57158eaa8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Web Server</h1>
 
@@ -2183,7 +3137,65 @@ Transfer rate:          19.75 [Kbytes/sec] received
 <p style="text-align:left"> </p>
 
 <p style="text-align:left">• Generally, application servers are a specific type of web server.</p>
-</div></div></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section class="stack" data-id="d19418d1be85fd2f29369d5300632679"><section data-id="84c68b5c5aa3c749a4dba9521f0a7045"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="6f5dea35323bca0eca6c10f8a350d9ac"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Rack</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="894d370d5ff101a9f2b9df66ab5c2196" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 168px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 83%;">
+<h2>Rack provides an interface between a web server and a Ruby application.</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5472a3c6155dd660ea3b9fd935143c66" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 319px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p style="text-align:left">Rack has a simple interface.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">An object that responds to the <em>call</em> method, and takes a hash of environment variables.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">The call method returns an array containing the HTTP response code, a hash of HTTP headers, and the response body, which is contained in an object that responds to <em>each</em>.</p>
+</div></div></section><section data-id="bc5110b580a1d22269c4d9f26470def7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="0133dd6bf8ec6adeedec1d84a8d74e29"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Rack</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="56ef974435036c1d027963e97f3afdea" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 147px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><a href="http://rack.github.io/" target="_blank">http://rack.github.io/</a></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="923cb85c43804098abebf23bdb7353f4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Canonical example</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="ade9c0adb50da464e8027ff212e1fa4c" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 80px; top: 383px;"><div class="sl-block-content" style="z-index: 14;" data-highlight-theme="ir-black"><pre class="ruby"><code># my_rack_app.rb
+ 
+require 'rack'
+ 
+app = Proc.new do |env|
+    ['200', {'Content-Type' =&gt; 'text/html'}, ['A barebones rack app.']]
+end
+ 
+Rack::Handler::WEBrick.run app</code></pre></div></div></section><section data-id="3f0be2bca8259e6050940280090cc272"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="5dc0b695201a708df2cff3cf61d7d31d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Rack</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6ac30aec661ff5dc57d38eb3228016d0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;">Rails and most other Ruby web frameworks utilize Rack. That is, a Rails application is Rack application.</p>
+</div></div></section><section data-id="d567705c784400d06573ef345cb725a1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 57px; height: auto;" data-block-id="4ccdf35a79794aab1fef14d1ebeb0689"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Rack</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 147px;" data-block-id="88bb979587b0b253f16a8de9b47b2377"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Rack Handlers</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3d935aa33d60b5e99d964c5e5bc751a3" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 221px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">A Rack handler is the glue between the rack application and the web server that is responsible for handling it.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">Rack itself ships with handlers for CGI, FCGI, SCGI, the LiteSpeed Web Server (LSWS), Thin, and Webrick.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left">You can write your own.</p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><a href="https://github.com/rack/rack/blob/master/lib/rack/handler/cgi.rb" target="_blank"><span style="font-size:0.9em">https://github.com/rack/rack/blob/master/lib/rack/handler/cgi.rb</span></a> for an example.</p>
+</div></div></section></section><section class="stack" data-id="500dc6c4983ef0813a5a56345d9d2b89"><section data-id="4cea56df12a05b791ed522f85e55a1e5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="72456befdf91a1516722791f4b107a2d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Ruby Web Servers</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;" data-block-id="52b1774e4cfac32b43fa070f8cdb0a45"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
@@ -2219,25 +3231,149 @@ Transfer rate:          19.75 [Kbytes/sec] received
 <p style="text-align:left">• Fairly well documented.</p>
 
 <p style="text-align:left">• Fairly slow.</p>
-</div></div></section><section data-id="01f572ab25a4070d4827964b8955e240"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d655176248d702320bdae5e7602ed1d4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div></section><section data-id="01f572ab25a4070d4827964b8955e240"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d655176248d702320bdae5e7602ed1d4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Mongrel</h1>
-</div></div></section><section data-id="5e3d49e7f2b7dfd473abacaa08ddb573"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="598bf8b4a360fc1ba756301b61bee7be"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="cad0345139a16bdebb45ba85c172e714"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Zed Shaw, 2006</p>
+
+<p style="text-align:left">• Ruby plus a C extension for parsing HTTP, built with Ragel</p>
+
+<p style="text-align:left">• Moderately fast for it's age</p>
+
+<p style="text-align:left">• EOL at 1.1.5 in a version that doesn't work with modern Rubies</p>
+
+<p style="text-align:left">• There is a 1.2.x version (gem install --pre mongrel) that does work with modern Rubies</p>
+
+<p style="text-align:left">• Completely unmaintained, but it is interesting code to look at and learn from.</p>
+</div></div></section><section data-id="5e3d49e7f2b7dfd473abacaa08ddb573"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="598bf8b4a360fc1ba756301b61bee7be"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Swiftiply</h1>
-</div></div></section><section data-id="1c89b006333f87c1e917aee64a9842a8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b26329350009e08e2436834b6717298a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="c11f27a2d3e3d10ab576ee1f42ac0703"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• My baby. May 2007</p>
+
+<p style="text-align:left">• Built on top of EventMachine</p>
+
+<p style="text-align:left">• Original used regex for HTTP parsing....</p>
+
+<p style="text-align:left">• Structurally has support for real parsing, but needs work</p>
+
+<p style="text-align:left">• Intended to be a load balancing reverse proxy with a twist, with light web serving capabilities (static files, mostly)</p>
+
+<p style="text-align:left">• Very fast</p>
+
+<p style="text-align:left">*• AFAIK, at least 100 production sites still use it</p>
+</div></div></section><section data-id="1c89b006333f87c1e917aee64a9842a8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="b26329350009e08e2436834b6717298a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Thin</h1>
-</div></div></section><section data-id="0401b8dfbf7ebc15d9aa850967e5997f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="f1bc34e67f8851a3e02bd8b2e0a916cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="001967ce198b0d9c0251dfe7ac1bfe42"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Marc-André Cournoyer, 2008</p>
+
+<p style="text-align:left">• Mongrel HTTP Parser</p>
+
+<p style="text-align:left">• Rack interface</p>
+
+<p style="text-align:left">• EventMachine</p>
+
+<p style="text-align:left">• Pretty fast. Still pretty commonly used</p>
+</div></div></section><section data-id="0401b8dfbf7ebc15d9aa850967e5997f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="f1bc34e67f8851a3e02bd8b2e0a916cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Goliath</h1>
-</div></div></section><section data-id="7f67091f2843d86578203b5981646b1a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="352af8bcf632facc6df72ba401e44a8b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="b8148efaab26fc2eb1802ee1f6a82c70"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="" dir="ui">
+<p style="text-align:left">• PostRank Labs, 2011</p>
+
+<p style="text-align:left">• Built on top of EventMachine</p>
+
+<p style="text-align:left">• Completely asynchronous design, leveraging Ruby fibers to unwind callback complexity</p>
+
+<p style="text-align:left">• Performance and resource focused</p>
+
+<p style="text-align:left">• Niche usage</p>
+</div></div></section><section data-id="7f67091f2843d86578203b5981646b1a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="352af8bcf632facc6df72ba401e44a8b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Puma</h1>
-</div></div></section><section data-id="f17fbad0ef9fa0c947a08dc667e2aa02"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cfe1197428531978f975e180adc134c8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="2a16288f7886951113f12e1a8c7cf85d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Evan Phoenix, 2011</p>
+
+<p style="text-align:left">• Built on the bones of Mongrel</p>
+
+<p style="text-align:left">• Built from the ground up with concurrency in mind</p>
+
+<p style="text-align:left">• Rack</p>
+
+<p style="text-align:left">• Runs on all major Ruby implementations (MRI, JRuby, Rubinius)</p>
+
+<p style="text-align:left">• If you use Thin, take a look at Puma</p>
+</div></div></section><section data-id="f17fbad0ef9fa0c947a08dc667e2aa02"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cfe1197428531978f975e180adc134c8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Passenger</h1>
-</div></div></section><section data-id="418cd47034d2860accb1053041b7ec1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e6490325d4028e36f30b578e3d48fa13"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="a18ce7088c103e11199563b0c208c36b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Phusion Passenger</p>
+
+<p style="text-align:left">• Heavy Rails world usage</p>
+
+<p style="text-align:left">• Directly integrates to Apache or Nginx</p>
+
+<p style="text-align:left">• New version includes a fast purpose built web server, Raptor</p>
+
+<p style="text-align:left">• Rack</p>
+
+<p style="text-align:left">• Commercial version has more multithreading/concurrency options than the single open source version does</p>
+
+<p style="text-align:left"> </p>
+</div></div></section><section data-id="418cd47034d2860accb1053041b7ec1e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="e6490325d4028e36f30b578e3d48fa13"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Unicorn</h1>
-</div></div></section><section data-id="e730710b0a672bbaa0a535f24a819679"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c050006e874129c7ac9a1d47b83eb006"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="30f002f720a8a7a698d4628121540ae5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Built on Mongrel's bones by Eric Wong circa 2009</p>
+
+<p style="text-align:left">• fork() (i.e. built in multiprocessing) oriented</p>
+
+<p style="text-align:left">• Not the fastest, but it deals well with slow/variable requests</p>
+
+<p style="text-align:left">• Very mature, and very heavy utilization in the Rails world</p>
+
+<p style="text-align:left">• With modern copy-on-write friendly Rubies, can have nice resource utilization</p>
+</div></div></section><section data-id="e730710b0a672bbaa0a535f24a819679"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c050006e874129c7ac9a1d47b83eb006"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Rainbows!</h1>
-</div></div></section><section data-id="88873dc7c0bbc5bbed6c0a7dc2914435"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c07c898a8d13363f59323d81da0b0618"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 325px;" data-block-id="0319416215b5c2f0facb8de84335e19c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Unicorn specifically tuned for those very big, very slow requests</p>
+</div></div></section><section data-id="88873dc7c0bbc5bbed6c0a7dc2914435"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c07c898a8d13363f59323d81da0b0618"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Yahns</h1>
-</div></div></section></section>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 209px;" data-block-id="37b0790128a134f2c7528c70bb5939cb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 98%;" data-has-custom-html="">
+<p style="text-align:left">• Another in the Unicorn family</p>
+
+<p style="text-align:left">• Tuned for apps that receive very little traffic</p>
+
+<p style="text-align:left">• When idle, it is truly idle</p>
+
+<p style="text-align:left">• Very sensitive to app failures</p>
+
+<p style="text-align:left"> </p>
+</div></div></section></section><section data-id="43670a4df73fa6fbf095d3a6d4defe8c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="e4a7ba4f49e9f302116ee98aca1116aa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Thank You!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="524c8e4c38003794479a1849d9219cc9" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Let's build some stuff. Ask me questions. Tell me what you want.</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="42f7cb450b7eb0943db32c3df56008ed" style="min-width: 30px; min-height: 30px; width: 215.942px; height: 300px; left: 34px; top: 16px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="298" data-natural-height="414" data-src="lets-build-a-webserver/2566940-panda-ruby.png"></div></div></section><section data-id="763fc04641ee993a3abe919cccb25136"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="042ba6f44ea83654ea930974b932cf30"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Thanks to Engine Yard</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="64514d908749ddcaba367d713d085eb1" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Your Trusted DevOps.</h2>
+
+<h2>Over 1 Billion AWS Hours.</h2>
+
+<p>With Engine Yard Cloud, do what you do best—developing Ruby on Rails, Node.js, or PHP apps—while we do what we do best—ensuring your environment runs smoothly. You can be as hands on or hands off with AWS as you want.</p>
+
+<h4 style="color:rgb(253, 29, 68)"><span style="color:#FFF0F5">Start developing your apps on our AWS account or yours for free today.</span></h4>
+
+<h4 style="color:rgb(253, 29, 68)"><span style="color:#FFF0F5">We’ve deployed it all....</span></h4>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="87ba1ee13c7b653a77b0e36fc8b593d1" style="min-width: 30px; min-height: 30px; width: 215.942px; height: 300px; left: 0px; top: 0px;"><div class="sl-block-content" style="z-index: 10; opacity: 0.3;"><img data-natural-width="298" data-natural-height="414" style="" data-src="lets-build-a-webserver/2566940-panda-ruby.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="0b45ad21b6a7098427f4bf2279e0bcba" style="min-width: 30px; min-height: 30px; width: 360px; height: 266.844px; left: 570px; top: 0px;"><div class="sl-block-content" style="z-index: 0; opacity: 0.3;"><img data-natural-width="827" data-natural-height="613" style="" data-src="lets-build-a-webserver/2563583-ey-train-on-transparent-bg.png"></div></div></section>
 			</div>
 		</div>
 
